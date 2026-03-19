@@ -1,0 +1,68 @@
+name: "KBO Knit: Update Data"
+
+on:
+  schedule:
+    # 3~10월 매일 KST 09:00 (UTC 00:00) 실행, 월요일 제외
+    - cron: "0 0 * 3-10 0,2,3,4,5,6"
+    # 9~10월은 월요일도 실행 (취소경기 보충)
+    - cron: "0 0 * 9,10 1"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run KBO scraper
+        run: node apps/kbo-knit/scrape-kbo.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet apps/kbo-knit/data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          DATE=$(date -u +%Y-%m-%d)
+          git add apps/kbo-knit/data/
+          git commit -m "data(kbo-knit): update KBO $(date +%Y) results (${DATE})"
+          git push
+
+      - name: Configure AWS credentials
+        if: steps.changes.outputs.changed == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.KBO_AWS_ROLE_ARN }}
+          aws-region: ${{ vars.KBO_AWS_REGION }}
+
+      - name: Sync data to S3
+        if: steps.changes.outputs.changed == 'true'
+        run: aws s3 sync apps/kbo-knit/data/ s3://${{ vars.KBO_S3_BUCKET }}/data/ --delete
+
+      - name: Invalidate CloudFront cache
+        if: steps.changes.outputs.changed == 'true'
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.KBO_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/data/*"

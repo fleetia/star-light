@@ -1,0 +1,16 @@
+{
+  "name": "크보니트",
+  "short_name": "크보니트",
+  "description": "KBO 프로야구 경기 결과를 목도리 배색 패턴으로 만들어주는 웹앱",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

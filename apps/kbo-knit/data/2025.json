@@ -1,0 +1,7835 @@
+{
+  "season": 2025,
+  "games": [
+    {
+      "gameKey": "20250308-KIA-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-08",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250308-SSG-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-08",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250308-KIWOOM-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-08",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250308-LG-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-08",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250308-DOOSAN-HANWHA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-08",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250309-KIA-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-09",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 0,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250309-SSG-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-09",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250309-KIWOOM-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-09",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250309-LG-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-09",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250309-DOOSAN-HANWHA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-09",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250310-HANWHA-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-10",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250310-LG-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-10",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250310-DOOSAN-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-10",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250310-KIA-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-10",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250310-KIWOOM-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-10",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250311-HANWHA-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-11",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 8,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250311-LG-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-11",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250311-DOOSAN-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-11",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250311-KIA-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-11",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 17,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250311-KIWOOM-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-11",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 9,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250313-KIA-DOOSAN-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-13",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250313-HANWHA-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-13",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250313-LG-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-13",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 10,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250313-KIWOOM-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250313-KT-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-13",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 10,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250314-KIA-DOOSAN-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-14",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250314-KIWOOM-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-14",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250314-HANWHA-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-14",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250314-LG-SAMSUNG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-14",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250314-KT-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-14",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250315-LG-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-15",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 9,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250315-KT-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-15",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250315-HANWHA-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-15",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250315-SAMSUNG-KIA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-15",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250315-DOOSAN-KIWOOM-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-15",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250316-LG-SSG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-16",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250316-KT-LOTTE-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-16",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250316-HANWHA-NC-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-16",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250316-SAMSUNG-KIA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-16",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250316-DOOSAN-KIWOOM-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-16",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250317-NC-LG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-17",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250317-DOOSAN-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250317-LOTTE-KIWOOM-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-17",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250317-SSG-KIA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-17",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250317-SAMSUNG-HANWHA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-17",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250318-NC-LG-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-18",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250318-DOOSAN-KT-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-18",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250318-SSG-KIA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-18",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250318-LOTTE-KIWOOM-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-18",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250318-SAMSUNG-HANWHA-1",
+      "seriesType": "PRESEASON",
+      "date": "2025-03-18",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250322-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-22",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250322-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-22",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250322-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-22",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250322-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-22",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250322-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-22",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250323-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-23",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250323-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-23",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250323-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-23",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 7,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250323-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-23",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250323-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-23",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250325-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-25",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250325-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-25",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250325-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-25",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 14
+    },
+    {
+      "gameKey": "20250325-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-25",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250325-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-25",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250326-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-26",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250326-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-26",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250326-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-26",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250326-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-26",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250326-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-26",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 17,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250327-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-27",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250327-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-27",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250327-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-27",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 11,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250327-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-27",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250327-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-27",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250328-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-28",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 0,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250328-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-28",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250328-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-28",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250328-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-28",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250328-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-28",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250329-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-29",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250329-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-29",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250329-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 13,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250329-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-29",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250329-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-29",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 14,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250330-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-30",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250330-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-30",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250330-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-30",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250330-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-30",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250330-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-03-30",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250401-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-01",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250401-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-01",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250401-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-01",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250401-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-01",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250401-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-01",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250402-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-02",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250402-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-02",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250402-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-02",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250402-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-02",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250402-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-02",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250403-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-03",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 1,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250403-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-03",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250403-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-03",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250403-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-03",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250403-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-03",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250404-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-04",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250404-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-04",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250404-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-04",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 15,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250404-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-04",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250404-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-04",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250405-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-05",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250405-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-05",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250405-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-05",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250405-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-05",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250405-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-05",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250406-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-06",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250406-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-06",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250406-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-06",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 15,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250406-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-06",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250406-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-06",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250408-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-08",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250408-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-08",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250408-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-08",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250408-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-08",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250408-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-08",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 13,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250409-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-09",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250409-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-09",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250409-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-09",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250409-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-09",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250409-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-09",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250410-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-10",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 7,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250410-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-10",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250410-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-10",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250410-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-10",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 7,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250410-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-10",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250411-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-11",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250411-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-11",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250411-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-11",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250411-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-11",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250411-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-11",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250412-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-12",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250412-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-12",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250412-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-12",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250412-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-12",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250412-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-12",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250413-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-13",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250413-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-13",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250413-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-13",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250413-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-13",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250413-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250415-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-15",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250415-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-15",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250415-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-15",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 6,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250415-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-15",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250415-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-15",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250416-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-16",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250416-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-16",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 10,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250416-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-16",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250416-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-16",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250416-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-16",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250417-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-17",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250417-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-17",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250417-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-17",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250417-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250417-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-17",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250418-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-18",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250418-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-18",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250418-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-18",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250418-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-18",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250418-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-18",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250419-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-19",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250419-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-19",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 11,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250419-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-19",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250419-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-19",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 11,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250419-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-19",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250420-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-20",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250420-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-20",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250420-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-20",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250420-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-20",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 5,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250420-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-20",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250422-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-22",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250422-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-22",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250422-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-22",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250422-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-22",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250422-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-22",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250423-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-23",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250423-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-23",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250423-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-23",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250423-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-23",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 11,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250423-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-23",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250424-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-24",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250424-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-24",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250424-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-24",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 17
+    },
+    {
+      "gameKey": "20250424-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-24",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250424-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-24",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250425-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-25",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250425-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-25",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250425-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-25",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 6,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250425-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-25",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250425-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-25",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250426-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-26",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 7,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250426-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-26",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250426-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-26",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250426-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-26",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 1,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250426-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-26",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250427-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-27",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250427-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-27",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250427-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-27",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250427-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-27",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250427-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-27",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250429-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-29",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250429-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250429-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-29",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250429-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-29",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250429-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-29",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250430-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-30",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 8,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250430-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-30",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250430-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-30",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 7,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250430-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-30",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 10,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250430-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-04-30",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250501-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-01",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250501-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-01",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250501-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-01",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250501-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-01",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 5,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250501-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-01",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250502-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-02",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250502-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-02",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250502-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-02",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250502-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-02",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250502-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-02",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250503-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-03",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250503-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-03",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250503-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-03",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 13,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250503-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-03",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250503-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-03",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 0,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250504-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-04",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250504-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-04",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250504-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-04",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 11,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250504-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-04",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250504-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-04",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250505-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-05",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250505-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-05",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250505-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-05",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250505-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-05",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 13,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250505-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-05",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250506-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-06",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250506-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-06",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 0,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250506-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-06",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250506-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-06",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250506-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-06",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250507-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-07",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250507-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-07",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250507-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-07",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 12,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250507-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-07",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 10,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250507-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-07",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250509-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-09",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250509-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-09",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250509-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-09",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250509-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-09",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250509-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-09",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250510-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250510-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250510-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250510-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250510-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250510-NC-DOOSAN-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250510-KIA-SSG-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250510-LOTTE-KT-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 8,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250510-LG-SAMSUNG-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-10",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250511-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 7,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250511-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 8,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250511-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 11,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250511-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250511-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250511-NC-DOOSAN-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250511-KIA-SSG-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250511-LOTTE-KT-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-11",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250513-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250513-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-13",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250513-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-13",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250513-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-13",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250513-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-13",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250514-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-14",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250514-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-14",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250514-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-14",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250514-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-14",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250514-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-14",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250515-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-15",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250515-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-15",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250515-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-15",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250515-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-15",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 8,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250515-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-15",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250516-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-16",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250516-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-16",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250516-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-16",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250516-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-16",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250516-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-16",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250517-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 12,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250517-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250517-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250517-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250517-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250517-KT-LG-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250517-SAMSUNG-LOTTE-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 7,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250517-DOOSAN-KIA-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250517-SSG-HANWHA-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250517-KIWOOM-NC-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-17",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250518-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-18",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250518-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-18",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250518-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-18",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250518-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-18",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250518-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-18",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250520-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-20",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250520-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-20",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 17,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250520-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-20",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250520-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-20",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250520-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-20",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250521-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-21",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 9,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250521-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-21",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 7,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250521-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-21",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250521-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-21",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250521-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-21",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250522-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-22",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250522-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-22",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250522-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-22",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 8,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250522-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-22",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250522-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-22",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250523-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-23",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 1,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250523-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-23",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250523-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-23",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250523-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-23",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250523-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-23",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250524-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-24",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 10,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250524-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-24",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 8,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250524-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-24",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250524-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-24",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250524-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-24",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250525-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-25",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250525-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-25",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250525-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-25",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250525-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-25",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250525-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-25",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250527-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-27",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250527-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-27",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250527-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-27",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250527-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-27",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250527-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-27",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250528-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-28",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250528-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-28",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250528-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-28",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250528-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-28",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 12,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250528-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-28",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 7,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250529-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-29",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250529-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-29",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250529-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-29",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250529-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-29",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250529-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-29",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250530-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-30",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250530-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-30",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250530-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-30",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250530-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-30",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250530-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-30",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250531-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-31",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250531-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-31",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250531-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-31",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250531-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-31",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250531-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-05-31",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250601-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-01",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250601-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-01",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250601-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-01",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250601-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-01",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 16
+    },
+    {
+      "gameKey": "20250601-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-01",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250603-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-03",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 15,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250603-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-03",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250603-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-03",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 11,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250603-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-03",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250603-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-03",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 0,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250604-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-04",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 8,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250604-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-04",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250604-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-04",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250604-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-04",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250604-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-04",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250605-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-05",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250605-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-05",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250605-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-05",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 10,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250605-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-05",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250605-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-05",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250606-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-06",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250606-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-06",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250606-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-06",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250606-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-06",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250606-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-06",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250607-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-07",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 9,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250607-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-07",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 11,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250607-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-07",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250607-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-07",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250607-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-07",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250608-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-08",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250608-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-08",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250608-NC-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-08",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250608-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-08",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250608-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-08",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250610-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-10",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250610-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-10",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250610-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-10",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 8,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250610-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-10",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250610-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-10",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250611-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-11",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250611-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-11",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250611-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-11",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250611-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-11",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250611-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-11",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250612-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-12",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250612-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-12",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 12,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250612-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-12",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250612-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-12",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 8,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250612-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-12",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250613-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250613-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-13",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250613-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-13",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250613-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-13",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250613-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-13",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250614-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-14",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250614-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-14",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250614-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-14",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 10,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250614-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-14",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250614-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-14",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250615-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-15",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250615-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-15",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250615-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-15",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 16,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250615-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-15",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250615-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-15",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250617-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-17",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250617-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-17",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 6,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250617-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 1,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250617-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-17",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250617-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-17",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 11,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250618-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-18",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 8,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250618-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-18",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250618-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-18",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250618-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-18",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250618-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-18",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250619-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-19",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250619-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-19",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250619-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-19",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 9,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250619-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-19",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250619-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-19",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250620-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-20",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250620-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-20",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250620-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-20",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250620-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-20",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250620-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-20",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250621-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-21",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250621-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-21",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250621-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-21",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250621-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-21",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250621-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-21",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250622-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-22",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 5,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250622-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-22",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250622-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-22",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250622-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-22",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250622-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-22",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250624-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-24",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250624-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-24",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250624-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-24",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250624-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-24",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250624-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-24",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250625-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-25",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250625-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-25",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250625-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-25",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250625-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-25",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250625-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-25",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250626-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-26",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250626-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-26",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250626-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-26",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250626-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-26",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250626-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-26",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 5,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250627-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-27",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250627-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-27",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250627-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-27",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 11,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250627-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-27",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250627-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-27",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250628-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-28",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 9,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250628-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-28",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250628-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-28",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250628-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-28",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250628-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-28",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 0,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250629-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 7,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250629-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-29",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 12,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250629-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-29",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250629-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-29",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 5,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250629-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-06-29",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250701-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-01",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250701-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-01",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250701-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-01",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250701-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-01",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250701-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-01",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250702-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-02",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250702-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-02",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250702-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-02",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250702-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-02",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 8,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250702-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-02",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250703-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-03",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250703-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-03",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 0,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250703-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-03",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250703-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-03",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250703-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-03",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250704-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-04",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250704-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-04",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250704-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-04",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250704-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-04",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250704-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-04",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250705-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-05",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250705-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-05",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250705-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-05",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250705-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-05",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250705-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-05",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250706-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-06",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 10,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250706-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-06",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 7,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250706-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-06",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250706-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-06",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250706-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-06",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250708-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-08",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250708-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-08",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250708-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-08",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 8,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250708-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-08",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250708-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-08",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 8,
+      "homeScore": 14
+    },
+    {
+      "gameKey": "20250709-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-09",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250709-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-09",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 10,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250709-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-09",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250709-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-09",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250709-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-09",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250710-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-10",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250710-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-10",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250710-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-10",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250710-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-10",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250710-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-10",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250717-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-17",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250717-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-17",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250717-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-17",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250717-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-17",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250717-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-17",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250718-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-18",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250718-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-18",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250718-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-18",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250718-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-18",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250718-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-18",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250719-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-19",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250719-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-19",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250719-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-19",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250719-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-19",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250719-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-19",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250720-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-20",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250720-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-20",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250720-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-20",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 10,
+      "homeScore": 15
+    },
+    {
+      "gameKey": "20250720-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-20",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 10,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250720-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-20",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250722-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-22",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250722-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-22",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250722-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-22",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250722-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-22",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 9,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250722-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-22",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250723-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-23",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20250723-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-23",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250723-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-23",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250723-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-23",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250723-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-23",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250724-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-24",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250724-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-24",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250724-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-24",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250724-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-24",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 8,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250724-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-24",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250725-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-25",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250725-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-25",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250725-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-25",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 16
+    },
+    {
+      "gameKey": "20250725-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-25",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250725-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-25",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250726-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-26",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250726-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-26",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250726-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-26",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250726-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-26",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 11,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250726-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-26",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250727-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-27",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250727-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-27",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250727-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-27",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250727-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-27",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250727-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-27",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250729-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-29",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250729-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-29",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250729-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-29",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250729-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-29",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 9,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250729-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250730-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-30",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250730-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-30",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250730-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-30",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250730-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-30",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250730-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-30",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250731-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-31",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 18
+    },
+    {
+      "gameKey": "20250731-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-31",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250731-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-31",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 5,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250731-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-31",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250731-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-07-31",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250801-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-01",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 7,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250801-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-01",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250801-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-01",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250801-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-01",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250801-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-01",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 0,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250802-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-02",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250802-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-02",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250802-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-02",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250802-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-02",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250802-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-02",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250803-LOTTE-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-03",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250803-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-03",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250803-LG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-03",
+      "awayTeam": "LG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250803-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-03",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250803-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-03",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250805-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-05",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250805-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-05",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250805-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-05",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250805-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-05",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 8,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250805-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-05",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250806-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-06",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 10,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250806-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-06",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250806-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-06",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250806-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-06",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250806-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-06",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250807-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-07",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250807-SAMSUNG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-07",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250807-KIA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-07",
+      "awayTeam": "KIA",
+      "homeTeam": "LOTTE",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250807-KIWOOM-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-07",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "NC",
+      "awayScore": 13,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250807-KT-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-07",
+      "awayTeam": "KT",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250808-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-08",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250808-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-08",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250808-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-08",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250808-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-08",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250808-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-08",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250809-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-09",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 1,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250809-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-09",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250809-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-09",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250809-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-09",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250809-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-09",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250810-DOOSAN-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-10",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250810-HANWHA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-10",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250810-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-10",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 10,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250810-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-10",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 12,
+      "homeScore": 16
+    },
+    {
+      "gameKey": "20250810-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-10",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250812-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-12",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250812-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-12",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250812-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-12",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250812-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-12",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 11,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250812-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-12",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250813-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-13",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250813-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250813-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-13",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 9,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250813-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-13",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250813-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-13",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250814-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-14",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250814-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-14",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250814-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-14",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 10,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250814-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-14",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250814-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-14",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250815-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-15",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250815-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-15",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250815-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-15",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 10,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250815-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-15",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250815-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-15",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250816-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-16",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250816-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-16",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 7,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250816-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-16",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250816-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-16",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250816-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-16",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250817-KT-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-17",
+      "awayTeam": "KT",
+      "homeTeam": "KIWOOM",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250817-KIA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-17",
+      "awayTeam": "KIA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250817-LG-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-17",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250817-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-17",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 8,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250817-HANWHA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-17",
+      "awayTeam": "HANWHA",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250819-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-19",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250819-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-19",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250819-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-19",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250819-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-19",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 9,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250819-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-19",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250820-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-20",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250820-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-20",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250820-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-20",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250820-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-20",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250820-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-20",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 13,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250821-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-21",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250821-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-21",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250821-SSG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-21",
+      "awayTeam": "SSG",
+      "homeTeam": "KT",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250821-KIWOOM-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-21",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KIA",
+      "awayScore": 11,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250821-DOOSAN-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-21",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250822-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-22",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 13,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250822-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-22",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250822-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-22",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250822-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-22",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 14,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250822-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-22",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250823-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-23",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250823-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-23",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250823-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-23",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250823-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-23",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250823-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-23",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250824-KT-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-24",
+      "awayTeam": "KT",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250824-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-24",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250824-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-24",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 17,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250824-LG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-24",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250824-SSG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-24",
+      "awayTeam": "SSG",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250826-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-26",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250826-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-26",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250826-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-26",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250826-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-26",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250826-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-26",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250827-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-27",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 14,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250827-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-27",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250827-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-27",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 7,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250827-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-27",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 10,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250827-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-27",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250828-SAMSUNG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-28",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250828-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-28",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 10,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250828-KT-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-28",
+      "awayTeam": "KT",
+      "homeTeam": "LOTTE",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250828-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-28",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250828-HANWHA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-28",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250829-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-29",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 3,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250829-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-29",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250829-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-29",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 7,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250829-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-29",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 10,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250829-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250830-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-30",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250830-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-30",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 12,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250830-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-30",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 8,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250830-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-30",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250830-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-30",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250831-KIWOOM-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-31",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250831-NC-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-31",
+      "awayTeam": "NC",
+      "homeTeam": "SSG",
+      "awayScore": 8,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250831-DOOSAN-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-31",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LOTTE",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250831-KIA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-31",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250831-SAMSUNG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-08-31",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250902-LOTTE-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-02",
+      "awayTeam": "LOTTE",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250902-KIWOOM-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-02",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SSG",
+      "awayScore": 1,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250902-NC-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-02",
+      "awayTeam": "NC",
+      "homeTeam": "KT",
+      "awayScore": 9,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250902-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-02",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 21
+    },
+    {
+      "gameKey": "20250903-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-03",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250903-LOTTE-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-03",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KT",
+      "awayScore": 8,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250903-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-03",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250903-NC-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-03",
+      "awayTeam": "NC",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250904-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-04",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250904-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-04",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 12,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250904-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-04",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 10,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250904-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-04",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250905-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-05",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250905-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-05",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250905-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-05",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250905-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-05",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250906-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-06",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250906-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-06",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250906-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-06",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 7,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250906-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-06",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250907-SSG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-07",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250907-HANWHA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-07",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250907-KIA-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-07",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250909-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-09",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250909-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-09",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250909-DOOSAN-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-09",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20250909-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-09",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250909-LG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-09",
+      "awayTeam": "LG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20250910-LG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-10",
+      "awayTeam": "LG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250910-HANWHA-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-10",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LOTTE",
+      "awayScore": 13,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250910-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-10",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250910-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-10",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250911-KT-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-11",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250911-SSG-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-11",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 8,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250911-LOTTE-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-11",
+      "awayTeam": "LOTTE",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250911-NC-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-11",
+      "awayTeam": "NC",
+      "homeTeam": "KIWOOM",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250912-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-12",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250912-DOOSAN-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-12",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250912-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-12",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250913-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-13",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250913-SSG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-13",
+      "awayTeam": "SSG",
+      "homeTeam": "LOTTE",
+      "awayScore": 11,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250913-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-13",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250913-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-13",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250913-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-13",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 5,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250914-KIA-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-14",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 14
+    },
+    {
+      "gameKey": "20250914-KT-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-14",
+      "awayTeam": "KT",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250914-DOOSAN-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-14",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "NC",
+      "awayScore": 0,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250914-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-14",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 13,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250915-KIWOOM-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-15",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "HANWHA",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250916-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-16",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250916-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-16",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250916-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-16",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250916-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-16",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 10,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250916-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-16",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 11,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250917-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250917-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250917-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250917-SSG-NC-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 0,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250917-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250917-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-17",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250918-LG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-18",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250918-LG-KT-2",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-18",
+      "awayTeam": "LG",
+      "homeTeam": "KT",
+      "awayScore": 14,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250918-KIWOOM-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-18",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250918-SAMSUNG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-18",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250918-HANWHA-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-18",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250919-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-19",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250919-LOTTE-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-19",
+      "awayTeam": "LOTTE",
+      "homeTeam": "NC",
+      "awayScore": 18,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250919-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-19",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250920-SAMSUNG-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-20",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LG",
+      "awayScore": 14,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250920-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-20",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 15
+    },
+    {
+      "gameKey": "20250920-KIWOOM-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-20",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "LOTTE",
+      "awayScore": 15,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250920-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-20",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250920-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-20",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 4,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250921-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-21",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250921-SAMSUNG-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-21",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KT",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250921-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-21",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 7,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20250922-DOOSAN-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-22",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SSG",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250923-KIA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-23",
+      "awayTeam": "KIA",
+      "homeTeam": "SSG",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250923-DOOSAN-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-23",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250923-KIWOOM-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-23",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "KT",
+      "awayScore": 0,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250923-NC-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-23",
+      "awayTeam": "NC",
+      "homeTeam": "LOTTE",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250924-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-24",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250924-LOTTE-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-24",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250924-LG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-24",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250924-KIA-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-24",
+      "awayTeam": "KIA",
+      "homeTeam": "KIWOOM",
+      "awayScore": 2,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250925-HANWHA-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-25",
+      "awayTeam": "HANWHA",
+      "homeTeam": "DOOSAN",
+      "awayScore": 0,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250925-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-25",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 10,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250925-KIWOOM-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-25",
+      "awayTeam": "KIWOOM",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 12
+    },
+    {
+      "gameKey": "20250925-LG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-25",
+      "awayTeam": "LG",
+      "homeTeam": "LOTTE",
+      "awayScore": 11,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250926-NC-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-26",
+      "awayTeam": "NC",
+      "homeTeam": "DOOSAN",
+      "awayScore": 3,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250926-KT-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-26",
+      "awayTeam": "KT",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250926-SAMSUNG-LOTTE-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-26",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "LOTTE",
+      "awayScore": 9,
+      "homeScore": 10
+    },
+    {
+      "gameKey": "20250926-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-26",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 1,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250927-SSG-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-27",
+      "awayTeam": "SSG",
+      "homeTeam": "DOOSAN",
+      "awayScore": 6,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250927-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-27",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20250927-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-27",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 9,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250928-LOTTE-DOOSAN-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-28",
+      "awayTeam": "LOTTE",
+      "homeTeam": "DOOSAN",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250928-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-28",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250928-SAMSUNG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-28",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20250928-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-28",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20250929-LOTTE-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-29",
+      "awayTeam": "LOTTE",
+      "homeTeam": "SSG",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250929-NC-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-29",
+      "awayTeam": "NC",
+      "homeTeam": "KIA",
+      "awayScore": 13,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20250929-LG-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-29",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20250930-DOOSAN-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-30",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": 6,
+      "homeScore": 0
+    },
+    {
+      "gameKey": "20250930-KIA-SAMSUNG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-30",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20250930-KT-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-30",
+      "awayTeam": "KT",
+      "homeTeam": "NC",
+      "awayScore": 4,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20250930-SSG-KIWOOM-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-30",
+      "awayTeam": "SSG",
+      "homeTeam": "KIWOOM",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20250930-LOTTE-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-09-30",
+      "awayTeam": "LOTTE",
+      "homeTeam": "HANWHA",
+      "awayScore": 0,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20251001-NC-LG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-01",
+      "awayTeam": "NC",
+      "homeTeam": "LG",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20251001-HANWHA-SSG-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-01",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20251001-KT-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-01",
+      "awayTeam": "KT",
+      "homeTeam": "KIA",
+      "awayScore": 9,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20251002-SSG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-02",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20251003-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-03",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20251003-HANWHA-KT-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-03",
+      "awayTeam": "HANWHA",
+      "homeTeam": "KT",
+      "awayScore": 6,
+      "homeScore": 6
+    },
+    {
+      "gameKey": "20251003-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-03",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20251004-SSG-NC-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-04",
+      "awayTeam": "SSG",
+      "homeTeam": "NC",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20251004-SAMSUNG-KIA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2025-10-04",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": 8,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20251006-NC-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-06",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameKey": "20251007-NC-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-07",
+      "awayTeam": "NC",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20251009-SAMSUNG-SSG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-09",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 2
+    },
+    {
+      "gameKey": "20251011-SAMSUNG-SSG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-11",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20251013-SSG-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-13",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20251014-SSG-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-14",
+      "awayTeam": "SSG",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 2,
+      "homeScore": 5
+    },
+    {
+      "gameKey": "20251018-SAMSUNG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-18",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 8,
+      "homeScore": 9
+    },
+    {
+      "gameKey": "20251019-SAMSUNG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-19",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 3
+    },
+    {
+      "gameKey": "20251021-HANWHA-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-21",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 5,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20251022-HANWHA-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-22",
+      "awayTeam": "HANWHA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20251024-SAMSUNG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-24",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "HANWHA",
+      "awayScore": 2,
+      "homeScore": 11
+    },
+    {
+      "gameKey": "20251026-HANWHA-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-26",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 2,
+      "homeScore": 8
+    },
+    {
+      "gameKey": "20251027-HANWHA-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-27",
+      "awayTeam": "HANWHA",
+      "homeTeam": "LG",
+      "awayScore": 5,
+      "homeScore": 13
+    },
+    {
+      "gameKey": "20251029-LG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-29",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 3,
+      "homeScore": 7
+    },
+    {
+      "gameKey": "20251030-LG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-30",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 7,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20251031-LG-HANWHA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2025-10-31",
+      "awayTeam": "LG",
+      "homeTeam": "HANWHA",
+      "awayScore": 4,
+      "homeScore": 1
+    }
+  ]
+}

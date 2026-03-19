@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./CardPagination.stories";
+
+<Meta of={Stories} />
+
+# CardPagination
+
+카드 기반 콘텐츠의 페이지 이동을 위한 페이지네이션 컴포넌트입니다. 현재 페이지와 전체 페이지 수를 표시합니다.
+
+## 사용법
+
+<Canvas of={Stories.Default} />
+<Controls of={Stories.Default} />
+
+## 변형
+
+### 첫 번째 페이지
+
+<Canvas of={Stories.FirstPage} />
+
+### 마지막 페이지
+
+<Canvas of={Stories.LastPage} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- 이전/다음 버튼이 첫 페이지 또는 마지막 페이지에서 비활성화됩니다.
+- 키보드 `Tab`으로 버튼 간 이동이 가능합니다.
+- 현재 페이지 정보가 스크린 리더에 전달됩니다.

@@ -1,0 +1,16 @@
+{
+  "name": "@star-light/test-utils",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./setup": "./setup.ts"
+  },
+  "dependencies": {
+    "@testing-library/react": "^16.3.0"
+  },
+  "peerDependencies": {
+    "vitest": ">=3.0.0"
+  }
+}

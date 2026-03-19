@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./IconButton.stories";
+
+<Meta of={Stories} />
+
+# IconButton
+
+아이콘과 이름을 표시하는 버튼 컴포넌트입니다. 일반, 폴더, 빈 상태 등 다양한 유형을 지원합니다.
+
+## 사용법
+
+<Canvas of={Stories.Normal} />
+<Controls of={Stories.Normal} />
+
+## 변형
+
+### 폴더
+
+<Canvas of={Stories.Folder} />
+
+### 빈 상태
+
+<Canvas of={Stories.Empty} />
+
+### 가로 레이아웃
+
+<Canvas of={Stories.Horizontal} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- `button` 역할을 가지며 `Enter` 및 `Space`로 활성화됩니다.
+- 아이콘에 적절한 `aria-label`이 제공되어야 합니다.
+- 포커스 시 시각적 윤곽선이 표시됩니다.

@@ -1,0 +1,34 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./Tabs.stories";
+
+<Meta of={Stories} />
+
+# Tabs
+
+탭 형태의 내비게이션 컴포넌트입니다. Primary와 Secondary 두 가지 스타일 변형을 제공합니다.
+
+## 사용법
+
+<Canvas of={Stories.Primary} />
+<Controls of={Stories.Primary} />
+
+## 변형
+
+### Secondary 스타일
+
+<Canvas of={Stories.Secondary} />
+
+### 인터랙티브
+
+<Canvas of={Stories.Interactive} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- `tablist` 역할을 가지며 각 탭은 `tab` 역할을 가집니다.
+- 화살표 키(`←`, `→`)로 탭 간 이동이 가능합니다.
+- 활성 탭에 `aria-selected="true"` 속성이 적용됩니다.
+- 탭 패널에 `tabpanel` 역할과 해당 탭과의 연결이 설정됩니다.

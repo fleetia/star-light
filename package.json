@@ -1,0 +1,46 @@
+{
+  "name": "star-light-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -F @star-light/extension dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test:run",
+    "storybook": "pnpm -F @star-light/components storybook",
+    "build-storybook": "pnpm -F @star-light/components build-storybook",
+    "dev:components": "pnpm -F @star-light/components dev",
+    "build:components": "pnpm -F @star-light/components build",
+    "test:components": "pnpm -F @star-light/components test",
+    "dev:lotuspad": "pnpm -F @star-light/extension dev",
+    "build:lotuspad": "pnpm -F @star-light/extension build",
+    "dev:kbo": "pnpm -F @star-light/kbo-knit dev",
+    "build:kbo": "pnpm -F @star-light/kbo-knit build",
+    "lint:kbo": "pnpm -F @star-light/kbo-knit lint",
+    "preview:kbo": "pnpm -F @star-light/kbo-knit preview",
+    "scrape:kbo": "pnpm -F @star-light/kbo-knit scrape",
+    "dev:homepage": "pnpm -F @star-light/homepage dev",
+    "build:homepage": "pnpm -F @star-light/homepage build",
+    "lint": "pnpm -r --if-present lint",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@star-light/config": "workspace:*",
+    "eslint": "^9.39.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.3"
+  },
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
+}

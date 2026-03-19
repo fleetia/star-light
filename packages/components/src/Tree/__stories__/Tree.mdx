@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./Tree.stories";
+
+<Meta of={Stories} />
+
+# Tree
+
+계층적 데이터를 트리 구조로 표시하는 컴포넌트입니다. 노드 펼침/접기, 가시성 토글, 드래그 재정렬을 지원합니다.
+
+## 사용법
+
+<Canvas of={Stories.Default} />
+<Controls of={Stories.Default} />
+
+## 변형
+
+### 가시성 토글
+
+<Canvas of={Stories.WithVisibilityToggle} />
+
+### 재정렬 지원
+
+<Canvas of={Stories.WithReorder} />
+
+### 인터랙티브
+
+<Canvas of={Stories.Interactive} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- `tree` 역할을 가지며 각 노드는 `treeitem` 역할을 가집니다.
+- 화살표 키(`↑`, `↓`)로 노드 간 이동, `←`로 접기, `→`로 펼치기가 가능합니다.
+- 펼침/접힘 상태가 `aria-expanded`로 표시됩니다.
+- 가시성 토글 버튼에 적절한 `aria-label`이 제공됩니다.

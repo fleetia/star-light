@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/components" },
+    { "path": "apps/extension" },
+    { "path": "apps/kbo-knit" }
+  ]
+}

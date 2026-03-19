@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./Breadcrumb.stories";
+
+<Meta of={Stories} />
+
+# Breadcrumb
+
+현재 위치의 계층 경로를 표시하는 탐색 컴포넌트입니다. 상위 경로를 클릭하여 빠르게 이동할 수 있습니다.
+
+## 사용법
+
+<Canvas of={Stories.Default} />
+<Controls of={Stories.Default} />
+
+## 변형
+
+### 긴 경로
+
+<Canvas of={Stories.WithMultipleItems} />
+
+### 단일 항목
+
+<Canvas of={Stories.SingleItem} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- `nav` 요소와 `aria-label="breadcrumb"`로 탐색 영역을 표시합니다.
+- 현재 페이지 항목에 `aria-current="page"` 속성이 적용됩니다.
+- 구분자는 장식 요소로 스크린 리더에서 무시됩니다.

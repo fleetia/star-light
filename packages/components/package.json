@@ -1,0 +1,161 @@
+{
+  "name": "@star-light/components",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./Badge": {
+      "types": "./dist/Badge/index.d.ts",
+      "import": "./dist/Badge/index.js"
+    },
+    "./Box": {
+      "types": "./dist/Box/index.d.ts",
+      "import": "./dist/Box/index.js"
+    },
+    "./Breadcrumb": {
+      "types": "./dist/Breadcrumb/index.d.ts",
+      "import": "./dist/Breadcrumb/index.js"
+    },
+    "./Button": {
+      "types": "./dist/Button/index.d.ts",
+      "import": "./dist/Button/index.js"
+    },
+    "./CardPagination": {
+      "types": "./dist/CardPagination/index.d.ts",
+      "import": "./dist/CardPagination/index.js"
+    },
+    "./Checkbox": {
+      "types": "./dist/Checkbox/index.d.ts",
+      "import": "./dist/Checkbox/index.js"
+    },
+    "./CollapsibleSection": {
+      "types": "./dist/CollapsibleSection/index.d.ts",
+      "import": "./dist/CollapsibleSection/index.js"
+    },
+    "./ColorPicker": {
+      "types": "./dist/ColorPicker/index.d.ts",
+      "import": "./dist/ColorPicker/index.js"
+    },
+    "./ColorRow": {
+      "types": "./dist/ColorRow/index.d.ts",
+      "import": "./dist/ColorRow/index.js"
+    },
+    "./ConfirmDialog": {
+      "types": "./dist/ConfirmDialog/index.d.ts",
+      "import": "./dist/ConfirmDialog/index.js"
+    },
+    "./ContextMenu": {
+      "types": "./dist/ContextMenu/index.d.ts",
+      "import": "./dist/ContextMenu/index.js"
+    },
+    "./IconButton": {
+      "types": "./dist/IconButton/index.d.ts",
+      "import": "./dist/IconButton/index.js"
+    },
+    "./Modal": {
+      "types": "./dist/Modal/index.d.ts",
+      "import": "./dist/Modal/index.js"
+    },
+    "./NavigationButton": {
+      "types": "./dist/NavigationButton/index.d.ts",
+      "import": "./dist/NavigationButton/index.js"
+    },
+    "./PositionGrid": {
+      "types": "./dist/PositionGrid/index.d.ts",
+      "import": "./dist/PositionGrid/index.js"
+    },
+    "./RangeInput": {
+      "types": "./dist/RangeInput/index.d.ts",
+      "import": "./dist/RangeInput/index.js"
+    },
+    "./Select": {
+      "types": "./dist/Select/index.d.ts",
+      "import": "./dist/Select/index.js"
+    },
+    "./Sidebar": {
+      "types": "./dist/Sidebar/index.d.ts",
+      "import": "./dist/Sidebar/index.js"
+    },
+    "./Tabs": {
+      "types": "./dist/Tabs/index.d.ts",
+      "import": "./dist/Tabs/index.js"
+    },
+    "./TextInput": {
+      "types": "./dist/TextInput/index.d.ts",
+      "import": "./dist/TextInput/index.js"
+    },
+    "./Toggle": {
+      "types": "./dist/Toggle/index.d.ts",
+      "import": "./dist/Toggle/index.js"
+    },
+    "./Tree": {
+      "types": "./dist/Tree/index.d.ts",
+      "import": "./dist/Tree/index.js"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.js"
+    },
+    "./i18n": {
+      "types": "./dist/i18n/index.d.ts",
+      "import": "./dist/i18n/index.js"
+    },
+    "./styles/*": "./dist/styles/*"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c && tsc --emitDeclarationOnly",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint ."
+  },
+  "peerDependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@star-light/config": "workspace:*",
+    "@star-light/test-utils": "workspace:*",
+    "@storybook/addon-docs": "^10.3.1",
+    "@storybook/react": "^10.3.1",
+    "@storybook/react-vite": "^10.3.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vanilla-extract/css": "^1.20.0",
+    "@vanilla-extract/rollup-plugin": "^1.5.3",
+    "@vanilla-extract/vite-plugin": "^5.2.1",
+    "@vitejs/plugin-react": "^6.0.0",
+    "eslint": "^9.39.4",
+    "happy-dom": "^17.4.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rollup": "^4.60.0",
+    "storybook": "^10.3.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.1.4"
+  }
+}

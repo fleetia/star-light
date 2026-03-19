@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, ArgTypes } from "@storybook/addon-docs/blocks";
+import * as Stories from "./ContextMenu.stories";
+
+<Meta of={Stories} />
+
+# ContextMenu
+
+우클릭 또는 특정 트리거로 나타나는 컨텍스트 메뉴 컴포넌트입니다. 위치 좌표를 기반으로 메뉴를 표시합니다.
+
+## 사용법
+
+<Canvas of={Stories.Default} />
+<Controls of={Stories.Default} />
+
+## 변형
+
+### 위험 항목 포함
+
+<Canvas of={Stories.WithDangerItem} />
+
+## Props
+
+<ArgTypes of={Stories} />
+
+## 접근성
+
+- `menu` 역할을 가지며 각 항목은 `menuitem` 역할을 가집니다.
+- 화살표 키(`↑`, `↓`)로 항목 간 이동이 가능합니다.
+- `Enter`로 항목을 선택하고 `Escape`로 메뉴를 닫을 수 있습니다.
+- 메뉴가 열리면 포커스가 자동으로 첫 번째 항목으로 이동합니다.

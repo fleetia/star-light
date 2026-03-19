@@ -1,0 +1,50 @@
+name: "KBO Knit: Deploy to AWS"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/kbo-knit/**"
+      - "packages/components/**"
+      - "!apps/kbo-knit/data/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: kbo-knit-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm -F @star-light/kbo-knit build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.KBO_AWS_ROLE_ARN }}
+          aws-region: ${{ vars.KBO_AWS_REGION }}
+
+      - name: Sync to S3
+        run: aws s3 sync apps/kbo-knit/dist/ s3://${{ vars.KBO_S3_BUCKET }} --delete
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.KBO_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

@@ -1,0 +1,31 @@
+name: "KBO Knit: CI"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "apps/kbo-knit/**"
+      - "packages/components/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm -F @star-light/kbo-knit lint
+
+      - name: Type check & Build
+        run: pnpm -F @star-light/kbo-knit build
