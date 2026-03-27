@@ -31,15 +31,7 @@ KBO 경기 데이터 크롤링은 [kbo-scraper](https://github.com/colabear754/k
 
 ## Scraper
 
-GitHub Actions로 시즌 중(3~10월) 매일 KST 오전 9시에 전날 경기 결과를 자동 크롤링합니다.
-
-## Tech Stack
-
-| 영역     | 스택                                      |
-| -------- | ----------------------------------------- |
-| Frontend | React, TypeScript, Vite, vanilla-extract  |
-| Scraper  | Playwright                                |
-| Data     | GitHub Actions (시즌 중 매일 자동 크롤링) |
+GitHub Actions로 시즌 중(3~10월) 매일 KST 오전 3시에 전날 경기 결과를 자동 크롤링합니다.
 
 ## Getting Started
 
