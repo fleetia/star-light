@@ -1,59 +1,25 @@
 # Star-light
 
-귀찮아서, 쓰고싶어서 만드는 프로젝트들입니다.
+귀찮아서, 쓰고싶어서 만드는 프로젝트들의 모노레포입니다.
 
-매번 새로 세팅하기 귀찮으므로 대충 모노레포로 대충 만들었습니다.
-기여는 매우 환영하고있습니다.의견이 있거나 수정사항이 있거나 한다면 편하게 PR 주세요
+기여는 매우 환영합니다. 의견이 있거나 수정사항이 있다면 편하게 이슈나 PR을 남겨주세요.
 
-# Launchpad
+## 프로젝트
 
-Chrome 새 탭을 커스터마이징 가능한 북마크 그리드로 대체하는 확장 프로그램.
+### KBO Knit
 
-- 스크롤 모드 (고정 그리드 + 페이지네이션) / 펼치기 모드 (Masonry 레이아웃)
-- 9분할 위치 배치
-- 테마 프리셋 (라이트/다크) + 개별 색상 커스터마이징
-- 배경 이미지/동영상 지원
-- 북마크 및 설정 가져오기/내보내기
+크보니팅 프로젝트입니다.
 
-## 설치
+### Lotuspad
 
-```bash
-yarn install
-```
+## 문서
 
-## 개발
-
-```bash
-yarn dev
-```
-
-`http://localhost:5173`에서 실행됩니다. 개발 환경에서는 `chrome.storage` 대신 `localStorage`를 사용합니다.
-
-## 빌드
-
-```bash
-yarn build
-```
-
-`dist/` 폴더에 결과물이 생성됩니다. 배포용 zip 파일을 만들려면:
-
-```bash
-yarn pack
-```
-
-## Chrome에 로드
-
-1. `chrome://extensions` → **개발자 모드** 활성화
-2. **압축해제된 확장 프로그램을 로드합니다** → `dist/` 폴더 선택
-3. 새 탭 열기
-
-## 테스트
-
-```bash
-yarn test        # watch 모드
-yarn test:run    # 단일 실행
-```
+- [시작하기](docs/getting-started.md) — 설치, 실행, 빌드, 테스트
+- [개발자 기여 가이드](docs/contributing.md) — PR, 코드 스타일, 테스트
+- [비개발자 기여 가이드](docs/contributing-non-dev.md) — 이슈, 피드백, 번역
+- [포크 가이드](docs/forking.md) — 이 프로젝트를 포크해서 새 프로젝트 만들기
+- [AI 가이드](docs/ai-guide.md) — AI 코딩 도구를 위한 프로젝트 구조 안내
 
 ## 라이선스
 
-MIT
+[AGPL-3.0](LICENSE)
