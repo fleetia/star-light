@@ -29,10 +29,14 @@ export const variant = styleVariants({
   secondary: {
     background: vars.color.surface,
     color: vars.color.text,
-    selectors: {
-      "&:hover:not(:disabled)": {
-        background: vars.color.hoverBg,
-        color: vars.color.hoverText
+    "@media": {
+      "(hover: hover)": {
+        selectors: {
+          "&:hover:not(:disabled)": {
+            background: vars.color.hoverBg,
+            color: vars.color.hoverText
+          }
+        }
       }
     }
   },
@@ -40,9 +44,13 @@ export const variant = styleVariants({
     background: "transparent",
     color: vars.color.text,
     borderColor: "transparent",
-    selectors: {
-      "&:hover:not(:disabled)": {
-        background: "rgba(0, 0, 0, 0.04)"
+    "@media": {
+      "(hover: hover)": {
+        selectors: {
+          "&:hover:not(:disabled)": {
+            background: "rgba(0, 0, 0, 0.04)"
+          }
+        }
       }
     }
   },
@@ -50,10 +58,14 @@ export const variant = styleVariants({
     background: "#dc3545",
     color: "#ffffff",
     borderColor: "#dc3545",
-    selectors: {
-      "&:hover:not(:disabled)": {
-        background: "#c82333",
-        borderColor: "#c82333"
+    "@media": {
+      "(hover: hover)": {
+        selectors: {
+          "&:hover:not(:disabled)": {
+            background: "#c82333",
+            borderColor: "#c82333"
+          }
+        }
       }
     }
   }

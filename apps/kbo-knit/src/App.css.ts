@@ -74,6 +74,11 @@ export const footer = style({
   gap: "0.5rem"
 });
 
+export const footerIcons = style({
+  display: "flex",
+  gap: "0.75rem"
+});
+
 export const footerLink = style({
   color: vars.color.textPlaceholder,
   textDecoration: "none",
