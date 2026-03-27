@@ -139,7 +139,7 @@ export function App() {
           </a>
           <a
             className={s.footerLink}
-            href="https://x.com/lammerTheFlog"
+            href="https://x.com/FlogLammer"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"

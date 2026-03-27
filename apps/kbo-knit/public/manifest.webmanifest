@@ -4,8 +4,8 @@
   "description": "KBO 프로야구 경기 결과를 목도리 배색 패턴으로 만들어주는 웹앱",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1a1a1a",
+  "background_color": "#faf9f6",
+  "theme_color": "#faf9f6",
   "icons": [
     {
       "src": "/favicon.svg",

@@ -1570,12 +1570,12 @@ export function OptionsSidebar({
           <div className={cx("creditsList")}>
             <div className={cx("creditsItem")}>
               <a
-                href="https://x.com/lammerTheFlog"
+                href="https://x.com/FlogLammer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cx("creditsName")}
               >
-                @lammerTheFlog
+                @FlogLammer
               </a>
               <span className={cx("creditsRole")}>
                 {t("sidebar.general.credits.dev")}
