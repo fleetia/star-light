@@ -6,6 +6,7 @@ on:
     paths:
       - "apps/kbo-knit/**"
       - "packages/components/**"
+      - ".github/workflows/kbo-knit-deploy.yml"
       - "!apps/kbo-knit/data/**"
 
 permissions:
@@ -33,6 +34,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build design system
+        run: pnpm -F @star-light/components build
 
       - name: Build
         run: pnpm -F @star-light/kbo-knit build

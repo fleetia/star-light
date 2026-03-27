@@ -27,5 +27,8 @@ jobs:
       - name: Lint
         run: pnpm -F @star-light/kbo-knit lint
 
+      - name: Build design system
+        run: pnpm -F @star-light/components build
+
       - name: Type check & Build
         run: pnpm -F @star-light/kbo-knit build
