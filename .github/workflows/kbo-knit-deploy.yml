@@ -6,7 +6,6 @@ on:
     paths:
       - "apps/kbo-knit/**"
       - "packages/components/**"
-      - ".github/workflows/kbo-knit-deploy.yml"
       - "!apps/kbo-knit/data/**"
 
 permissions:
