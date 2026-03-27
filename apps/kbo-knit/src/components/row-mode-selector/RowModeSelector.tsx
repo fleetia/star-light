@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Select } from "@star-light/components/Select";
 import { TextInput } from "@star-light/components/TextInput";
 import { Box } from "@star-light/components/Box";
@@ -18,12 +19,20 @@ const MODE_LABELS: Record<RowMode, string> = {
   perDiff: "점수차이당"
 };
 
+function clampCount(v: string): number {
+  const n = parseInt(v, 10);
+  if (isNaN(n) || n < 1) return 1;
+  return Math.min(10, n);
+}
+
 export function RowModeSelector({
   mode,
   count,
   onModeChange,
   onCountChange
 }: Props) {
+  const [draft, setDraft] = useState<string | null>(null);
+
   return (
     <Box title="줄 수 설정" className={s.group}>
       <div className={s.row}>
@@ -41,10 +50,12 @@ export function RowModeSelector({
           type="number"
           min={1}
           max={10}
-          value={String(count)}
-          onChange={v => {
-            const n = Math.max(1, Math.min(10, Number(v) || 1));
-            onCountChange(n);
+          value={draft ?? String(count)}
+          onChange={v => setDraft(v)}
+          onBlur={() => {
+            const clamped = clampCount(draft ?? String(count));
+            onCountChange(clamped);
+            setDraft(null);
           }}
           className={s.countInput}
         />

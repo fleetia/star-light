@@ -8,6 +8,7 @@ export type TextInputProps = {
   placeholder?: string;
   value: string;
   onChange: (value: string) => void;
+  onBlur?: () => void;
   error?: string;
   type?: string;
   min?: number;
@@ -21,6 +22,7 @@ export function TextInput({
   placeholder,
   value,
   onChange,
+  onBlur,
   error,
   type = "text",
   min,
@@ -43,6 +45,7 @@ export function TextInput({
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}
+        onBlur={onBlur}
         placeholder={placeholder}
         min={min}
         max={max}
