@@ -116,12 +116,30 @@ pnpm lint
 pnpm format
 ```
 
+## 앱별 차이점
+
+### Lotuspad (apps/extension/)
+
+- 테스트 필수 — Vitest + React Testing Library, Chrome API 모킹 (`test/setup.ts`)
+- 스타일링: SCSS + Vanilla Extract 병행
+- 경로 별칭 `@/` 사용 (예: `@/utils/storage`)
+- 자동 배포 없음 — Chrome Web Store 수동 업로드
+- 설정 모달에서 저장 전까지 실제 컴포넌트에 CSS 변수를 적용하지 마세요
+
+### KBO Knit (apps/kbo-knit/)
+
+- 유닛 테스트 없음 (추가 환영)
+- 스타일링: Vanilla Extract만 사용
+- TypeScript 더 엄격 — `noUnusedLocals`, `noUnusedParameters` 활성화
+- tsconfig이 앱(`tsconfig.app.json`)과 스크립트(`tsconfig.node.json`)로 분리
+- `data/` 디렉토리는 스크래퍼가 자동 생성 — 직접 수정 금지
+- main 머지 시 AWS S3 + CloudFront 자동 배포
+
 ## 주의사항
 
-- 커밋 메시지에 "Co-Authored-By" 트레일러를 추가하지 마세요
 - 새 앱이나 패키지를 만들 때는 기존 앱(extension, kbo-knit)의 설정 패턴을 먼저 확인하고 따르세요
-- 설정 모달에서 저장 전까지 실제 컴포넌트에 CSS 변수를 적용하지 마세요 (Lotuspad)
+- 앱별 기여 가이드: [Lotuspad](lotuspad/contributing.md), [KBO Knit](kbo-knit/contributing.md)
 
 ## 라이선스
 
-이 프로젝트는 AGPL-3.0입니다. 기여한 코드도 동일 라이선스가 적용됩니다.
+이 프로젝트는 AGPL-3.0입니다. 포크 한 코드도 동일 라이선스가 적용됩니다.
