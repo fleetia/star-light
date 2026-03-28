@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><text x="64" y="100" font-size="100" text-anchor="middle">⚾</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- shadow -->
+  <circle cx="64" cy="64" r="60" fill="#e8e8e8"/>
+  <!-- ball -->
+  <circle cx="64" cy="64" r="58" fill="#fff"/>
+  <!-- left seam ) : start x=44, curves right toward center -->
+  <path d="M44 28 C52 44, 52 84, 44 100" stroke="#d63031" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="44" cy="28" r="3" fill="#d63031"/>
+  <circle cx="44" cy="100" r="3" fill="#d63031"/>
+  <!-- right seam ( : start x=84, curves left toward center -->
+  <path d="M84 28 C76 44, 76 84, 84 100" stroke="#d63031" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="84" cy="28" r="3" fill="#d63031"/>
+  <circle cx="84" cy="100" r="3" fill="#d63031"/>
+</svg>
