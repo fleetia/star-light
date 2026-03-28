@@ -50,7 +50,7 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           git add apps/kbo-knit/data/
           git commit -m "data(kbo-knit): update KBO $(date +%Y) results (${DATE})"
-          git push
+          HUSKY=0 git push
 
       - name: Configure AWS credentials
         if: steps.changes.outputs.changed == 'true'
