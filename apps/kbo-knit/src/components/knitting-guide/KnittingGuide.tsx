@@ -1,4 +1,5 @@
 import type { ScarfRow } from "../../types/game.types";
+import { useProgress } from "../../hooks/useProgress";
 import * as s from "./KnittingGuide.css";
 
 type Props = {
@@ -8,15 +9,13 @@ type Props = {
 };
 
 export function KnittingGuide({ rows, checked, onToggleCheck }: Props) {
-  const doneCount = rows.filter(r => checked[r.rowKey]).length;
-  const total = rows.length;
-  const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+  const { doneCount, total, percentage } = useProgress(rows, checked);
 
   return (
     <div className={s.container}>
       <div className={s.header}>
         <span className={s.progress}>
-          {doneCount} / {total}단 완료 ({pct}%)
+          {doneCount} / {total}단 완료 ({percentage}%)
         </span>
       </div>
 

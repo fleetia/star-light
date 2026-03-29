@@ -19,7 +19,7 @@ export const track = style({
   width: "36px",
   height: "20px",
   borderRadius: "10px",
-  background: vars.color.border,
+  background: vars.color.muted,
   border: "none",
   cursor: "pointer",
   padding: 0,

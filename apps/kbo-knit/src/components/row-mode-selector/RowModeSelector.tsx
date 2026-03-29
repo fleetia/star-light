@@ -16,6 +16,7 @@ type Props = {
 const MODE_LABELS: Record<RowMode, string> = {
   perGame: "경기당",
   perScore: "득점당",
+  perOpScore: "득점/실점당",
   perDiff: "점수차이당"
 };
 

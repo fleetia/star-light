@@ -1,1 +1,27 @@
-pnpm test
+#!/bin/sh
+
+CHANGED=$(git diff --name-only origin/main...HEAD 2>/dev/null || git diff --name-only HEAD~1)
+
+# data/ 만 변경된 경우 스킵
+if echo "$CHANGED" | grep -qv '^apps/kbo-knit/data/' 2>/dev/null; then
+  :
+else
+  echo "data only — skipping tests"
+  exit 0
+fi
+
+TARGETS=""
+
+if echo "$CHANGED" | grep -q '^apps/kbo-knit/src/'; then
+  TARGETS="$TARGETS --filter @star-light/kbo-knit"
+fi
+
+if echo "$CHANGED" | grep -q '^packages/components/src/'; then
+  TARGETS="$TARGETS --filter @star-light/components"
+fi
+
+if [ -n "$TARGETS" ]; then
+  pnpm $TARGETS test:run
+else
+  pnpm -r test:run
+fi

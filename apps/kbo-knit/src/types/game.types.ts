@@ -52,9 +52,17 @@ export type ScarfRow = {
   prefix: "H" | "A";
 };
 
-export type RowMode = "perGame" | "perScore" | "perDiff";
+export type RowMode = "perGame" | "perScore" | "perOpScore" | "perDiff";
+
+export type TabKey = "pattern" | "guide" | "counter";
+
+export type CheckTiming = "start" | "end";
 
 export type AppState = {
+  activeTab?: TabKey;
+  checkTiming?: CheckTiming;
+  stockinetteEnabled?: boolean;
+  stockinetteOddKnit?: boolean;
   season: number;
   team: TeamCode;
   awaySame: boolean;
@@ -71,4 +79,5 @@ export type AppState = {
   checkedMap?: Record<string, Record<string, boolean>>;
   rowMode: RowMode;
   rowCount: number;
+  customGames: Game[];
 };

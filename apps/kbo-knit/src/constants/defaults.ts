@@ -17,7 +17,8 @@ export const DEFAULT_STATE: AppState = {
   },
   checked: {},
   rowMode: "perGame",
-  rowCount: 1
+  rowCount: 1,
+  customGames: []
 };
 
 export const STORAGE_KEY = "kbo-knit";

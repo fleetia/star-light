@@ -1,1 +1,8 @@
-export { Select, type SelectProps } from "./Select";
+export {
+  Select,
+  SelectLabel,
+  SelectGroup,
+  type SelectProps,
+  type SelectLabelProps,
+  type SelectGroupProps
+} from "./Select";

@@ -1,9 +1,12 @@
 import { useCallback, useMemo } from "react";
 import type {
   AppState,
+  CheckTiming,
+  Game,
   RowMode,
   ScarfColors,
   SeriesType,
+  TabKey,
   TeamCode
 } from "../types/game.types";
 import { TEAM_COLORS } from "../constants/teams";
@@ -16,9 +19,15 @@ type AppActions = {
   setAwaySame: (awaySame: boolean) => void;
   toggleSeries: (series: SeriesType) => void;
   setColor: (key: keyof AppState["colors"], value: string) => void;
-  toggleChecked: (gameKey: string) => void;
+  toggleChecked: (gameKey: string, allRowKeys?: string[]) => void;
   setRowMode: (mode: RowMode) => void;
   setRowCount: (count: number) => void;
+  setActiveTab: (tab: TabKey) => void;
+  setCheckTiming: (timing: CheckTiming) => void;
+  setStockinetteEnabled: (enabled: boolean) => void;
+  setStockinetteOddKnit: (oddKnit: boolean) => void;
+  addCustomGame: (game: Game) => void;
+  removeCustomGame: (gameKey: string) => void;
   scarfColors: ScarfColors;
 };
 
@@ -105,16 +114,76 @@ export function useAppState(): [AppState, AppActions] {
   );
 
   const toggleChecked = useCallback(
-    (gameKey: string) =>
+    (gameKey: string, allRowKeys?: string[]) =>
       setState(prev => {
-        const next = { ...prev.checked };
-        if (next[gameKey]) {
-          delete next[gameKey];
-        } else {
-          next[gameKey] = true;
+        const wasChecked = prev.checked[gameKey];
+
+        if (!allRowKeys) {
+          const checked = wasChecked
+            ? Object.fromEntries(
+                Object.entries(prev.checked).filter(([k]) => k !== gameKey)
+              )
+            : { ...prev.checked, [gameKey]: true };
+          return { ...prev, checked };
         }
-        return { ...prev, checked: next };
+
+        const idx = allRowKeys.indexOf(gameKey);
+        if (idx === -1) return prev;
+
+        const keysToToggle = new Set(
+          wasChecked ? allRowKeys.slice(idx) : allRowKeys.slice(0, idx + 1)
+        );
+        const checked = wasChecked
+          ? Object.fromEntries(
+              Object.entries(prev.checked).filter(([k]) => !keysToToggle.has(k))
+            )
+          : {
+              ...prev.checked,
+              ...Object.fromEntries([...keysToToggle].map(k => [k, true]))
+            };
+
+        return { ...prev, checked };
       }),
+    [setState]
+  );
+
+  const setActiveTab = useCallback(
+    (tab: TabKey) => setState(prev => ({ ...prev, activeTab: tab })),
+    [setState]
+  );
+
+  const setCheckTiming = useCallback(
+    (checkTiming: CheckTiming) => setState(prev => ({ ...prev, checkTiming })),
+    [setState]
+  );
+
+  const setStockinetteEnabled = useCallback(
+    (stockinetteEnabled: boolean) =>
+      setState(prev => ({ ...prev, stockinetteEnabled })),
+    [setState]
+  );
+
+  const setStockinetteOddKnit = useCallback(
+    (stockinetteOddKnit: boolean) =>
+      setState(prev => ({ ...prev, stockinetteOddKnit })),
+    [setState]
+  );
+
+  const addCustomGame = useCallback(
+    (game: Game) =>
+      setState(prev => ({
+        ...prev,
+        customGames: [...(prev.customGames ?? []), game]
+      })),
+    [setState]
+  );
+
+  const removeCustomGame = useCallback(
+    (gameKey: string) =>
+      setState(prev => ({
+        ...prev,
+        customGames: (prev.customGames ?? []).filter(g => g.gameKey !== gameKey)
+      })),
     [setState]
   );
 
@@ -144,6 +213,12 @@ export function useAppState(): [AppState, AppActions] {
       toggleChecked,
       setRowMode,
       setRowCount,
+      setActiveTab,
+      setCheckTiming,
+      setStockinetteEnabled,
+      setStockinetteOddKnit,
+      addCustomGame,
+      removeCustomGame,
       scarfColors
     }
   ];

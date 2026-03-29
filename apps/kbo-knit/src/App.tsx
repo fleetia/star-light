@@ -1,13 +1,10 @@
-import { useMemo, useState } from "react";
+import { useCallback } from "react";
 import { Tabs } from "@star-light/components/Tabs";
 import { useAppState } from "./hooks/useAppState";
 import { useKboData } from "./hooks/useKboData";
-import {
-  getTeamGames,
-  buildScarfRows,
-  expandScarfRows,
-  countResults
-} from "./utils/gameUtils";
+import { useCustomGameSync } from "./hooks/useCustomGameSync";
+import { useScarfData } from "./hooks/useScarfData";
+import type { TabKey } from "./types/game.types";
 import { SeasonSelector } from "./components/season-selector/SeasonSelector";
 import { TeamSelector } from "./components/team-selector/TeamSelector";
 import { SeriesFilter } from "./components/series-filter/SeriesFilter";
@@ -16,33 +13,34 @@ import { RowModeSelector } from "./components/row-mode-selector/RowModeSelector"
 import { ScarfPreview } from "./components/scarf-preview/ScarfPreview";
 import { ScarfHorizontal } from "./components/scarf-horizontal/ScarfHorizontal";
 import { KnittingGuide } from "./components/knitting-guide/KnittingGuide";
+import { RowCounter } from "./components/row-counter/RowCounter";
+import { GameEditor } from "./components/game-editor/GameEditor";
 import * as s from "./App.css";
-
-type Tab = "pattern" | "guide";
 
 export function App() {
   const [state, actions] = useAppState();
-  const [activeTab, setActiveTab] = useState<Tab>("pattern");
+  const activeTab = state.activeTab ?? "pattern";
   const { games, isLoading, error } = useKboData(state.season);
 
-  const filteredGames = useMemo(
-    () => getTeamGames(games, state.team, state.series),
-    [games, state.team, state.series]
+  const allGames = useCustomGameSync(
+    games,
+    state.customGames ?? [],
+    state.season,
+    actions.removeCustomGame
   );
 
-  const baseScarfRows = useMemo(
-    () => buildScarfRows(filteredGames, state.team, actions.scarfColors),
-    [filteredGames, state.team, actions.scarfColors]
+  const { scarfRows, rowKeys, wins, draws, losses } = useScarfData(
+    allGames,
+    state.team,
+    state.series,
+    actions.scarfColors,
+    state.rowMode,
+    state.rowCount
   );
 
-  const scarfRows = useMemo(
-    () => expandScarfRows(baseScarfRows, state.rowMode, state.rowCount),
-    [baseScarfRows, state.rowMode, state.rowCount]
-  );
-
-  const { wins, draws, losses } = useMemo(
-    () => countResults(baseScarfRows),
-    [baseScarfRows]
+  const handleToggleCheck = useCallback(
+    (key: string) => actions.toggleChecked(key, rowKeys),
+    [actions, rowKeys]
   );
 
   return (
@@ -88,9 +86,19 @@ export function App() {
             series={state.series}
           />
 
+          <GameEditor
+            team={state.team}
+            season={state.season}
+            series={state.series}
+            games={games}
+            customGames={state.customGames ?? []}
+            onAdd={actions.addCustomGame}
+            onRemove={actions.removeCustomGame}
+          />
+
           <Tabs
             activeKey={activeTab}
-            onChange={key => setActiveTab(key as Tab)}
+            onChange={key => actions.setActiveTab(key as TabKey)}
             items={[
               {
                 key: "pattern",
@@ -104,7 +112,7 @@ export function App() {
                     draws={draws}
                     losses={losses}
                     checked={state.checked}
-                    onToggleCheck={actions.toggleChecked}
+                    onToggleCheck={handleToggleCheck}
                   />
                 )
               },
@@ -115,7 +123,24 @@ export function App() {
                   <KnittingGuide
                     rows={scarfRows}
                     checked={state.checked}
-                    onToggleCheck={actions.toggleChecked}
+                    onToggleCheck={handleToggleCheck}
+                  />
+                )
+              },
+              {
+                key: "counter",
+                label: "단수 카운터",
+                content: (
+                  <RowCounter
+                    rows={scarfRows}
+                    checked={state.checked}
+                    onToggleCheck={handleToggleCheck}
+                    checkTiming={state.checkTiming ?? "start"}
+                    onCheckTimingChange={actions.setCheckTiming}
+                    stockinetteEnabled={state.stockinetteEnabled ?? false}
+                    onStockinetteEnabledChange={actions.setStockinetteEnabled}
+                    stockinetteOddKnit={state.stockinetteOddKnit ?? true}
+                    onStockinetteOddKnitChange={actions.setStockinetteOddKnit}
                   />
                 )
               }

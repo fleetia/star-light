@@ -9,23 +9,28 @@ import type {
 } from "../types/game.types";
 import { TEAM_NAMES } from "../constants/teams";
 
-// 해당 날짜의 모든 경기가 0:0이면 아직 시작 전으로 간주
+const hasValidScore = (g: Game) => g.awayScore !== null && g.homeScore !== null;
+
+const hasNonZeroScore = (g: Game) => g.awayScore !== 0 || g.homeScore !== 0;
+
+export const getMatchupKey = (g: {
+  date: string;
+  awayTeam: string;
+  homeTeam: string;
+}) => `${g.date}-${g.awayTeam}-${g.homeTeam}`;
+
+export const getRealMatchups = (games: Game[]) =>
+  new Set(games.filter(hasValidScore).map(getMatchupKey));
+
 function getUnplayedDates(games: Game[]): Set<string> {
-  const dateScores = new Map<string, boolean>();
-  for (const g of games) {
-    if (g.awayScore === null || g.homeScore === null) continue;
-    const hasScore = g.awayScore !== 0 || g.homeScore !== 0;
-    if (hasScore) {
-      dateScores.set(g.date, true);
-    } else if (!dateScores.has(g.date)) {
-      dateScores.set(g.date, false);
-    }
-  }
-  const dates = new Set<string>();
-  for (const [date, hasScore] of dateScores) {
-    if (!hasScore) dates.add(date);
-  }
-  return dates;
+  const validGames = games.filter(hasValidScore);
+  const scoredDates = new Set(
+    validGames.filter(hasNonZeroScore).map(g => g.date)
+  );
+  const zeroDates = new Set(
+    validGames.filter(g => !hasNonZeroScore(g)).map(g => g.date)
+  );
+  return new Set([...zeroDates].filter(d => !scoredDates.has(d)));
 }
 
 export function getTeamGames(
@@ -40,8 +45,7 @@ export function getTeamGames(
       g =>
         (g.homeTeam === teamCode || g.awayTeam === teamCode) &&
         seriesFilter.includes(g.seriesType) &&
-        g.awayScore !== null &&
-        g.homeScore !== null &&
+        hasValidScore(g) &&
         !unplayed.has(g.date)
     )
     .sort((a, b) => a.date.localeCompare(b.date));
@@ -59,14 +63,10 @@ export function getGameResult(
   const isHome = game.homeTeam === teamCode;
   const myScore = (isHome ? game.homeScore : game.awayScore) ?? 0;
   const opScore = (isHome ? game.awayScore : game.homeScore) ?? 0;
+  const result: GameResult =
+    myScore > opScore ? "win" : myScore < opScore ? "loss" : "draw";
 
-  if (myScore > opScore) {
-    return { isHome, result: "win", myScore, opScore };
-  }
-  if (myScore < opScore) {
-    return { isHome, result: "loss", myScore, opScore };
-  }
-  return { isHome, result: "draw", myScore, opScore };
+  return { isHome, result, myScore, opScore };
 }
 
 export function buildScarfRows(
@@ -98,7 +98,7 @@ function getRowRepeat(row: ScarfRow, mode: RowMode, count: number): number {
 
   const [my, op] = row.score.split(":").map(Number);
   if (mode === "perScore") return Math.max(1, my * count);
-  // perDiff
+  if (mode === "perOpScore") return Math.max(1, (my > op ? my : op) * count);
   return Math.max(1, Math.abs(my - op) * count);
 }
 
@@ -109,18 +109,16 @@ export function expandScarfRows(
 ): ScarfRow[] {
   if (mode === "perGame" && count === 1) return rows;
 
-  const result: ScarfRow[] = [];
-  for (const row of rows) {
+  return rows.flatMap(row => {
     const n = getRowRepeat(row, mode, count);
-    for (let i = 0; i < n; i++) {
-      result.push({
-        ...row,
-        rowKey: n > 1 ? `${row.gameKey}-${i}` : row.gameKey
-      });
-    }
-  }
-  return result;
+    return Array.from({ length: n }, (_, i) => ({
+      ...row,
+      rowKey: n > 1 ? `${row.gameKey}-${i}` : row.gameKey
+    }));
+  });
 }
+
+const resultKey = { win: "wins", draw: "draws", loss: "losses" } as const;
 
 export function countResults(rows: ScarfRow[]): {
   wins: number;
@@ -128,15 +126,10 @@ export function countResults(rows: ScarfRow[]): {
   losses: number;
 } {
   return rows.reduce(
-    (acc, r) => {
-      if (r.result === "win") {
-        return { ...acc, wins: acc.wins + 1 };
-      }
-      if (r.result === "draw") {
-        return { ...acc, draws: acc.draws + 1 };
-      }
-      return { ...acc, losses: acc.losses + 1 };
-    },
+    (acc, r) => ({
+      ...acc,
+      [resultKey[r.result]]: acc[resultKey[r.result]] + 1
+    }),
     { wins: 0, draws: 0, losses: 0 }
   );
 }

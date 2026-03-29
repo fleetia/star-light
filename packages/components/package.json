@@ -1,6 +1,6 @@
 {
   "name": "@star-light/components",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,6 +9,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./styles/*": "./dist/styles/*",
     "./Badge": {
       "types": "./dist/Badge/index.d.ts",
       "import": "./dist/Badge/index.js"
@@ -53,6 +54,10 @@
       "types": "./dist/ContextMenu/index.d.ts",
       "import": "./dist/ContextMenu/index.js"
     },
+    "./DateInput": {
+      "types": "./dist/DateInput/index.d.ts",
+      "import": "./dist/DateInput/index.js"
+    },
     "./IconButton": {
       "types": "./dist/IconButton/index.d.ts",
       "import": "./dist/IconButton/index.js"
@@ -68,6 +73,10 @@
     "./PositionGrid": {
       "types": "./dist/PositionGrid/index.d.ts",
       "import": "./dist/PositionGrid/index.js"
+    },
+    "./RadioGroup": {
+      "types": "./dist/RadioGroup/index.d.ts",
+      "import": "./dist/RadioGroup/index.js"
     },
     "./RangeInput": {
       "types": "./dist/RangeInput/index.d.ts",
@@ -97,6 +106,14 @@
       "types": "./dist/Tree/index.d.ts",
       "import": "./dist/Tree/index.js"
     },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js"
+    },
+    "./i18n": {
+      "types": "./dist/i18n/index.d.ts",
+      "import": "./dist/i18n/index.js"
+    },
     "./icons": {
       "types": "./dist/icons/index.d.ts",
       "import": "./dist/icons/index.js"
@@ -105,11 +122,10 @@
       "types": "./dist/theme/index.d.ts",
       "import": "./dist/theme/index.js"
     },
-    "./i18n": {
-      "types": "./dist/i18n/index.d.ts",
-      "import": "./dist/i18n/index.js"
-    },
-    "./styles/*": "./dist/styles/*"
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
+    }
   },
   "sideEffects": [
     "**/*.css"
@@ -119,7 +135,7 @@
   ],
   "scripts": {
     "dev": "rollup -c --watch",
-    "build": "rollup -c && tsc --emitDeclarationOnly",
+    "build": "node scripts/sync-exports.js && rollup -c && tsc --emitDeclarationOnly",
     "test": "vitest",
     "test:run": "vitest run",
     "storybook": "storybook dev -p 6006",

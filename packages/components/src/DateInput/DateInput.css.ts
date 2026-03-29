@@ -1,34 +1,25 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../styles/tokens.css";
 
-export const wrapper = style({
-  display: "flex",
-  flexDirection: "column",
-  gap: "0.25em"
-});
-
-export const label = style({
-  fontSize: "0.8rem",
-  fontWeight: 500,
-  color: vars.color.text
-});
-
 export const input = style({
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  gap: "0.3em",
   width: "100%",
   padding: "0.4em 0.5em",
+  lineHeight: 1.15,
   border: `1px solid ${vars.color.border}`,
   borderRadius: 4,
   background: vars.color.surface,
   fontSize: "0.8rem",
   color: vars.color.text,
   boxSizing: "border-box",
+  cursor: "pointer",
   selectors: {
-    "&:focus": {
+    "&:focus-within": {
       outline: "none",
       boxShadow: `0 0 0 1px ${vars.color.accent}`
-    },
-    "&::placeholder": {
-      color: vars.color.muted
     }
   }
 });
@@ -36,13 +27,32 @@ export const input = style({
 export const inputError = style({
   borderColor: "#dc3545",
   selectors: {
-    "&:focus": {
+    "&:focus-within": {
       boxShadow: "0 0 0 1px #dc3545"
     }
   }
 });
 
-export const error = style({
+export const segment = style({
+  fontSize: "inherit",
+  fontFamily: "inherit",
+  color: "inherit",
+  pointerEvents: "none"
+});
+
+export const separator = style({
+  color: vars.color.muted,
+  userSelect: "none",
   fontSize: "0.75rem",
-  color: "#dc3545"
+  pointerEvents: "none"
+});
+
+export const nativeInput = style({
+  position: "absolute",
+  inset: 0,
+  width: "100%",
+  height: "100%",
+  opacity: 0,
+  cursor: "pointer",
+  boxSizing: "border-box"
 });

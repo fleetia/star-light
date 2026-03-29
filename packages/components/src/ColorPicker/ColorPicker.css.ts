@@ -12,6 +12,7 @@ export const trigger = style({
   gap: "0.35em",
   padding: "0.2em 0.4em",
   border: `1px solid ${vars.color.border}`,
+  borderRadius: 4,
   background: vars.color.surface,
   cursor: "pointer",
   fontSize: "0.75rem",
@@ -31,6 +32,7 @@ export const swatch = style({
   width: "18px",
   height: "18px",
   border: `1px solid ${vars.color.border}`,
+  borderRadius: 4,
   flexShrink: 0
 });
 
@@ -40,6 +42,7 @@ export const panel = style({
   width: "240px",
   padding: "0.75em",
   border: `1px solid ${vars.color.border}`,
+  borderRadius: 4,
   background: vars.color.surface,
   boxShadow: "0 4px 16px rgba(0, 0, 0, 0.12)"
 });
@@ -108,6 +111,7 @@ export const formatButton = style({
   flex: 1,
   padding: "0.2em",
   border: `1px solid ${vars.color.border}`,
+  borderRadius: 4,
   background: vars.color.surface,
   cursor: "pointer",
   fontSize: "0.65rem",
@@ -139,6 +143,7 @@ export const fieldInput = style({
   width: "100%",
   padding: "0.2em 0.3em",
   border: `1px solid ${vars.color.border}`,
+  borderRadius: 4,
   background: vars.color.surface,
   fontSize: "0.7rem",
   fontFamily: "inherit",

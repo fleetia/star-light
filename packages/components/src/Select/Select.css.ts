@@ -1,6 +1,18 @@
 import { style, styleVariants } from "@vanilla-extract/css";
 import { vars } from "../styles/tokens.css";
 
+export const wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.25em"
+});
+
+export const label = style({
+  fontSize: "0.8rem",
+  fontWeight: 500,
+  color: vars.color.text
+});
+
 export const base = style({
   width: "100%",
   cursor: "pointer",

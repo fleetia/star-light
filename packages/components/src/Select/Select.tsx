@@ -30,3 +30,27 @@ export function Select({
     </select>
   );
 }
+
+export type SelectLabelProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export function SelectLabel({
+  children,
+  className
+}: SelectLabelProps): React.ReactElement {
+  return <span className={clsx(styles.label, className)}>{children}</span>;
+}
+
+export type SelectGroupProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export function SelectGroup({
+  children,
+  className
+}: SelectGroupProps): React.ReactElement {
+  return <div className={clsx(styles.wrapper, className)}>{children}</div>;
+}
