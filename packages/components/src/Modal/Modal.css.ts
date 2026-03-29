@@ -34,8 +34,7 @@ export const header = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "0.75em 1.25em",
-  borderBottom: `1px solid ${vars.color.border}`
+  padding: "0.75em 1.25em"
 });
 
 export const title = style({

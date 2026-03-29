@@ -37,9 +37,14 @@ export function DateInput({
     [onChange]
   );
 
+  const handleClick = useCallback(() => {
+    nativeRef.current?.showPicker();
+  }, []);
+
   return (
     <div
       className={clsx(styles.input, hasError && styles.inputError, className)}
+      onClick={handleClick}
     >
       <span className={styles.segment}>{year || "YYYY"}</span>
       <span className={styles.separator}>.</span>
