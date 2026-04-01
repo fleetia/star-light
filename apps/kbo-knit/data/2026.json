@@ -682,8 +682,8 @@
       "date": "2026-04-01",
       "awayTeam": "KIA",
       "homeTeam": "LG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 2,
+      "homeScore": 7
     },
     {
       "gameKey": "20260401-KIWOOM-SSG-1",
@@ -691,8 +691,8 @@
       "date": "2026-04-01",
       "awayTeam": "KIWOOM",
       "homeTeam": "SSG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 11,
+      "homeScore": 2
     },
     {
       "gameKey": "20260401-DOOSAN-SAMSUNG-1",
@@ -700,8 +700,8 @@
       "date": "2026-04-01",
       "awayTeam": "DOOSAN",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 3,
+      "homeScore": 13
     },
     {
       "gameKey": "20260401-LOTTE-NC-1",
@@ -709,8 +709,8 @@
       "date": "2026-04-01",
       "awayTeam": "LOTTE",
       "homeTeam": "NC",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 4,
+      "homeScore": 5
     },
     {
       "gameKey": "20260401-KT-HANWHA-1",
@@ -718,8 +718,8 @@
       "date": "2026-04-01",
       "awayTeam": "KT",
       "homeTeam": "HANWHA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 14,
+      "homeScore": 11
     },
     {
       "gameKey": "20260402-KIA-LG-1",
@@ -1082,6 +1082,15 @@
       "homeScore": null
     },
     {
+      "gameKey": "20260411-KIA-HANWHA-1",
+      "seriesType": "REGULAR_SEASON",
+      "date": "2026-04-11",
+      "awayTeam": "KIA",
+      "homeTeam": "HANWHA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
       "gameKey": "20260411-SSG-LG-1",
       "seriesType": "REGULAR_SEASON",
       "date": "2026-04-11",
@@ -1114,15 +1123,6 @@
       "date": "2026-04-11",
       "awayTeam": "LOTTE",
       "homeTeam": "KIWOOM",
-      "awayScore": null,
-      "homeScore": null
-    },
-    {
-      "gameKey": "20260411-KIA-HANWHA-1",
-      "seriesType": "REGULAR_SEASON",
-      "date": "2026-04-11",
-      "awayTeam": "KIA",
-      "homeTeam": "HANWHA",
       "awayScore": null,
       "homeScore": null
     },
