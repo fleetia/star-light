@@ -146,7 +146,7 @@ const ko: Translations = {
   "popup.inactive": "비활성화됨",
   "popup.deactivate": "비활성화",
   "popup.activate": "활성화",
-  "popup.description": "현재 탭에서 Lotuspad 기능을 사용할 수 있습니다.",
+  "popup.description": "현재 탭에서 Starlit 기능을 사용할 수 있습니다.",
   "popup.settings": "설정",
 
   // ConfirmDialog
@@ -171,7 +171,7 @@ const ko: Translations = {
   "positionGrid.margin.right": "오른쪽 여백",
 
   // Content script
-  "content.activated": "Lotuspad 활성화됨"
+  "content.activated": "Starlit 활성화됨"
 };
 
 export default ko;

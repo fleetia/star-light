@@ -8,7 +8,7 @@ pnpm 워크스페이스 모노레포입니다.
 
 ```
 apps/
-  extension/          # Lotuspad - Chrome 새 탭 확장 프로그램
+  extension/          # Starlit - Chrome 새 탭 확장 프로그램
   kbo-knit/           # KBO Knit - 야구 니팅 패턴 웹앱
 packages/
   components/         # @star-light/components - 공유 컴포넌트 라이브러리
@@ -118,7 +118,7 @@ pnpm format
 
 ## 앱별 차이점
 
-### Lotuspad (apps/extension/)
+### Starlit (apps/extension/)
 
 - 테스트 필수 — Vitest + React Testing Library, Chrome API 모킹 (`test/setup.ts`)
 - 스타일링: SCSS + Vanilla Extract 병행
@@ -138,7 +138,7 @@ pnpm format
 ## 주의사항
 
 - 새 앱이나 패키지를 만들 때는 기존 앱(extension, kbo-knit)의 설정 패턴을 먼저 확인하고 따르세요
-- 앱별 기여 가이드: [Lotuspad](lotuspad/contributing.md), [KBO Knit](kbo-knit/contributing.md)
+- 앱별 기여 가이드: [Starlit](starlit/contributing.md), [KBO Knit](kbo-knit/contributing.md)
 
 ## 라이선스
 

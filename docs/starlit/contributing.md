@@ -1,6 +1,6 @@
-# Lotuspad 개발자 기여 가이드
+# Starlit 개발자 기여 가이드
 
-Chrome 새 탭 확장 프로그램 Lotuspad에 기여하기 위한 가이드입니다.
+Chrome 새 탭 확장 프로그램 Starlit에 기여하기 위한 가이드입니다.
 
 ## 개발 환경
 
@@ -14,7 +14,7 @@ pnpm dev          # http://localhost:5173
 ### Chrome에서 확인하기
 
 ```bash
-pnpm build:lotuspad
+pnpm build:starlit
 ```
 
 1. `chrome://extensions` → 개발자 모드 활성화

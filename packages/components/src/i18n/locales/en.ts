@@ -145,7 +145,7 @@ const en: Translations = {
   "popup.inactive": "Inactive",
   "popup.deactivate": "Deactivate",
   "popup.activate": "Activate",
-  "popup.description": "You can use Lotuspad features in the current tab.",
+  "popup.description": "You can use Starlit features in the current tab.",
   "popup.settings": "Settings",
 
   // ConfirmDialog
@@ -170,7 +170,7 @@ const en: Translations = {
   "positionGrid.margin.right": "Right margin",
 
   // Content script
-  "content.activated": "Lotuspad activated"
+  "content.activated": "Starlit activated"
 };
 
 export default en;

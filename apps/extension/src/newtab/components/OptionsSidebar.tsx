@@ -337,7 +337,7 @@ export function OptionsSidebar({
       backgroundMeta,
       customCSS
     );
-    exportToJson(data, "lotuspad-settings.json");
+    exportToJson(data, "starlit-settings.json");
   };
 
   const handleImportSettingsFile = async (

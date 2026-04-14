@@ -146,7 +146,7 @@ const ja: Translations = {
   "popup.inactive": "無効",
   "popup.deactivate": "無効にする",
   "popup.activate": "有効にする",
-  "popup.description": "現在のタブでLotuspadの機能を使用できます。",
+  "popup.description": "現在のタブでStarlitの機能を使用できます。",
   "popup.settings": "設定",
 
   // ConfirmDialog
@@ -171,7 +171,7 @@ const ja: Translations = {
   "positionGrid.margin.right": "右余白",
 
   // Content script
-  "content.activated": "Lotuspad 有効"
+  "content.activated": "Starlit 有効"
 };
 
 export default ja;

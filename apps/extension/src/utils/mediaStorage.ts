@@ -1,4 +1,4 @@
-const DB_NAME = "lotuspad";
+const DB_NAME = "starlit";
 const STORE_NAME = "media";
 const DB_VERSION = 1;
 

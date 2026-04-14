@@ -13,12 +13,12 @@ pnpm install
 
 ## 개발 서버 실행
 
-### Lotuspad (Chrome 확장)
+### Starlit (Chrome 확장)
 
 ```bash
 pnpm dev
 # 또는
-pnpm dev:lotuspad
+pnpm dev:starlit
 ```
 
 `http://localhost:5173`에서 실행됩니다. 개발 환경에서는 `chrome.storage` 대신 `localStorage`를 사용합니다.
@@ -54,12 +54,12 @@ pnpm build
 개별 빌드:
 
 ```bash
-pnpm build:lotuspad    # Chrome 확장
+pnpm build:starlit    # Chrome 확장
 pnpm build:kbo         # KBO Knit
 pnpm build:components  # 컴포넌트 라이브러리
 ```
 
-Lotuspad 빌드 결과물은 `apps/extension/dist/` 폴더에 생성됩니다.
+Starlit 빌드 결과물은 `apps/extension/dist/` 폴더에 생성됩니다.
 
 ## Chrome에 확장 프로그램 로드
 
@@ -94,7 +94,7 @@ pnpm format          # 자동 포맷팅
 
 | 스크립트              | 설명                |
 | --------------------- | ------------------- |
-| `pnpm dev`            | Lotuspad 개발 서버  |
+| `pnpm dev`            | Starlit 개발 서버   |
 | `pnpm dev:kbo`        | KBO Knit 개발 서버  |
 | `pnpm dev:components` | 컴포넌트 watch 빌드 |
 | `pnpm storybook`      | Storybook 실행      |

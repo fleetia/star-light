@@ -11,8 +11,8 @@
     "dev:components": "pnpm -F @star-light/components dev",
     "build:components": "pnpm -F @star-light/components build",
     "test:components": "pnpm -F @star-light/components test",
-    "dev:lotuspad": "pnpm -F @star-light/extension dev",
-    "build:lotuspad": "pnpm -F @star-light/extension build",
+    "dev:starlit": "pnpm -F @star-light/extension dev",
+    "build:starlit": "pnpm -F @star-light/extension build",
     "dev:kbo": "pnpm -F @star-light/kbo-knit dev",
     "build:kbo": "pnpm -F @star-light/kbo-knit build",
     "lint:kbo": "pnpm -F @star-light/kbo-knit lint",
@@ -23,7 +23,10 @@
     "lint": "pnpm -r --if-present lint",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
@@ -35,6 +38,8 @@
     ]
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
     "@star-light/config": "workspace:*",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
