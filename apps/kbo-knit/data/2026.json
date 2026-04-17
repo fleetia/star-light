@@ -1312,8 +1312,8 @@
       "date": "2026-04-17",
       "awayTeam": "KIA",
       "homeTeam": "DOOSAN",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 7,
+      "homeScore": 3
     },
     {
       "gameKey": "20260417-HANWHA-LOTTE-1",
@@ -1348,8 +1348,8 @@
       "date": "2026-04-17",
       "awayTeam": "KIWOOM",
       "homeTeam": "KT",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 5
     },
     {
       "gameKey": "20260418-LG-SAMSUNG-1",
