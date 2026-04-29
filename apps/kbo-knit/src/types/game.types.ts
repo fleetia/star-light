@@ -58,7 +58,7 @@ export type ScarfRow = {
 
 export type RowMode = "perGame" | "perScore" | "perOpScore" | "perDiff";
 
-export type TabKey = "pattern" | "guide" | "counter";
+export type TabKey = "pattern" | "guide" | "counter" | "options";
 
 export type CheckTiming = "start" | "end";
 

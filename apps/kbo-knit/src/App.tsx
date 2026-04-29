@@ -1,10 +1,11 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import { Tabs } from "@star-light/components/Tabs";
 import { useAppState } from "./hooks/useAppState";
 import { useKboData } from "./hooks/useKboData";
 import { useCustomGameSync } from "./hooks/useCustomGameSync";
 import { useScarfData } from "./hooks/useScarfData";
 import type { TabKey } from "./types/game.types";
+import { STORAGE_KEY } from "./constants/defaults";
 import { SeasonSelector } from "./components/season-selector/SeasonSelector";
 import { TeamSelector } from "./components/team-selector/TeamSelector";
 import { SeriesFilter } from "./components/series-filter/SeriesFilter";
@@ -17,9 +18,13 @@ import { RowCounter } from "./components/row-counter/RowCounter";
 import { GameEditor } from "./components/game-editor/GameEditor";
 import * as s from "./App.css";
 
+const isFirstVisit =
+  typeof window !== "undefined" && !window.localStorage.getItem(STORAGE_KEY);
+const DEFAULT_TAB: TabKey = isFirstVisit ? "options" : "pattern";
+
 export function App() {
   const [state, actions] = useAppState();
-  const activeTab = state.activeTab ?? "pattern";
+  const activeTab = state.activeTab ?? DEFAULT_TAB;
   const { games, isLoading, error } = useKboData(state.season);
 
   const allGames = useCustomGameSync(
@@ -46,6 +51,39 @@ export function App() {
     [actions, rowKeys]
   );
 
+  const optionsContent = useMemo(
+    () => (
+      <div className={s.optionsTab}>
+        <div className={s.settings}>
+          <SeasonSelector value={state.season} onChange={actions.setSeason} />
+          <TeamSelector value={state.team} onChange={actions.setTeam} />
+          <SeriesFilter active={state.series} onToggle={actions.toggleSeries} />
+        </div>
+        <ColorPicker
+          colors={state.colors}
+          awaySame={state.awaySame}
+          onAwaySameChange={actions.setAwaySame}
+          onColorChange={actions.setColor}
+        />
+        <RowModeSelector
+          mode={state.rowMode}
+          count={state.rowCount}
+          cancelCount={state.cancelRowCount}
+          onModeChange={actions.setRowMode}
+          onCountChange={actions.setRowCount}
+          onCancelCountChange={actions.setCancelRowCount}
+        />
+      </div>
+    ),
+    [state, actions]
+  );
+
+  const hasRows = !isLoading && !error && scarfRows.length > 0;
+  const emptyMessage =
+    !isLoading && !error && scarfRows.length === 0
+      ? "진행된 경기가 없습니다."
+      : null;
+
   return (
     <div className={s.app}>
       <h1 className={s.title}>크보니트</h1>
@@ -53,36 +91,10 @@ export function App() {
         경기 결과를 목도리 배색 패턴으로 만들어보세요
       </p>
 
-      <div className={s.settings}>
-        <SeasonSelector value={state.season} onChange={actions.setSeason} />
-        <TeamSelector value={state.team} onChange={actions.setTeam} />
-        <SeriesFilter active={state.series} onToggle={actions.toggleSeries} />
-      </div>
-
-      <ColorPicker
-        colors={state.colors}
-        awaySame={state.awaySame}
-        onAwaySameChange={actions.setAwaySame}
-        onColorChange={actions.setColor}
-      />
-
-      <RowModeSelector
-        mode={state.rowMode}
-        count={state.rowCount}
-        cancelCount={state.cancelRowCount}
-        onModeChange={actions.setRowMode}
-        onCountChange={actions.setRowCount}
-        onCancelCountChange={actions.setCancelRowCount}
-      />
-
       {isLoading && <p className={s.loading}>데이터 로딩 중...</p>}
       {error && <p className={s.error}>{error}</p>}
 
-      {!isLoading && !error && scarfRows.length === 0 && (
-        <p className={s.empty}>진행된 경기가 없습니다.</p>
-      )}
-
-      {!isLoading && !error && scarfRows.length > 0 && (
+      {hasRows && (
         <>
           <ScarfHorizontal
             rows={scarfRows}
@@ -101,60 +113,73 @@ export function App() {
             onAdd={actions.addCustomGame}
             onRemove={actions.removeCustomGame}
           />
-
-          <Tabs
-            activeKey={activeTab}
-            onChange={key => actions.setActiveTab(key as TabKey)}
-            items={[
-              {
-                key: "pattern",
-                label: "목도리 패턴",
-                content: (
-                  <ScarfPreview
-                    rows={scarfRows}
-                    colors={actions.scarfColors}
-                    awaySame={state.awaySame}
-                    wins={wins}
-                    draws={draws}
-                    losses={losses}
-                    cancels={cancels}
-                    showCancelLegend={showCancelLegend}
-                    checked={state.checked}
-                    onToggleCheck={handleToggleCheck}
-                  />
-                )
-              },
-              {
-                key: "guide",
-                label: "뜨개 가이드",
-                content: (
-                  <KnittingGuide
-                    rows={scarfRows}
-                    checked={state.checked}
-                    onToggleCheck={handleToggleCheck}
-                  />
-                )
-              },
-              {
-                key: "counter",
-                label: "단수 카운터",
-                content: (
-                  <RowCounter
-                    rows={scarfRows}
-                    checked={state.checked}
-                    onToggleCheck={handleToggleCheck}
-                    checkTiming={state.checkTiming ?? "start"}
-                    onCheckTimingChange={actions.setCheckTiming}
-                    stockinetteEnabled={state.stockinetteEnabled ?? false}
-                    onStockinetteEnabledChange={actions.setStockinetteEnabled}
-                    stockinetteOddKnit={state.stockinetteOddKnit ?? true}
-                    onStockinetteOddKnitChange={actions.setStockinetteOddKnit}
-                  />
-                )
-              }
-            ]}
-          />
         </>
+      )}
+
+      {!isLoading && (
+        <Tabs
+          activeKey={activeTab}
+          onChange={key => actions.setActiveTab(key as TabKey)}
+          items={[
+            {
+              key: "pattern",
+              label: "목도리 패턴",
+              content: hasRows ? (
+                <ScarfPreview
+                  rows={scarfRows}
+                  colors={actions.scarfColors}
+                  awaySame={state.awaySame}
+                  wins={wins}
+                  draws={draws}
+                  losses={losses}
+                  cancels={cancels}
+                  showCancelLegend={showCancelLegend}
+                  checked={state.checked}
+                  onToggleCheck={handleToggleCheck}
+                />
+              ) : (
+                <p className={s.empty}>{emptyMessage}</p>
+              )
+            },
+            {
+              key: "guide",
+              label: "뜨개 가이드",
+              content: hasRows ? (
+                <KnittingGuide
+                  rows={scarfRows}
+                  checked={state.checked}
+                  onToggleCheck={handleToggleCheck}
+                />
+              ) : (
+                <p className={s.empty}>{emptyMessage}</p>
+              )
+            },
+            {
+              key: "counter",
+              label: "단수 카운터",
+              content: hasRows ? (
+                <RowCounter
+                  rows={scarfRows}
+                  checked={state.checked}
+                  onToggleCheck={handleToggleCheck}
+                  checkTiming={state.checkTiming ?? "start"}
+                  onCheckTimingChange={actions.setCheckTiming}
+                  stockinetteEnabled={state.stockinetteEnabled ?? false}
+                  onStockinetteEnabledChange={actions.setStockinetteEnabled}
+                  stockinetteOddKnit={state.stockinetteOddKnit ?? true}
+                  onStockinetteOddKnitChange={actions.setStockinetteOddKnit}
+                />
+              ) : (
+                <p className={s.empty}>{emptyMessage}</p>
+              )
+            },
+            {
+              key: "options",
+              label: "옵션",
+              content: optionsContent
+            }
+          ]}
+        />
       )}
 
       <footer className={s.footer}>
