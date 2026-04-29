@@ -34,5 +34,6 @@ export const TEAM_CODES = Object.keys(TEAM_NAMES) as TeamCode[];
 export const RESULT_LABELS: Record<string, string> = {
   win: "승",
   draw: "무",
-  loss: "패"
+  loss: "패",
+  cancel: "취소"
 };

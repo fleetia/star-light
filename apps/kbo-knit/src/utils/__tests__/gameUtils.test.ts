@@ -22,8 +22,8 @@ const makeGame = (overrides: Partial<Game> = {}): Game => ({
 });
 
 const colors: ScarfColors = {
-  home: { win: "#ff0000", draw: "#888888", loss: "#000000" },
-  away: { win: "#0000ff", draw: "#cccccc", loss: "#333333" }
+  home: { win: "#ff0000", draw: "#888888", loss: "#000000", cancel: "#777777" },
+  away: { win: "#0000ff", draw: "#cccccc", loss: "#333333", cancel: "#aaaaaa" }
 };
 
 describe("getGameResult", () => {
@@ -291,11 +291,70 @@ describe("countResults", () => {
         prefix: "H"
       }
     ];
-    expect(countResults(rows)).toEqual({ wins: 2, draws: 1, losses: 1 });
+    expect(countResults(rows)).toEqual({
+      wins: 2,
+      draws: 1,
+      losses: 1,
+      cancels: 0
+    });
   });
 
   it("빈 배열", () => {
-    expect(countResults([])).toEqual({ wins: 0, draws: 0, losses: 0 });
+    expect(countResults([])).toEqual({
+      wins: 0,
+      draws: 0,
+      losses: 0,
+      cancels: 0
+    });
+  });
+
+  it("취소 경기 카운트", () => {
+    const rows: ScarfRow[] = [
+      {
+        gameKey: "1",
+        rowKey: "1",
+        color: "",
+        result: "cancel",
+        isHome: true,
+        date: "",
+        opponent: "",
+        score: "취소",
+        prefix: "H"
+      }
+    ];
+    expect(countResults(rows)).toEqual({
+      wins: 0,
+      draws: 0,
+      losses: 0,
+      cancels: 1
+    });
+  });
+});
+
+describe("취소 경기", () => {
+  const cancelGame = makeGame({
+    gameKey: "c1",
+    awayScore: null,
+    homeScore: null,
+    status: "cancelled"
+  });
+
+  it("getTeamGames에 취소 경기 포함", () => {
+    const result = getTeamGames([cancelGame], "HANWHA", ["REGULAR_SEASON"]);
+    expect(result).toHaveLength(1);
+  });
+
+  it("buildScarfRows: result는 cancel, score는 '취소'", () => {
+    const rows = buildScarfRows([cancelGame], "HANWHA", colors);
+    expect(rows[0].result).toBe("cancel");
+    expect(rows[0].score).toBe("취소");
+    expect(rows[0].color).toBe("#777777");
+  });
+
+  it("expandScarfRows: cancelRowCount만큼 반복", () => {
+    const rows = buildScarfRows([cancelGame], "HANWHA", colors);
+    expect(expandScarfRows(rows, "perGame", 1, 0)).toHaveLength(0);
+    expect(expandScarfRows(rows, "perGame", 1, 3)).toHaveLength(3);
   });
 });
 

@@ -12,7 +12,9 @@ export type TeamCode =
 
 export type SeriesType = "PRESEASON" | "REGULAR_SEASON" | "POSTSEASON";
 
-export type GameResult = "win" | "draw" | "loss";
+export type GameResult = "win" | "draw" | "loss" | "cancel";
+
+export type GameStatus = "cancelled";
 
 export type Game = {
   gameKey: string;
@@ -22,6 +24,7 @@ export type Game = {
   homeTeam: TeamCode;
   awayScore: number | null;
   homeScore: number | null;
+  status?: GameStatus;
 };
 
 export type KboData = {
@@ -33,6 +36,7 @@ export type ColorSet = {
   win: string;
   draw: string;
   loss: string;
+  cancel: string;
 };
 
 export type ScarfColors = {
@@ -71,13 +75,16 @@ export type AppState = {
     homeWin: string;
     homeDraw: string;
     homeLoss: string;
+    homeCancel: string;
     awayWin: string;
     awayDraw: string;
     awayLoss: string;
+    awayCancel: string;
   };
   checked: Record<string, boolean>;
   checkedMap?: Record<string, Record<string, boolean>>;
   rowMode: RowMode;
   rowCount: number;
+  cancelRowCount: number;
   customGames: Game[];
 };

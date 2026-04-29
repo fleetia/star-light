@@ -47,6 +47,11 @@ export function ColorPicker({
             value={colors.homeLoss}
             onChange={(c: string) => onColorChange("homeLoss", c)}
           />
+          <ColorRow
+            label="취소"
+            value={colors.homeCancel}
+            onChange={(c: string) => onColorChange("homeCancel", c)}
+          />
         </>
       ) : (
         <div className={s.splitRow}>
@@ -67,6 +72,11 @@ export function ColorPicker({
               value={colors.homeLoss}
               onChange={(c: string) => onColorChange("homeLoss", c)}
             />
+            <ColorRow
+              label="취소"
+              value={colors.homeCancel}
+              onChange={(c: string) => onColorChange("homeCancel", c)}
+            />
           </div>
           <div className={s.section}>
             <h4 className={s.sectionLabel}>원정</h4>
@@ -84,6 +94,11 @@ export function ColorPicker({
               label="패"
               value={colors.awayLoss}
               onChange={(c: string) => onColorChange("awayLoss", c)}
+            />
+            <ColorRow
+              label="취소"
+              value={colors.awayCancel}
+              onChange={(c: string) => onColorChange("awayCancel", c)}
             />
           </div>
         </div>

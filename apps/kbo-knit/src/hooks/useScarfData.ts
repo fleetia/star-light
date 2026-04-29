@@ -20,6 +20,7 @@ type ScarfData = {
   wins: number;
   draws: number;
   losses: number;
+  cancels: number;
 };
 
 export function useScarfData(
@@ -28,7 +29,8 @@ export function useScarfData(
   series: SeriesType[],
   colors: ScarfColors,
   rowMode: RowMode,
-  rowCount: number
+  rowCount: number,
+  cancelRowCount: number
 ): ScarfData {
   const filteredGames = useMemo(
     () => getTeamGames(games, team, series),
@@ -41,16 +43,16 @@ export function useScarfData(
   );
 
   const scarfRows = useMemo(
-    () => expandScarfRows(baseScarfRows, rowMode, rowCount),
-    [baseScarfRows, rowMode, rowCount]
+    () => expandScarfRows(baseScarfRows, rowMode, rowCount, cancelRowCount),
+    [baseScarfRows, rowMode, rowCount, cancelRowCount]
   );
 
-  const { wins, draws, losses } = useMemo(
+  const { wins, draws, losses, cancels } = useMemo(
     () => countResults(baseScarfRows),
     [baseScarfRows]
   );
 
   const rowKeys = useMemo(() => scarfRows.map(r => r.rowKey), [scarfRows]);
 
-  return { scarfRows, rowKeys, wins, draws, losses };
+  return { scarfRows, rowKeys, wins, draws, losses, cancels };
 }

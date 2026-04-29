@@ -12,6 +12,8 @@ type Props = {
   wins: number;
   draws: number;
   losses: number;
+  cancels: number;
+  showCancelLegend?: boolean;
   checked: Record<string, boolean>;
   onToggleCheck: (gameKey: string) => void;
 };
@@ -23,10 +25,12 @@ export function ScarfPreview({
   wins,
   draws,
   losses,
+  cancels,
+  showCancelLegend,
   checked,
   onToggleCheck
 }: Props) {
-  const legend = buildLegend(colors, awaySame);
+  const legend = buildLegend(colors, awaySame, showCancelLegend);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
   const handleRowClick = useCallback(
@@ -51,6 +55,7 @@ export function ScarfPreview({
       <div className={s.header}>
         <span className={s.stats}>
           {wins + draws + losses}경기 | {wins}승 {draws}무 {losses}패
+          {cancels > 0 && ` | 취소 ${cancels}`}
         </span>
       </div>
 

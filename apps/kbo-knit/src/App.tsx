@@ -29,14 +29,17 @@ export function App() {
     actions.removeCustomGame
   );
 
-  const { scarfRows, rowKeys, wins, draws, losses } = useScarfData(
+  const { scarfRows, rowKeys, wins, draws, losses, cancels } = useScarfData(
     allGames,
     state.team,
     state.series,
     actions.scarfColors,
     state.rowMode,
-    state.rowCount
+    state.rowCount,
+    state.cancelRowCount
   );
+
+  const showCancelLegend = state.cancelRowCount > 0 && cancels > 0;
 
   const handleToggleCheck = useCallback(
     (key: string) => actions.toggleChecked(key, rowKeys),
@@ -66,8 +69,10 @@ export function App() {
       <RowModeSelector
         mode={state.rowMode}
         count={state.rowCount}
+        cancelCount={state.cancelRowCount}
         onModeChange={actions.setRowMode}
         onCountChange={actions.setRowCount}
+        onCancelCountChange={actions.setCancelRowCount}
       />
 
       {isLoading && <p className={s.loading}>데이터 로딩 중...</p>}
@@ -84,6 +89,7 @@ export function App() {
             colors={actions.scarfColors}
             awaySame={state.awaySame}
             series={state.series}
+            showCancelLegend={showCancelLegend}
           />
 
           <GameEditor
@@ -111,6 +117,8 @@ export function App() {
                     wins={wins}
                     draws={draws}
                     losses={losses}
+                    cancels={cancels}
+                    showCancelLegend={showCancelLegend}
                     checked={state.checked}
                     onToggleCheck={handleToggleCheck}
                   />

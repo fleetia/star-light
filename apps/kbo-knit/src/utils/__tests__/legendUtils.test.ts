@@ -3,8 +3,8 @@ import type { ScarfColors } from "../../types/game.types";
 import { buildLegend } from "../legendUtils";
 
 const colors: ScarfColors = {
-  home: { win: "#ff0000", draw: "#888888", loss: "#000000" },
-  away: { win: "#0000ff", draw: "#cccccc", loss: "#333333" }
+  home: { win: "#ff0000", draw: "#888888", loss: "#000000", cancel: "#777777" },
+  away: { win: "#0000ff", draw: "#cccccc", loss: "#333333", cancel: "#aaaaaa" }
 };
 
 describe("buildLegend", () => {

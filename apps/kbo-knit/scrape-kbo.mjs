@@ -99,6 +99,8 @@ const parseRow = async (row, season, seriesValue, state) => {
   }
 
   const scores = await parseScores(playCell);
+  const rowText = await row.innerText();
+  const cancelled = scores.length === 0 && /취소/.test(rowText);
   const key = `${state.date.replace(/-/g, "")}-${teams.away}-${teams.home}`;
   const n = (state.counts[key] = (state.counts[key] ?? 0) + 1);
 
@@ -109,7 +111,8 @@ const parseRow = async (row, season, seriesValue, state) => {
     awayTeam: teams.away,
     homeTeam: teams.home,
     awayScore: scores[0] ?? null,
-    homeScore: scores[1] ?? null
+    homeScore: scores[1] ?? null,
+    ...(cancelled ? { status: "cancelled" } : {})
   };
 };
 

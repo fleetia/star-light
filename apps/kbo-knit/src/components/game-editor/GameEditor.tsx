@@ -82,38 +82,54 @@ export function GameEditor({
   const [myScore, setMyScore] = useState("");
   const [opScore, setOpScore] = useState("");
   const [seriesType, setSeriesType] = useState<SeriesType>(defaultSeries);
+  const [isCancelled, setIsCancelled] = useState(false);
 
   const opponents = TEAM_CODES.filter(c => c !== team);
   const canSubmit =
     date !== "" &&
     date >= today &&
     opponent !== "" &&
-    myScore !== "" &&
-    opScore !== "" &&
-    !isNaN(Number(myScore)) &&
-    !isNaN(Number(opScore));
+    (isCancelled ||
+      (myScore !== "" &&
+        opScore !== "" &&
+        !isNaN(Number(myScore)) &&
+        !isNaN(Number(opScore))));
 
   function handleSubmit() {
     if (!canSubmit || !opponent) return;
 
     const homeTeam = isHome ? team : opponent;
     const awayTeam = isHome ? opponent : team;
-    const homeScore = isHome ? Number(myScore) : Number(opScore);
-    const awayScore = isHome ? Number(opScore) : Number(myScore);
     const gameKey = `custom-${date}-${awayTeam}-${homeTeam}-${Date.now()}`;
 
-    onAdd({
-      gameKey,
-      seriesType,
-      date,
-      homeTeam,
-      awayTeam,
-      homeScore,
-      awayScore
-    });
+    if (isCancelled) {
+      onAdd({
+        gameKey,
+        seriesType,
+        date,
+        homeTeam,
+        awayTeam,
+        homeScore: null,
+        awayScore: null,
+        status: "cancelled"
+      });
+    } else {
+      const homeScore = isHome ? Number(myScore) : Number(opScore);
+      const awayScore = isHome ? Number(opScore) : Number(myScore);
+      onAdd({
+        gameKey,
+        seriesType,
+        date,
+        homeTeam,
+        awayTeam,
+        homeScore,
+        awayScore
+      });
+    }
 
     setMyScore("");
     setOpScore("");
+    setIsCancelled(false);
   }
 
   const seasonGames = customGames.filter(g =>
@@ -178,22 +194,33 @@ export function GameEditor({
             </Select>
           </SelectGroup>
 
-          <div className={s.row}>
-            <TextInput
-              label="내 팀 점수"
-              type="number"
-              min={0}
-              value={myScore}
-              onChange={setMyScore}
+          <label className={s.checkboxRow}>
+            <input
+              type="checkbox"
+              checked={isCancelled}
+              onChange={e => setIsCancelled(e.target.checked)}
             />
-            <TextInput
-              label="상대 점수"
-              type="number"
-              min={0}
-              value={opScore}
-              onChange={setOpScore}
-            />
-          </div>
+            취소 경기로 추가
+          </label>
+
+          {!isCancelled && (
+            <div className={s.row}>
+              <TextInput
+                label="내 팀 점수"
+                type="number"
+                min={0}
+                value={myScore}
+                onChange={setMyScore}
+              />
+              <TextInput
+                label="상대 점수"
+                type="number"
+                min={0}
+                value={opScore}
+                onChange={setOpScore}
+              />
+            </div>
+          )}
 
           <button
             className={s.submitButton}
@@ -214,11 +241,13 @@ export function GameEditor({
                 const opTeam = isHomeGame ? g.awayTeam : g.homeTeam;
                 const my = isHomeGame ? g.homeScore : g.awayScore;
                 const op = isHomeGame ? g.awayScore : g.homeScore;
+                const cancelled = g.status === "cancelled";
                 return (
                   <div key={g.gameKey} className={s.listItem}>
                     <div className={s.listInfo}>
                       <span>
-                        {TEAM_NAMES[opTeam]} {my}:{op}{" "}
+                        {TEAM_NAMES[opTeam]}{" "}
+                        {cancelled ? "취소" : `${my}:${op}`}{" "}
                         {isHomeGame ? "(홈)" : "(원정)"}
                       </span>
                       <span className={s.listDate}>{formatDate(g.date)}</span>
