@@ -11,11 +11,12 @@ import { TeamSelector } from "./components/team-selector/TeamSelector";
 import { SeriesFilter } from "./components/series-filter/SeriesFilter";
 import { ColorPicker } from "./components/color-picker/ColorPicker";
 import { RowModeSelector } from "./components/row-mode-selector/RowModeSelector";
-import { ScarfPreview } from "./components/scarf-preview/ScarfPreview";
 import { ScarfHorizontal } from "./components/scarf-horizontal/ScarfHorizontal";
 import { KnittingGuide } from "./components/knitting-guide/KnittingGuide";
 import { RowCounter } from "./components/row-counter/RowCounter";
 import { GameEditor } from "./components/game-editor/GameEditor";
+import { KnitPatternEditor } from "./components/knit-pattern-editor/KnitPatternEditor";
+import { PatternChart } from "./components/pattern-chart/PatternChart";
 import * as s from "./App.css";
 
 const isFirstVisit =
@@ -34,7 +35,7 @@ export function App() {
     actions.removeCustomGame
   );
 
-  const { scarfRows, rowKeys, wins, draws, losses, cancels } = useScarfData(
+  const { scarfRows, rowKeys, cancels } = useScarfData(
     allGames,
     state.team,
     state.series,
@@ -72,6 +73,14 @@ export function App() {
           onModeChange={actions.setRowMode}
           onCountChange={actions.setRowCount}
           onCancelCountChange={actions.setCancelRowCount}
+        />
+        <KnitPatternEditor
+          pattern={state.knitPattern}
+          cellSize={state.patternCellSize}
+          viewOrigin={state.patternViewOrigin}
+          onChange={actions.setKnitPattern}
+          onCellSizeChange={actions.setPatternCellSize}
+          onViewOriginChange={actions.setPatternViewOrigin}
         />
       </div>
     ),
@@ -125,15 +134,11 @@ export function App() {
               key: "pattern",
               label: "목도리 패턴",
               content: hasRows ? (
-                <ScarfPreview
+                <PatternChart
                   rows={scarfRows}
-                  colors={actions.scarfColors}
-                  awaySame={state.awaySame}
-                  wins={wins}
-                  draws={draws}
-                  losses={losses}
-                  cancels={cancels}
-                  showCancelLegend={showCancelLegend}
+                  pattern={state.knitPattern}
+                  cellSize={state.patternCellSize}
+                  viewOrigin={state.patternViewOrigin}
                   checked={state.checked}
                   onToggleCheck={handleToggleCheck}
                 />

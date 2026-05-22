@@ -58,9 +58,37 @@ export type ScarfRow = {
 
 export type RowMode = "perGame" | "perScore" | "perOpScore" | "perDiff";
 
+export type StitchIcon =
+  | "text"
+  | "purl"
+  | "yarnOver"
+  | "k2tog"
+  | "ssk"
+  | "centerDoubleDecrease"
+  | "cable"
+  | "custom";
+
+export type StitchDefinition = {
+  id: string;
+  label: string;
+  symbol?: string;
+  icon?: StitchIcon;
+  customIconPaths?: string[];
+  span: number;
+};
+
+export type KnitPattern = {
+  width: number;
+  height: number;
+  cells: string[][];
+  customStitches: StitchDefinition[];
+};
+
 export type TabKey = "pattern" | "guide" | "counter" | "options";
 
 export type CheckTiming = "start" | "end";
+
+export type PatternViewOrigin = "bottom" | "top";
 
 export type AppState = {
   activeTab?: TabKey;
@@ -86,5 +114,8 @@ export type AppState = {
   rowMode: RowMode;
   rowCount: number;
   cancelRowCount: number;
+  knitPattern: KnitPattern;
+  patternCellSize: number;
+  patternViewOrigin: PatternViewOrigin;
   customGames: Game[];
 };

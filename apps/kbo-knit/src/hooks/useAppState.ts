@@ -3,6 +3,8 @@ import type {
   AppState,
   CheckTiming,
   Game,
+  KnitPattern,
+  PatternViewOrigin,
   RowMode,
   ScarfColors,
   SeriesType,
@@ -12,6 +14,10 @@ import type {
 import { TEAM_COLORS } from "../constants/teams";
 import { DEFAULT_STATE, STORAGE_KEY } from "../constants/defaults";
 import { useLocalStorage } from "./useLocalStorage";
+import {
+  clampPatternCellSize,
+  normalizeKnitPattern
+} from "../utils/patternUtils";
 
 type AppActions = {
   setSeason: (season: number) => void;
@@ -23,6 +29,9 @@ type AppActions = {
   setRowMode: (mode: RowMode) => void;
   setRowCount: (count: number) => void;
   setCancelRowCount: (count: number) => void;
+  setKnitPattern: (pattern: KnitPattern) => void;
+  setPatternCellSize: (size: number) => void;
+  setPatternViewOrigin: (origin: PatternViewOrigin) => void;
   setActiveTab: (tab: TabKey) => void;
   setCheckTiming: (timing: CheckTiming) => void;
   setStockinetteEnabled: (enabled: boolean) => void;
@@ -42,7 +51,11 @@ export function useAppState(): [AppState, AppActions] {
     () => ({
       ...rawState,
       colors: { ...DEFAULT_STATE.colors, ...rawState.colors },
-      cancelRowCount: rawState.cancelRowCount ?? DEFAULT_STATE.cancelRowCount
+      cancelRowCount: rawState.cancelRowCount ?? DEFAULT_STATE.cancelRowCount,
+      knitPattern: normalizeKnitPattern(rawState.knitPattern),
+      patternCellSize: clampPatternCellSize(rawState.patternCellSize),
+      patternViewOrigin:
+        rawState.patternViewOrigin ?? DEFAULT_STATE.patternViewOrigin
     }),
     [rawState]
   );
@@ -125,6 +138,30 @@ export function useAppState(): [AppState, AppActions] {
 
   const setCancelRowCount = useCallback(
     (cancelRowCount: number) => setState(prev => ({ ...prev, cancelRowCount })),
+    [setState]
+  );
+
+  const setKnitPattern = useCallback(
+    (knitPattern: KnitPattern) =>
+      setState(prev => ({
+        ...prev,
+        knitPattern: normalizeKnitPattern(knitPattern)
+      })),
+    [setState]
+  );
+
+  const setPatternCellSize = useCallback(
+    (patternCellSize: number) =>
+      setState(prev => ({
+        ...prev,
+        patternCellSize: clampPatternCellSize(patternCellSize)
+      })),
+    [setState]
+  );
+
+  const setPatternViewOrigin = useCallback(
+    (patternViewOrigin: PatternViewOrigin) =>
+      setState(prev => ({ ...prev, patternViewOrigin })),
     [setState]
   );
 
@@ -235,6 +272,9 @@ export function useAppState(): [AppState, AppActions] {
       setRowMode,
       setRowCount,
       setCancelRowCount,
+      setKnitPattern,
+      setPatternCellSize,
+      setPatternViewOrigin,
       setActiveTab,
       setCheckTiming,
       setStockinetteEnabled,

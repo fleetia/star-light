@@ -1,4 +1,8 @@
 import type { AppState } from "../types/game.types";
+import {
+  DEFAULT_KNIT_PATTERN,
+  DEFAULT_PATTERN_CELL_SIZE
+} from "../utils/patternUtils";
 
 export const CURRENT_YEAR = new Date().getFullYear();
 
@@ -21,6 +25,9 @@ export const DEFAULT_STATE: AppState = {
   rowMode: "perGame",
   rowCount: 1,
   cancelRowCount: 0,
+  knitPattern: DEFAULT_KNIT_PATTERN,
+  patternCellSize: DEFAULT_PATTERN_CELL_SIZE,
+  patternViewOrigin: "bottom",
   customGames: []
 };
 
