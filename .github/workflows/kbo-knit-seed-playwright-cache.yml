@@ -1,0 +1,128 @@
+name: "KBO Knit: Seed Playwright Cache"
+
+# 일회성/재시드용 (workflow_dispatch 전용).
+#
+# 배경: cdn.playwright.dev 가 chrome-linux64.zip 을 Content-Length 만큼 다 보내고도
+# TCP 연결을 닫지 않아(FIN 미전송), playwright 다운로더가 100% 이후 stream 'end' 를
+# 기다리며 무한 hang -> Install Playwright Chromium 스텝 타임아웃. 다운로드가 끝나질
+# 않으니 Actions 캐시도 영영 생성 안 됨(chicken-and-egg).
+#
+# 우회: playwright 다운로더 대신 curl 로 받는다(바이트는 1초 내 도착하고 curl 은
+# Content-Length 를 채우면 즉시 종료하므로 hang 안 함). playwright 캐시 레이아웃에
+# 맞게 풀고 마커를 만든 뒤, smoke launch 로 검증되면 actions/cache 에 저장한다.
+# 한 번 성공하면 메인 워크플로우(kbo-knit-update-data)가 그 캐시를 히트해 다운로드
+# 단계를 영구히 건너뛴다. playwright 버전을 올린 뒤 CDN 이 또 불안정하면 수동 재실행.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve Playwright + browser versions
+        id: pw
+        run: |
+          PW_VERSION=$(pnpm --filter kbo-knit exec playwright --version | awk '{print $2}')
+          BROWSERS_JSON=$(find "$(pwd)" -path '*/playwright-core/browsers.json' | head -1)
+          eval "$(node -e '
+            const j = require(process.argv[1]);
+            const g = n => j.browsers.find(b => b.name === n);
+            const c = g("chromium"), f = g("ffmpeg");
+            console.log("CHROMIUM_VERSION=" + c.browserVersion);
+            console.log("CHROMIUM_REVISION=" + c.revision);
+            console.log("FFMPEG_REVISION=" + f.revision);
+          ' "$BROWSERS_JSON")"
+          {
+            echo "version=$PW_VERSION"
+            echo "chromium_version=$CHROMIUM_VERSION"
+            echo "chromium_revision=$CHROMIUM_REVISION"
+            echo "ffmpeg_revision=$FFMPEG_REVISION"
+          } >> "$GITHUB_OUTPUT"
+          echo "playwright=$PW_VERSION chromium=$CHROMIUM_VERSION rev=$CHROMIUM_REVISION ffmpeg=$FFMPEG_REVISION"
+
+      # 메인 워크플로우와 동일한 키. restore 로 히트 여부만 확인하고, 저장은 검증 후 별도 수행.
+      - name: Restore Playwright cache
+        id: pw-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+      - name: Seed browsers via curl
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        env:
+          CV: ${{ steps.pw.outputs.chromium_version }}
+          CR: ${{ steps.pw.outputs.chromium_revision }}
+          FR: ${{ steps.pw.outputs.ffmpeg_revision }}
+        run: |
+          set -euo pipefail
+          BASE="$HOME/.cache/ms-playwright"
+          CFT="https://cdn.playwright.dev/builds/cft/${CV}/linux64"
+
+          mkdir -p "$BASE/chromium-${CR}"
+          curl -fSL --retry 3 --max-time 120 -o /tmp/chromium.zip "${CFT}/chrome-linux64.zip"
+          unzip -q /tmp/chromium.zip -d "$BASE/chromium-${CR}"
+          touch "$BASE/chromium-${CR}/INSTALLATION_COMPLETE" "$BASE/chromium-${CR}/DEPENDENCIES_VALIDATED"
+
+          mkdir -p "$BASE/chromium_headless_shell-${CR}"
+          curl -fSL --retry 3 --max-time 120 -o /tmp/shell.zip "${CFT}/chrome-headless-shell-linux64.zip"
+          unzip -q /tmp/shell.zip -d "$BASE/chromium_headless_shell-${CR}"
+          touch "$BASE/chromium_headless_shell-${CR}/INSTALLATION_COMPLETE" "$BASE/chromium_headless_shell-${CR}/DEPENDENCIES_VALIDATED"
+
+          # ffmpeg 는 스크래퍼에 불필요하지만 정상 install 과 캐시 내용을 맞추기 위해 best-effort 로 포함.
+          mkdir -p "$BASE/ffmpeg-${FR}"
+          if curl -fSL --retry 3 --max-time 120 -o /tmp/ffmpeg.zip "https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/${FR}/ffmpeg-linux.zip"; then
+            unzip -q /tmp/ffmpeg.zip -d "$BASE/ffmpeg-${FR}"
+            touch "$BASE/ffmpeg-${FR}/INSTALLATION_COMPLETE"
+          else
+            echo "ffmpeg seed skipped (non-fatal)"
+          fi
+
+          chmod -R +x "$BASE/chromium-${CR}/chrome-linux64" "$BASE/chromium_headless_shell-${CR}/chrome-headless-shell-linux64" || true
+          echo "=== seeded tree ==="
+          find "$BASE" -maxdepth 2 -mindepth 1
+
+      - name: Validate seed (deps + smoke launch)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        timeout-minutes: 5
+        run: |
+          # apt 시스템 의존성만 설치 (브라우저 다운로드 트리거 안 함).
+          pnpm --filter kbo-knit exec playwright install-deps chromium
+          # 시드한 캐시에서 실제로 chromium 이 뜨는지 확인 -> 레이아웃이 맞다는 결정적 증거.
+          pnpm --filter kbo-knit exec node -e '
+            const { chromium } = require("playwright");
+            (async () => {
+              const b = await chromium.launch({ headless: true });
+              const v = b.version();
+              await b.close();
+              console.log("launched OK:", v);
+            })().catch(e => { console.error(e); process.exit(1); });
+          '
+
+      # 검증을 통과(success)했고 캐시 미스였을 때만 저장 -> 잘못된 캐시 영구 저장 방지.
+      - name: Save Playwright cache
+        if: ${{ success() && steps.pw-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
