@@ -9,9 +9,14 @@ import type {
 } from "../types/game.types";
 import { TEAM_NAMES } from "../constants/teams";
 
-const hasValidScore = (g: Game) => g.awayScore !== null && g.homeScore !== null;
+const isCancelled = (g: Game) => g.status === "cancelled";
+
+const hasValidScore = (g: Game) =>
+  !isCancelled(g) && g.awayScore !== null && g.homeScore !== null;
 
 const hasNonZeroScore = (g: Game) => g.awayScore !== 0 || g.homeScore !== 0;
+
+const isDecided = (g: Game) => isCancelled(g) || hasValidScore(g);
 
 export const getMatchupKey = (g: {
   date: string;
@@ -20,7 +25,7 @@ export const getMatchupKey = (g: {
 }) => `${g.date}-${g.awayTeam}-${g.homeTeam}`;
 
 export const getRealMatchups = (games: Game[]) =>
-  new Set(games.filter(hasValidScore).map(getMatchupKey));
+  new Set(games.filter(isDecided).map(getMatchupKey));
 
 function getUnplayedDates(games: Game[]): Set<string> {
   const validGames = games.filter(hasValidScore);
@@ -45,7 +50,7 @@ export function getTeamGames(
       g =>
         (g.homeTeam === teamCode || g.awayTeam === teamCode) &&
         seriesFilter.includes(g.seriesType) &&
-        hasValidScore(g) &&
+        isDecided(g) &&
         !unplayed.has(g.date)
     )
     .sort((a, b) => a.date.localeCompare(b.date));
@@ -63,8 +68,13 @@ export function getGameResult(
   const isHome = game.homeTeam === teamCode;
   const myScore = (isHome ? game.homeScore : game.awayScore) ?? 0;
   const opScore = (isHome ? game.awayScore : game.homeScore) ?? 0;
-  const result: GameResult =
-    myScore > opScore ? "win" : myScore < opScore ? "loss" : "draw";
+  const result: GameResult = isCancelled(game)
+    ? "cancel"
+    : myScore > opScore
+      ? "win"
+      : myScore < opScore
+        ? "loss"
+        : "draw";
 
   return { isHome, result, myScore, opScore };
 }
@@ -87,13 +97,19 @@ export function buildScarfRows(
       isHome,
       date: game.date,
       opponent: TEAM_NAMES[opponent] ?? opponent,
-      score: `${myScore}:${opScore}`,
+      score: result === "cancel" ? "취소" : `${myScore}:${opScore}`,
       prefix: isHome ? ("H" as const) : ("A" as const)
     };
   });
 }
 
-function getRowRepeat(row: ScarfRow, mode: RowMode, count: number): number {
+function getRowRepeat(
+  row: ScarfRow,
+  mode: RowMode,
+  count: number,
+  cancelRowCount: number
+): number {
+  if (row.result === "cancel") return cancelRowCount;
   if (mode === "perGame") return count;
 
   const [my, op] = row.score.split(":").map(Number);
@@ -105,12 +121,16 @@ function getRowRepeat(row: ScarfRow, mode: RowMode, count: number): number {
 export function expandScarfRows(
   rows: ScarfRow[],
   mode: RowMode,
-  count: number
+  count: number,
+  cancelRowCount: number = 0
 ): ScarfRow[] {
-  if (mode === "perGame" && count === 1) return rows;
+  const hasCancel = rows.some(r => r.result === "cancel");
+  if (mode === "perGame" && count === 1 && (!hasCancel || cancelRowCount === 1))
+    return rows;
 
   return rows.flatMap(row => {
-    const n = getRowRepeat(row, mode, count);
+    const n = getRowRepeat(row, mode, count, cancelRowCount);
+    if (n <= 0) return [];
     return Array.from({ length: n }, (_, i) => ({
       ...row,
       rowKey: n > 1 ? `${row.gameKey}-${i}` : row.gameKey
@@ -124,12 +144,14 @@ export function countResults(rows: ScarfRow[]): {
   wins: number;
   draws: number;
   losses: number;
+  cancels: number;
 } {
   return rows.reduce(
-    (acc, r) => ({
-      ...acc,
-      [resultKey[r.result]]: acc[resultKey[r.result]] + 1
-    }),
-    { wins: 0, draws: 0, losses: 0 }
+    (acc, r) => {
+      if (r.result === "cancel") return { ...acc, cancels: acc.cancels + 1 };
+      const k = resultKey[r.result as "win" | "draw" | "loss"];
+      return { ...acc, [k]: acc[k] + 1 };
+    },
+    { wins: 0, draws: 0, losses: 0, cancels: 0 }
   );
 }

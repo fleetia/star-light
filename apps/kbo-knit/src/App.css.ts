@@ -29,6 +29,12 @@ export const subtitle = style({
   }
 });
 
+export const optionsTab = style({
+  display: "grid",
+  gap: "1rem",
+  padding: "0.5rem 0"
+});
+
 export const settings = style({
   display: "grid",
   gap: "0.8rem",

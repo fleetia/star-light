@@ -11,7 +11,10 @@ export const group = style({
 export const row = style({
   display: "flex",
   alignItems: "center",
-  gap: "0.5rem"
+  gap: "0.5rem",
+  selectors: {
+    "& + &": { marginTop: "0.5rem" }
+  }
 });
 
 export const countInput = style({

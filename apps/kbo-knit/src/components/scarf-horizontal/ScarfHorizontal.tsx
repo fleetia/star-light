@@ -12,10 +12,17 @@ type Props = {
   colors: ScarfColors;
   awaySame: boolean;
   series: SeriesType[];
+  showCancelLegend?: boolean;
 };
 
-export function ScarfHorizontal({ rows, colors, awaySame, series }: Props) {
-  const legend = buildLegend(colors, awaySame);
+export function ScarfHorizontal({
+  rows,
+  colors,
+  awaySame,
+  series,
+  showCancelLegend
+}: Props) {
+  const legend = buildLegend(colors, awaySame, showCancelLegend);
   const hasRegular = series.includes("REGULAR_SEASON");
   const emptyCount = hasRegular
     ? Math.max(0, REGULAR_SEASON_GAMES - rows.length)

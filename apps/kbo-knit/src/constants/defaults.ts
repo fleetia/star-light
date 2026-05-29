@@ -11,13 +11,16 @@ export const DEFAULT_STATE: AppState = {
     homeWin: "#FF6600",
     homeDraw: "#aab7b8",
     homeLoss: "#000000",
+    homeCancel: "#7f8c8d",
     awayWin: "#2e86c1",
     awayDraw: "#d5dbdb",
-    awayLoss: "#e74c3c"
+    awayLoss: "#e74c3c",
+    awayCancel: "#bdc3c7"
   },
   checked: {},
   rowMode: "perGame",
   rowCount: 1,
+  cancelRowCount: 0,
   customGames: []
 };
 

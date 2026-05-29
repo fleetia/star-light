@@ -22,6 +22,7 @@ type AppActions = {
   toggleChecked: (gameKey: string, allRowKeys?: string[]) => void;
   setRowMode: (mode: RowMode) => void;
   setRowCount: (count: number) => void;
+  setCancelRowCount: (count: number) => void;
   setActiveTab: (tab: TabKey) => void;
   setCheckTiming: (timing: CheckTiming) => void;
   setStockinetteEnabled: (enabled: boolean) => void;
@@ -32,9 +33,18 @@ type AppActions = {
 };
 
 export function useAppState(): [AppState, AppActions] {
-  const [state, setState] = useLocalStorage<AppState>(
+  const [rawState, setState] = useLocalStorage<AppState>(
     STORAGE_KEY,
     DEFAULT_STATE
+  );
+
+  const state: AppState = useMemo(
+    () => ({
+      ...rawState,
+      colors: { ...DEFAULT_STATE.colors, ...rawState.colors },
+      cancelRowCount: rawState.cancelRowCount ?? DEFAULT_STATE.cancelRowCount
+    }),
+    [rawState]
   );
 
   const setSeason = useCallback(
@@ -110,6 +120,11 @@ export function useAppState(): [AppState, AppActions] {
 
   const setRowCount = useCallback(
     (rowCount: number) => setState(prev => ({ ...prev, rowCount })),
+    [setState]
+  );
+
+  const setCancelRowCount = useCallback(
+    (cancelRowCount: number) => setState(prev => ({ ...prev, cancelRowCount })),
     [setState]
   );
 
@@ -192,13 +207,19 @@ export function useAppState(): [AppState, AppActions] {
     const home = {
       win: colors.homeWin,
       draw: colors.homeDraw,
-      loss: colors.homeLoss
+      loss: colors.homeLoss,
+      cancel: colors.homeCancel
     };
     return {
       home,
       away: awaySame
         ? home
-        : { win: colors.awayWin, draw: colors.awayDraw, loss: colors.awayLoss }
+        : {
+            win: colors.awayWin,
+            draw: colors.awayDraw,
+            loss: colors.awayLoss,
+            cancel: colors.awayCancel
+          }
     };
   }, [state]);
 
@@ -213,6 +234,7 @@ export function useAppState(): [AppState, AppActions] {
       toggleChecked,
       setRowMode,
       setRowCount,
+      setCancelRowCount,
       setActiveTab,
       setCheckTiming,
       setStockinetteEnabled,

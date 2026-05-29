@@ -9,8 +9,10 @@ import * as s from "./RowModeSelector.css";
 type Props = {
   mode: RowMode;
   count: number;
+  cancelCount: number;
   onModeChange: (mode: RowMode) => void;
   onCountChange: (count: number) => void;
+  onCancelCountChange: (count: number) => void;
 };
 
 const MODE_LABELS: Record<RowMode, string> = {
@@ -26,13 +28,22 @@ function clampCount(v: string): number {
   return Math.min(10, n);
 }
 
+function clampCancelCount(v: string): number {
+  const n = parseInt(v, 10);
+  if (isNaN(n) || n < 0) return 0;
+  return Math.min(10, n);
+}
+
 export function RowModeSelector({
   mode,
   count,
+  cancelCount,
   onModeChange,
-  onCountChange
+  onCountChange,
+  onCancelCountChange
 }: Props) {
   const [draft, setDraft] = useState<string | null>(null);
+  const [cancelDraft, setCancelDraft] = useState<string | null>(null);
 
   return (
     <Box title="줄 수 설정" className={s.group}>
@@ -61,6 +72,25 @@ export function RowModeSelector({
           className={s.countInput}
         />
         <span>줄</span>
+      </div>
+      <div className={s.row}>
+        <span>취소 경기</span>
+        <TextInput
+          type="number"
+          min={0}
+          max={10}
+          value={cancelDraft ?? String(cancelCount)}
+          onChange={v => setCancelDraft(v)}
+          onBlur={() => {
+            const clamped = clampCancelCount(
+              cancelDraft ?? String(cancelCount)
+            );
+            onCancelCountChange(clamped);
+            setCancelDraft(null);
+          }}
+          className={s.countInput}
+        />
+        <span>줄 (0=숨김)</span>
       </div>
     </Box>
   );
