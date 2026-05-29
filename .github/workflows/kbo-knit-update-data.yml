@@ -15,6 +15,7 @@ permissions:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -31,8 +32,25 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Resolve Playwright version
+        id: pw
+        run: echo "version=$(pnpm --filter kbo-knit exec playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
       - name: Install Playwright Chromium
-        run: pnpm --filter kbo-knit exec playwright install --with-deps chromium
+        timeout-minutes: 5
+        run: |
+          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then
+            pnpm --filter kbo-knit exec playwright install-deps chromium
+          else
+            pnpm --filter kbo-knit exec playwright install --with-deps chromium
+          fi
 
       - name: Run KBO scraper
         run: node apps/kbo-knit/scrape-kbo.mjs
