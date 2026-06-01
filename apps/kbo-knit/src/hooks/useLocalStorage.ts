@@ -1,8 +1,21 @@
 import { useState, useCallback } from "react";
 
+function getStorage(): Storage | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
 function readStorage<T>(key: string, fallback: T): T {
   try {
-    const raw = localStorage.getItem(key);
+    const storage = getStorage();
+    if (!storage) return fallback;
+
+    const raw = storage.getItem(key);
     if (!raw) return fallback;
     const parsed = JSON.parse(raw) as T;
     if (
@@ -19,7 +32,22 @@ function readStorage<T>(key: string, fallback: T): T {
 }
 
 function writeStorage<T>(key: string, value: T): void {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    getStorage()?.setItem(key, JSON.stringify(value));
+  } catch {
+    // Storage can be unavailable in private or restricted browsing contexts.
+  }
+}
+
+export function hasStoredValue(key: string): boolean {
+  try {
+    const storage = getStorage();
+    if (!storage) return false;
+
+    return storage.getItem(key) !== null;
+  } catch {
+    return false;
+  }
 }
 
 export function useLocalStorage<T>(
