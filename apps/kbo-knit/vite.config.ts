@@ -2,14 +2,42 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { readdirSync, readFileSync, existsSync, writeFileSync } from "node:fs";
-import { resolve, join } from "node:path";
+import { resolve, join, relative } from "node:path";
 
 const dataDir = resolve(__dirname, "data");
 
+function getPrecacheUrls(outDir: string): string[] {
+  const urls = new Set<string>(["/"]);
+
+  function walk(dir: string) {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const filePath = join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(filePath);
+        continue;
+      }
+
+      const fileName = relative(outDir, filePath).replaceAll("\\", "/");
+      if (fileName === "sw.js") continue;
+      urls.add(`/${fileName}`);
+    }
+  }
+
+  if (existsSync(outDir)) walk(outDir);
+  return [...urls].sort();
+}
+
 const injectSwVersion = (): Plugin => {
   const version = `kbo-knit-${Date.now()}`;
-  const inject = (source: string) =>
-    source.replaceAll("__BUILD_VERSION__", version);
+  const inject = (source: string, precacheUrls?: string[]) => {
+    const withVersion = source.replaceAll("__BUILD_VERSION__", version);
+    if (!precacheUrls) return withVersion;
+
+    return withVersion.replace(
+      '"__PRECACHE_URLS__"',
+      JSON.stringify(precacheUrls, null, 2)
+    );
+  };
 
   return {
     name: "inject-sw-version",
@@ -25,8 +53,11 @@ const injectSwVersion = (): Plugin => {
       if (!existsSync(swPath)) return;
 
       const source = readFileSync(swPath, "utf-8");
-      if (source.includes("__BUILD_VERSION__")) {
-        writeFileSync(swPath, inject(source));
+      if (
+        source.includes("__BUILD_VERSION__") ||
+        source.includes("__PRECACHE_URLS__")
+      ) {
+        writeFileSync(swPath, inject(source, getPrecacheUrls(outDir)));
       }
     }
   };
