@@ -61,8 +61,8 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  // Network-first for data files (always want fresh game results)
-  if (request.url.includes("/data/")) {
+  // Network-first for app shell and data files (always want fresh content)
+  if (request.mode === "navigate" || request.url.includes("/data/")) {
     event.respondWith(networkFirst(request));
     return;
   }
