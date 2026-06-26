@@ -1,6 +1,6 @@
 // __BUILD_VERSION__ is replaced at build time by Vite plugin
 const CACHE_NAME = "__BUILD_VERSION__";
-const PRECACHE_URLS = ["/", "/favicon.svg"];
+const PRECACHE_URLS = "__PRECACHE_URLS__";
 const isLocalhost =
   self.location.hostname === "localhost" ||
   self.location.hostname === "127.0.0.1";
@@ -25,14 +25,24 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-function networkFirst(request) {
+function networkFirst(request, fallbackUrl, cacheKey) {
   return fetch(request)
     .then(response => {
+      if (!response.ok) return response;
       const clone = response.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+      caches
+        .open(CACHE_NAME)
+        .then(cache => cache.put(cacheKey ?? request, clone));
       return response;
     })
-    .catch(() => caches.match(request));
+    .catch(() =>
+      caches
+        .match(cacheKey ?? request)
+        .then(
+          cached => cached ?? (fallbackUrl ? caches.match(fallbackUrl) : null)
+        )
+        .then(cached => cached ?? new Response("Offline", { status: 503 }))
+    );
 }
 
 function cacheFirst(request) {
@@ -54,16 +64,26 @@ self.addEventListener("fetch", event => {
 
   // Only handle http(s) requests
   if (url.protocol !== "http:" && url.protocol !== "https:") return;
+  if (request.method !== "GET") return;
 
   // localhost: always network-first
   if (isLocalhost) {
-    event.respondWith(networkFirst(request));
+    event.respondWith(
+      networkFirst(request, request.mode === "navigate" ? "/" : undefined)
+    );
     return;
   }
 
-  // Network-first for data files (always want fresh game results)
-  if (request.url.includes("/data/")) {
-    event.respondWith(networkFirst(request));
+  // Network-first for app shell and data files (always want fresh content)
+  if (request.mode === "navigate") {
+    event.respondWith(
+      networkFirst(request, request.mode === "navigate" ? "/" : undefined)
+    );
+    return;
+  }
+
+  if (url.pathname.startsWith("/data/")) {
+    event.respondWith(networkFirst(request, undefined, url.pathname));
     return;
   }
 

@@ -4,6 +4,7 @@ import { useAppState } from "./hooks/useAppState";
 import { useKboData } from "./hooks/useKboData";
 import { useCustomGameSync } from "./hooks/useCustomGameSync";
 import { useScarfData } from "./hooks/useScarfData";
+import { hasStoredValue } from "./hooks/useLocalStorage";
 import type { TabKey } from "./types/game.types";
 import { STORAGE_KEY } from "./constants/defaults";
 import { SeasonSelector } from "./components/season-selector/SeasonSelector";
@@ -18,8 +19,7 @@ import { RowCounter } from "./components/row-counter/RowCounter";
 import { GameEditor } from "./components/game-editor/GameEditor";
 import * as s from "./App.css";
 
-const isFirstVisit =
-  typeof window !== "undefined" && !window.localStorage.getItem(STORAGE_KEY);
+const isFirstVisit = !hasStoredValue(STORAGE_KEY);
 const DEFAULT_TAB: TabKey = isFirstVisit ? "options" : "pattern";
 
 export function App() {

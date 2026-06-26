@@ -18,7 +18,10 @@ export function useKboData(season: number): UseKboDataReturn {
     setIsLoading(true);
     setError(null);
 
-    fetch(`/data/${season}.json`, { signal: controller.signal })
+    fetch(`/data/${season}.json?updatedAt=${Date.now()}`, {
+      cache: "no-store",
+      signal: controller.signal
+    })
       .then(res => {
         if (!res.ok) {
           throw new Error(`${season}년 데이터가 없습니다`);
