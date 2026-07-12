@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { isCancelledGame } from "./scrape-kbo-utils.mjs";
 
 const KBO_URL = "https://www.koreabaseball.com/Schedule/Schedule.aspx";
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), "data");
@@ -99,8 +100,8 @@ const parseRow = async (row, season, seriesValue, state) => {
   }
 
   const scores = await parseScores(playCell);
-  const rowText = await row.innerText();
-  const cancelled = scores.length === 0 && /취소/.test(rowText);
+  const cancellationReason = await row.locator("td").last().innerText();
+  const cancelled = isCancelledGame(scores, cancellationReason);
   const key = `${state.date.replace(/-/g, "")}-${teams.away}-${teams.home}`;
   const n = (state.counts[key] = (state.counts[key] ?? 0) + 1);
 

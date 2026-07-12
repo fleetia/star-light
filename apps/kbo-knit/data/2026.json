@@ -4399,7 +4399,8 @@
       "awayTeam": "HANWHA",
       "homeTeam": "LG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260705-SAMSUNG-SSG-1",
@@ -4417,7 +4418,8 @@
       "awayTeam": "NC",
       "homeTeam": "KIA",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260705-LOTTE-KT-1",
