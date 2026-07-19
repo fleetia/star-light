@@ -2,14 +2,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Introduction" />
 
-# Launchpad Design System
+# KBO Knit Components
 
-`@launchpad/components`는 Launchpad 브라우저 확장 프로그램을 위한 디자인 시스템입니다.
+`@star-light/components`는 KBO Knit에서 사용하는 UI 컴포넌트 패키지입니다.
 
 ## 설치
 
 ```bash
-pnpm add @launchpad/components
+pnpm install
 ```
 
 ## 테마 시스템
@@ -17,7 +17,7 @@ pnpm add @launchpad/components
 모든 컴포넌트는 CSS 변수 기반 테마 시스템을 사용합니다. 런타임에 `setCSSVariable` 또는 `setCSSVariables`를 호출하여 테마를 변경할 수 있습니다.
 
 ```tsx
-import { setCSSVariables, darkTheme } from "@launchpad/components";
+import { setCSSVariables, darkTheme } from "@star-light/components";
 
 // 다크 테마 적용
 setCSSVariables({
@@ -54,44 +54,22 @@ setCSSVariables({
 
 - **Modal** — 오버레이 모달 컨테이너
 - **Box** — 테두리 있는 그룹 컨테이너
-- **Sidebar** — 사이드바 레이아웃
-- **CollapsibleSection** — 접기/펼치기 섹션
 - **Tabs** — 탭 네비게이션
-
-### 네비게이션
-
-- **Breadcrumb** — 경로 탐색
-- **NavigationButton** — 이전/다음 버튼
-- **CardPagination** — 페이지네이션
-- **Tree** — 재귀 트리 구조
 
 ### 입력
 
 - **Button** — 범용 버튼 (primary, secondary, ghost, danger)
 - **TextInput** — 텍스트 입력
-- **Checkbox** — 체크박스
+- **DateInput** — 날짜 입력
+- **Select** — 선택 입력
+- **RadioGroup** — 단일 선택 그룹
 - **Toggle** — 토글 스위치
-- **RangeInput** — 슬라이더
 - **ColorPicker** — 색상 선택기
-- **PositionGrid** — 위치 선택 그리드
-
-### 표시
-
-- **Badge** — 상태 뱃지
-- **ContextMenu** — 우클릭 메뉴
-- **ConfirmDialog** — 확인 다이얼로그
-- **IconButton** — 아이콘 버튼
 - **ColorRow** — 색상 행
-
-### 아이콘
-
-- ChevronLeftIcon, ChevronRightIcon
-- TriangleUpIcon, TriangleDownIcon
-- GearIcon, FolderIcon, EyeIcon, DragHandleIcon
 
 ## 기술 스택
 
-- **React 18** — UI 프레임워크
+- **React 19** — UI 프레임워크
 - **vanilla-extract** — 타입 안전 CSS-in-TS
 - **Storybook 10** — 컴포넌트 문서화
 - **Vitest** — 테스트

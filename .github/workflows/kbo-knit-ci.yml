@@ -6,6 +6,13 @@ on:
     paths:
       - "apps/kbo-knit/**"
       - "packages/components/**"
+      - "tools/config/**"
+      - "utils/test/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - "tsconfig.json"
+      - "eslint.config.js"
 
 jobs:
   check:

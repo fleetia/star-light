@@ -1,9 +1,10 @@
 {
-  "name": "star-light-monorepo",
+  "name": "kbo-knit-workspace",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm -F @star-light/extension dev",
+    "predev": "pnpm build:components",
+    "dev": "pnpm -F @star-light/kbo-knit dev",
     "build": "pnpm -r build",
     "test": "pnpm -r test:run",
     "storybook": "pnpm -F @star-light/components storybook",
@@ -11,22 +12,15 @@
     "dev:components": "pnpm -F @star-light/components dev",
     "build:components": "pnpm -F @star-light/components build",
     "test:components": "pnpm -F @star-light/components test",
-    "dev:starlit": "pnpm -F @star-light/extension dev",
-    "build:starlit": "pnpm -F @star-light/extension build",
-    "dev:kbo": "pnpm -F @star-light/kbo-knit dev",
-    "build:kbo": "pnpm -F @star-light/kbo-knit build",
+    "dev:kbo": "pnpm dev",
+    "build:kbo": "pnpm build:components && pnpm -F @star-light/kbo-knit build",
     "lint:kbo": "pnpm -F @star-light/kbo-knit lint",
     "preview:kbo": "pnpm -F @star-light/kbo-knit preview",
     "scrape:kbo": "pnpm -F @star-light/kbo-knit scrape",
-    "dev:homepage": "pnpm -F @star-light/homepage dev",
-    "build:homepage": "pnpm -F @star-light/homepage build",
     "lint": "pnpm -r --if-present lint",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "prepare": "husky",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "changeset publish"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
@@ -38,8 +32,6 @@
     ]
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.6.0",
-    "@changesets/cli": "^2.30.0",
     "@star-light/config": "workspace:*",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",

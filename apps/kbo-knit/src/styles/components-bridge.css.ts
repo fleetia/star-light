@@ -1,7 +1,7 @@
 import { createGlobalTheme } from "@vanilla-extract/css";
-import { vars as lpVars } from "@star-light/components";
+import { vars as componentVars } from "@star-light/components";
 
-createGlobalTheme(":root", lpVars, {
+createGlobalTheme(":root", componentVars, {
   em: "16px",
   iconSize: "32px",
   gap: "1em",

@@ -6,7 +6,7 @@ KBO 야구 경기 결과를 니팅 패턴으로 시각화하는 웹앱 KBO Knit�
 
 ```bash
 pnpm install
-pnpm dev:kbo      # Vite 개발 서버
+pnpm dev      # Vite 개발 서버
 ```
 
 개발 서버에서는 `data/*.json` 파일을 미들웨어로 서빙합니다 (vite.config.ts에서 설정).
@@ -53,11 +53,15 @@ KBO Knit은 더 엄격한 TypeScript 설정을 사용합니다:
 
 ## 테스트
 
-현재 유닛 테스트가 없습니다. 테스트 추가는 환영합니다.
+```bash
+pnpm test
+```
+
+KBO Knit의 hooks와 utilities는 Vitest로 테스트합니다.
 
 ## PR 체크
 
-PR에서 다음이 자동 실행됩니다 (`apps/kbo-knit/**` 또는 `packages/components/**` 변경 시):
+PR에서 KBO 앱이나 지원 workspace/config가 변경되면 다음이 자동 실행됩니다:
 
 - ESLint
 - TypeScript 타입 체크

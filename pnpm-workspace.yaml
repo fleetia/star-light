@@ -1,5 +1,5 @@
 packages:
   - "packages/*"
-  - "apps/*"
+  - "apps/kbo-knit"
   - "tools/*"
   - "utils/*"

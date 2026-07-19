@@ -10,33 +10,13 @@
       "import": "./dist/index.js"
     },
     "./styles/*": "./dist/styles/*",
-    "./Badge": {
-      "types": "./dist/Badge/index.d.ts",
-      "import": "./dist/Badge/index.js"
-    },
     "./Box": {
       "types": "./dist/Box/index.d.ts",
       "import": "./dist/Box/index.js"
     },
-    "./Breadcrumb": {
-      "types": "./dist/Breadcrumb/index.d.ts",
-      "import": "./dist/Breadcrumb/index.js"
-    },
     "./Button": {
       "types": "./dist/Button/index.d.ts",
       "import": "./dist/Button/index.js"
-    },
-    "./CardPagination": {
-      "types": "./dist/CardPagination/index.d.ts",
-      "import": "./dist/CardPagination/index.js"
-    },
-    "./Checkbox": {
-      "types": "./dist/Checkbox/index.d.ts",
-      "import": "./dist/Checkbox/index.js"
-    },
-    "./CollapsibleSection": {
-      "types": "./dist/CollapsibleSection/index.d.ts",
-      "import": "./dist/CollapsibleSection/index.js"
     },
     "./ColorPicker": {
       "types": "./dist/ColorPicker/index.d.ts",
@@ -46,49 +26,21 @@
       "types": "./dist/ColorRow/index.d.ts",
       "import": "./dist/ColorRow/index.js"
     },
-    "./ConfirmDialog": {
-      "types": "./dist/ConfirmDialog/index.d.ts",
-      "import": "./dist/ConfirmDialog/index.js"
-    },
-    "./ContextMenu": {
-      "types": "./dist/ContextMenu/index.d.ts",
-      "import": "./dist/ContextMenu/index.js"
-    },
     "./DateInput": {
       "types": "./dist/DateInput/index.d.ts",
       "import": "./dist/DateInput/index.js"
-    },
-    "./IconButton": {
-      "types": "./dist/IconButton/index.d.ts",
-      "import": "./dist/IconButton/index.js"
     },
     "./Modal": {
       "types": "./dist/Modal/index.d.ts",
       "import": "./dist/Modal/index.js"
     },
-    "./NavigationButton": {
-      "types": "./dist/NavigationButton/index.d.ts",
-      "import": "./dist/NavigationButton/index.js"
-    },
-    "./PositionGrid": {
-      "types": "./dist/PositionGrid/index.d.ts",
-      "import": "./dist/PositionGrid/index.js"
-    },
     "./RadioGroup": {
       "types": "./dist/RadioGroup/index.d.ts",
       "import": "./dist/RadioGroup/index.js"
     },
-    "./RangeInput": {
-      "types": "./dist/RangeInput/index.d.ts",
-      "import": "./dist/RangeInput/index.js"
-    },
     "./Select": {
       "types": "./dist/Select/index.d.ts",
       "import": "./dist/Select/index.js"
-    },
-    "./Sidebar": {
-      "types": "./dist/Sidebar/index.d.ts",
-      "import": "./dist/Sidebar/index.js"
     },
     "./Tabs": {
       "types": "./dist/Tabs/index.d.ts",
@@ -102,10 +54,6 @@
       "types": "./dist/Toggle/index.d.ts",
       "import": "./dist/Toggle/index.js"
     },
-    "./Tree": {
-      "types": "./dist/Tree/index.d.ts",
-      "import": "./dist/Tree/index.js"
-    },
     "./hooks": {
       "types": "./dist/hooks/index.d.ts",
       "import": "./dist/hooks/index.js"
@@ -113,10 +61,6 @@
     "./i18n": {
       "types": "./dist/i18n/index.d.ts",
       "import": "./dist/i18n/index.js"
-    },
-    "./icons": {
-      "types": "./dist/icons/index.d.ts",
-      "import": "./dist/icons/index.js"
     },
     "./theme": {
       "types": "./dist/theme/index.d.ts",

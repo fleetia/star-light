@@ -1,32 +1,34 @@
-# Star-light
+# KBO Knit
 
-모노레포 루트입니다. 기본적으로 개발자가 아닌 사람이 보고 수정 할 것이라고 생각하고 모든 가이드를 작성하였습니다 (w.claude)
+KBO 경기 결과를 뜨개 패턴으로 시각화하고 진행 상황을 기록하는 웹앱입니다.
 
-## 프로젝트
+- [서비스](https://kbo-knit.star-light.space/)
+- [앱 소개](apps/kbo-knit/README.md)
 
-### KBO Knit
+## Workspace
 
-크보니팅 프로젝트입니다.
+- `apps/kbo-knit`: 웹앱과 KBO 데이터 스크래퍼
+- `packages/components`: 앱에서 사용하는 UI 컴포넌트
+- `tools/config`: 공통 ESLint, Prettier, TypeScript 설정
+- `utils/test`: 공통 테스트 유틸리티
 
-### Starlit
+## Getting Started
 
-## 문서
+```bash
+pnpm install
+pnpm dev
+```
 
-### 시작하기
+빌드와 테스트:
 
-- [시작하기](docs/getting-started.md) — 설치, 실행, 빌드, 테스트
+```bash
+pnpm build
+pnpm test
+pnpm lint
+```
 
-### 기여 가이드
+자세한 내용은 [시작하기](docs/getting-started.md)와 [개발자 기여 가이드](docs/kbo-knit/contributing.md)를 참고하세요.
 
-- [Starlit 기여 가이드](docs/starlit/contributing.md) — Chrome 확장 개발, 테스트
-- [KBO Knit 기여 가이드](docs/kbo-knit/contributing.md) — 웹앱 개발, 데이터 파이프라인, 배포
-- [비개발자 기여 가이드](docs/contributing-non-dev.md) — 이슈, 피드백, 번역
-- [AI 가이드](docs/ai-guide.md) — AI 코딩 도구를 위한 프로젝트 구조 안내
-
-### 기타
-
-- [포크 가이드](docs/forking.md) — 이 프로젝트를 포크해서 새 프로젝트 만들기
-
-## 라이선스
+## License
 
 [AGPL-3.0](LICENSE)

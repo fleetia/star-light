@@ -47,9 +47,9 @@ pnpm dev:kbo
 ### 스크래퍼 (수동 실행 시)
 
 ```bash
-npx playwright install chromium
-node scrape-kbo.mjs          # 올해 시즌
-node scrape-kbo.mjs 2025     # 특정 연도
+pnpm --filter @star-light/kbo-knit exec playwright install chromium
+pnpm scrape:kbo                              # 올해 시즌
+pnpm --filter @star-light/kbo-knit scrape -- 2025  # 특정 연도
 ```
 
 ## Contributing
@@ -58,8 +58,6 @@ node scrape-kbo.mjs 2025     # 특정 연도
 
 - [KBO Knit 기여 가이드](../../docs/kbo-knit/contributing.md) — 개발 환경, 데이터 파이프라인, 배포
 - [비개발자 기여 가이드](../../docs/contributing-non-dev.md) — 버그 리포트, 기능 제안, 피드백
-- [AI 가이드](../../docs/ai-guide.md) — AI 코딩 도구를 위한 프로젝트 구조 안내
-- [포크 가이드](../../docs/forking.md) — 이 프로젝트를 포크해서 새 프로젝트 만들기
 
 ## License
 

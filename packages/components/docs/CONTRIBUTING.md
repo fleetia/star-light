@@ -20,9 +20,10 @@ packages/components/src/ComponentName/
 1. [ ] 컴포넌트 파일 생성 (`ComponentName.tsx`)
 2. [ ] Vanilla Extract 스타일 파일 생성 (`ComponentName.css.ts`)
 3. [ ] barrel export (`index.ts`)
-4. [ ] `src/index.ts`에 export 추가
-5. [ ] 유닛 테스트 작성 (Vitest + @testing-library/react)
-6. [ ] Storybook 스토리 작성
+4. [ ] 유닛 테스트 작성 (Vitest + @testing-library/react)
+5. [ ] Storybook 스토리 작성
+
+`index.ts`가 있는 디렉토리는 build 시 `package.json` exports에 자동 반영됩니다.
 
 ### 스타일 규칙
 
@@ -56,7 +57,7 @@ export const size = styleVariants({
 
 - 사용자에게 보이는 문자열은 하드코딩하지 않음
 - `useTranslation()` 훅의 `t()` 함수 사용
-- 번역 키는 `컴포넌트.기능.설명` 형식 (예: `sidebar.general.export`)
+- 번역 키는 `컴포넌트.기능.설명` 형식 (예: `modal.close`)
 - 새 키 추가 시 `packages/components/src/i18n/locales/`의 en, ko, ja 파일 모두 업데이트
 
 ### 테스트 규칙
