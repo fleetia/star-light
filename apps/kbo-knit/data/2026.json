@@ -5348,7 +5348,8 @@
       "awayTeam": "NC",
       "homeTeam": "DOOSAN",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260805-HANWHA-SAMSUNG-1",
@@ -5357,7 +5358,8 @@
       "awayTeam": "HANWHA",
       "homeTeam": "SAMSUNG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260805-KIWOOM-LOTTE-1",
@@ -5366,7 +5368,8 @@
       "awayTeam": "KIWOOM",
       "homeTeam": "LOTTE",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260805-LG-SSG-1",
@@ -5375,7 +5378,8 @@
       "awayTeam": "LG",
       "homeTeam": "SSG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260805-KT-KIA-1",
@@ -5384,7 +5388,8 @@
       "awayTeam": "KT",
       "homeTeam": "KIA",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260806-NC-DOOSAN-1",
@@ -5393,7 +5398,8 @@
       "awayTeam": "NC",
       "homeTeam": "DOOSAN",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260806-HANWHA-SAMSUNG-1",
@@ -5402,7 +5408,8 @@
       "awayTeam": "HANWHA",
       "homeTeam": "SAMSUNG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260806-KIWOOM-LOTTE-1",
@@ -5411,7 +5418,8 @@
       "awayTeam": "KIWOOM",
       "homeTeam": "LOTTE",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260806-LG-SSG-1",
@@ -5420,7 +5428,8 @@
       "awayTeam": "LG",
       "homeTeam": "SSG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260806-KT-KIA-1",
@@ -5429,7 +5438,8 @@
       "awayTeam": "KT",
       "homeTeam": "KIA",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260807-KIA-LG-1",
