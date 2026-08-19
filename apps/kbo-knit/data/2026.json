@@ -5869,8 +5869,8 @@
       "date": "2026-08-18",
       "awayTeam": "KT",
       "homeTeam": "LG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 1,
+      "homeScore": 9
     },
     {
       "gameKey": "20260818-SSG-SAMSUNG-1",
@@ -5878,8 +5878,8 @@
       "date": "2026-08-18",
       "awayTeam": "SSG",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 5,
+      "homeScore": 4
     },
     {
       "gameKey": "20260818-KIWOOM-LOTTE-1",
@@ -5887,8 +5887,8 @@
       "date": "2026-08-18",
       "awayTeam": "KIWOOM",
       "homeTeam": "LOTTE",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 10,
+      "homeScore": 15
     },
     {
       "gameKey": "20260818-DOOSAN-NC-1",
@@ -5896,8 +5896,8 @@
       "date": "2026-08-18",
       "awayTeam": "DOOSAN",
       "homeTeam": "NC",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 6,
+      "homeScore": 4
     },
     {
       "gameKey": "20260818-KIA-HANWHA-1",
@@ -5905,8 +5905,8 @@
       "date": "2026-08-18",
       "awayTeam": "KIA",
       "homeTeam": "HANWHA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 4,
+      "homeScore": 3
     },
     {
       "gameKey": "20260819-KT-LG-1",
@@ -5914,8 +5914,8 @@
       "date": "2026-08-19",
       "awayTeam": "KT",
       "homeTeam": "LG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 0
     },
     {
       "gameKey": "20260819-SSG-SAMSUNG-1",
@@ -5923,8 +5923,8 @@
       "date": "2026-08-19",
       "awayTeam": "SSG",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 0
     },
     {
       "gameKey": "20260819-KIWOOM-LOTTE-1",
@@ -5932,8 +5932,8 @@
       "date": "2026-08-19",
       "awayTeam": "KIWOOM",
       "homeTeam": "LOTTE",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 0
     },
     {
       "gameKey": "20260819-DOOSAN-NC-1",
@@ -5941,8 +5941,8 @@
       "date": "2026-08-19",
       "awayTeam": "DOOSAN",
       "homeTeam": "NC",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 0
     },
     {
       "gameKey": "20260819-KIA-HANWHA-1",
@@ -5950,8 +5950,8 @@
       "date": "2026-08-19",
       "awayTeam": "KIA",
       "homeTeam": "HANWHA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 0,
+      "homeScore": 0
     },
     {
       "gameKey": "20260820-KT-LG-1",
