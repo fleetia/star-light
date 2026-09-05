@@ -34,7 +34,7 @@ jobs:
 
       - name: Resolve Playwright version
         id: pw
-        run: echo "version=$(pnpm --filter kbo-knit exec playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
+        run: echo "version=$(pnpm exec playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
 
       - name: Cache Playwright browsers
         id: pw-cache
@@ -47,18 +47,18 @@ jobs:
         timeout-minutes: 5
         run: |
           if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then
-            pnpm --filter kbo-knit exec playwright install-deps chromium
+            pnpm exec playwright install-deps chromium
           else
-            pnpm --filter kbo-knit exec playwright install --with-deps chromium
+            pnpm exec playwright install --with-deps chromium
           fi
 
       - name: Run KBO scraper
-        run: node apps/kbo-knit/scrape-kbo.mjs
+        run: node scrape-kbo.mjs
 
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet apps/kbo-knit/data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
@@ -66,7 +66,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           DATE=$(date -u +%Y-%m-%d)
-          git add apps/kbo-knit/data/
+          git add data/
           git commit -m "data(kbo-knit): update KBO $(date +%Y) results (${DATE})"
           HUSKY=0 git push
 
@@ -79,7 +79,7 @@ jobs:
 
       - name: Sync data to S3
         if: steps.changes.outputs.changed == 'true'
-        run: aws s3 sync apps/kbo-knit/data/ s3://${{ vars.KBO_S3_BUCKET }}/data/ --delete
+        run: aws s3 sync data/ s3://${{ vars.KBO_S3_BUCKET }}/data/ --delete
 
       - name: Invalidate CloudFront cache
         if: steps.changes.outputs.changed == 'true'
