@@ -1,5 +1,6 @@
 import { useCallback, useMemo } from "react";
 import { Tabs, TabList, Tab, TabPanel } from "@fleetia/lagrange";
+import { CloudAccount } from "./components/cloud-account/CloudAccount";
 import { useAppState } from "./hooks/useAppState";
 import { useKboData } from "./hooks/useKboData";
 import { useCustomGameSync } from "./hooks/useCustomGameSync";
@@ -7,6 +8,7 @@ import { useScarfData } from "./hooks/useScarfData";
 import { hasStoredValue } from "./hooks/useLocalStorage";
 import type { TabKey } from "./types/game.types";
 import { STORAGE_KEY } from "./constants/defaults";
+import { OWNER_KEY } from "./cloud/storage";
 import { SeasonSelector } from "./components/season-selector/SeasonSelector";
 import { TeamSelector } from "./components/team-selector/TeamSelector";
 import { SeriesFilter } from "./components/series-filter/SeriesFilter";
@@ -19,7 +21,7 @@ import { RowCounter } from "./components/row-counter/RowCounter";
 import { GameEditor } from "./components/game-editor/GameEditor";
 import * as s from "./App.css";
 
-const isFirstVisit = !hasStoredValue(STORAGE_KEY);
+const isFirstVisit = !hasStoredValue(STORAGE_KEY) && !hasStoredValue(OWNER_KEY);
 const DEFAULT_TAB: TabKey = isFirstVisit ? "options" : "pattern";
 const TAB_LABELS: Record<TabKey, string> = {
   pattern: "목도리 패턴",
@@ -29,7 +31,7 @@ const TAB_LABELS: Record<TabKey, string> = {
 };
 
 export function App() {
-  const [state, actions] = useAppState();
+  const [state, actions, cloud, cloudStore] = useAppState();
   const activeTab = state.activeTab ?? DEFAULT_TAB;
   const { games, isLoading, error } = useKboData(state.season);
 
@@ -60,6 +62,7 @@ export function App() {
   const optionsContent = useMemo(
     () => (
       <div className={s.optionsTab}>
+        <CloudAccount snapshot={cloud} store={cloudStore} />
         <div className={s.settings}>
           <SeasonSelector value={state.season} onChange={actions.setSeason} />
           <TeamSelector value={state.team} onChange={actions.setTeam} />
@@ -81,7 +84,7 @@ export function App() {
         />
       </div>
     ),
-    [state, actions]
+    [state, actions, cloud, cloudStore]
   );
 
   const hasRows = !isLoading && !error && scarfRows.length > 0;

@@ -17,6 +17,17 @@ try {
   const errors = [];
   page.on("pageerror", error => errors.push(error.message));
   await page.clock.setFixedTime(new Date("2026-09-05T12:00:00+09:00"));
+  await context.route("https://iserlohn.star-light.space/**", route =>
+    route.fulfill({
+      status: 401,
+      contentType: "application/json",
+      headers: {
+        "access-control-allow-origin": new URL(url).origin,
+        "access-control-allow-credentials": "true"
+      },
+      body: JSON.stringify({ error: "Unauthorized" })
+    })
+  );
   await page.goto(url);
   await page.getByRole("tab", { name: "옵션", exact: true }).waitFor();
   assert.equal(
@@ -130,11 +141,12 @@ try {
   await page.waitForFunction(
     () =>
       Object.values(
-        JSON.parse(localStorage.getItem("kbo-knit")).checked
+        JSON.parse(localStorage.getItem("kbo-knit:cloud:v2:guest")).state
+          .checked
       ).filter(Boolean).length === 1
   );
-  const saved = await page.evaluate(() =>
-    JSON.parse(localStorage.getItem("kbo-knit"))
+  const saved = await page.evaluate(
+    () => JSON.parse(localStorage.getItem("kbo-knit:cloud:v2:guest")).state
   );
   assert.equal(saved.season, 2026);
   assert.equal(saved.team, "SAMSUNG");
@@ -150,7 +162,9 @@ try {
     true
   );
   assert.deepEqual(
-    await page.evaluate(() => JSON.parse(localStorage.getItem("kbo-knit"))),
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem("kbo-knit:cloud:v2:guest")).state
+    ),
     saved
   );
   await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
@@ -158,7 +172,9 @@ try {
   await page.reload();
   await page.getByRole("button", { name: "이전 단", exact: true }).waitFor();
   assert.deepEqual(
-    await page.evaluate(() => JSON.parse(localStorage.getItem("kbo-knit"))),
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem("kbo-knit:cloud:v2:guest")).state
+    ),
     saved
   );
   assert.equal(

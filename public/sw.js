@@ -14,13 +14,29 @@ self.addEventListener("install", event => {
 
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches
-      .keys()
-      .then(keys =>
-        Promise.all(
-          keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
-        )
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.map(async key => {
+          if (key !== CACHE_NAME) return caches.delete(key);
+          const cache = await caches.open(key);
+          const requests = await cache.keys();
+          await Promise.all(
+            requests
+              .filter(request => {
+                const url = new URL(request.url);
+                return (
+                  url.origin !== self.location.origin ||
+                  url.pathname.startsWith("/api/") ||
+                  url.pathname.startsWith("/v1/") ||
+                  url.pathname.startsWith("/auth") ||
+                  url.pathname.startsWith("/account")
+                );
+              })
+              .map(request => cache.delete(request))
+          );
+        })
       )
+    )
   );
   self.clients.claim();
 });
@@ -65,6 +81,14 @@ self.addEventListener("fetch", event => {
   // Only handle http(s) requests
   if (url.protocol !== "http:" && url.protocol !== "https:") return;
   if (request.method !== "GET") return;
+  if (
+    url.origin !== self.location.origin ||
+    url.pathname.startsWith("/api/") ||
+    url.pathname.startsWith("/v1/") ||
+    url.pathname.startsWith("/auth") ||
+    url.pathname.startsWith("/account")
+  )
+    return;
 
   // localhost: always network-first
   if (isLocalhost) {
