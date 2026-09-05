@@ -1,0 +1,16 @@
+packages:
+  - .
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+trustPolicy: no-downgrade
+# Existing lockfile artifacts checked against their upstream release sources.
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
+  - vite@5.4.21
+blockExoticSubdeps: true
+strictDepBuilds: true
+allowBuilds:
+  "@parcel/watcher": false
+  esbuild: true
