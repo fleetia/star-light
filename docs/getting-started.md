@@ -17,9 +17,9 @@ pnpm install
 pnpm dev
 ```
 
-`@star-light/components`를 먼저 빌드한 뒤 KBO Knit Vite 개발 서버를 실행합니다.
+KBO Knit Vite 개발 서버를 실행합니다. `src/ui`의 컴포넌트도 앱과 함께 처리됩니다.
 
-### 컴포넌트 라이브러리 (Storybook)
+### UI 컴포넌트 (Storybook)
 
 ```bash
 pnpm storybook
@@ -27,40 +27,42 @@ pnpm storybook
 
 `http://localhost:6006`에서 Storybook이 실행됩니다.
 
-컴포넌트를 watch 모드로 빌드하려면:
-
-```bash
-pnpm dev:components
-```
-
 ## 빌드
-
-전체 빌드:
 
 ```bash
 pnpm build
+pnpm build-storybook
 ```
 
-개별 빌드:
-
-```bash
-pnpm build:kbo         # KBO Knit
-pnpm build:components  # 컴포넌트 라이브러리
-```
+앱 빌드는 TypeScript 검사 후 `dist/`를 생성하고 서비스 워커의 precache 목록을 검증합니다. Storybook 빌드 결과는 `storybook-static/`에 생성됩니다.
 
 ## 테스트
 
 ```bash
-pnpm test              # 전체 테스트 (단일 실행)
-pnpm test:components   # 컴포넌트 테스트 (watch 모드)
+pnpm test        # 앱과 UI 전체 테스트 (단일 실행)
+pnpm test:watch  # watch 모드
 ```
 
-각 앱 디렉토리에서 개별 실행도 가능합니다:
+## 브라우저 검증
+
+Playwright Chromium을 준비하고 앱을 빌드한 뒤 preview 서버를 실행합니다:
 
 ```bash
-cd apps/kbo-knit
-pnpm test        # watch 모드
-pnpm test:run    # 단일 실행
+pnpm exec playwright install chromium
+pnpm build
+pnpm preview --host 127.0.0.1 --port 4173
+```
+
+preview 서버를 켜 둔 상태에서 별도 터미널로 실행합니다:
+
+```bash
+pnpm verify:app http://127.0.0.1:4173
+```
+
+색상 선택, 경기 편집, 진행 상황 저장과 서비스 워커 동작을 확인합니다. 스크린샷이 필요하면 두 번째 인자로 저장 디렉토리를 지정합니다:
+
+```bash
+pnpm verify:app http://127.0.0.1:4173 /tmp/kbo-knit-screenshots
 ```
 
 ## 린트 & 포맷팅
@@ -73,13 +75,15 @@ pnpm format          # 자동 포맷팅
 
 ## 주요 스크립트 목록
 
-| 스크립트              | 설명                |
-| --------------------- | ------------------- |
-| `pnpm dev`            | KBO Knit 개발 서버  |
-| `pnpm dev:components` | 컴포넌트 watch 빌드 |
-| `pnpm storybook`      | Storybook 실행      |
-| `pnpm build`          | 전체 빌드           |
-| `pnpm test`           | 전체 테스트         |
-| `pnpm lint`           | 전체 린트           |
-| `pnpm format`         | 자동 포맷팅         |
-| `pnpm scrape:kbo`     | KBO 데이터 스크래핑 |
+| 스크립트               | 설명                         |
+| ---------------------- | ---------------------------- |
+| `pnpm dev`             | KBO Knit 개발 서버           |
+| `pnpm storybook`       | Storybook 실행               |
+| `pnpm build`           | 앱 빌드와 서비스 워커 검증   |
+| `pnpm build-storybook` | Storybook 정적 빌드          |
+| `pnpm test`            | 앱과 UI 전체 테스트          |
+| `pnpm test:watch`      | 테스트 watch 모드            |
+| `pnpm verify:app`      | 실행 중인 앱의 브라우저 검증 |
+| `pnpm lint`            | 전체 린트                    |
+| `pnpm format`          | 자동 포맷팅                  |
+| `pnpm scrape`          | KBO 데이터 스크래핑          |

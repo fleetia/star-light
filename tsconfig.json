@@ -1,4 +1,11 @@
 {
   "files": [],
-  "references": [{ "path": "packages/components" }, { "path": "apps/kbo-knit" }]
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

@@ -4,14 +4,19 @@ on:
   push:
     branches: [main]
     paths:
-      - "apps/kbo-knit/**"
-      - "packages/components/**"
-      - "tools/config/**"
+      - "src/**"
+      - "public/**"
+      - "data/**"
+      - "scripts/**"
+      - "scrape-kbo*.mjs"
+      - "index.html"
       - "package.json"
       - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "tsconfig.json"
-      - "!apps/kbo-knit/data/**"
+      - "tsconfig*.json"
+      - "vite.config.ts"
+      - "eslint.config.js"
+      - ".github/workflows/kbo-knit-deploy.yml"
+      - "!data/**"
 
 permissions:
   id-token: write
@@ -39,11 +44,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build design system
-        run: pnpm -F @star-light/components build
-
       - name: Build
-        run: pnpm -F @star-light/kbo-knit build
+        run: pnpm build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -52,7 +54,7 @@ jobs:
           aws-region: ${{ vars.KBO_AWS_REGION }}
 
       - name: Sync to S3
-        run: aws s3 sync apps/kbo-knit/dist/ s3://${{ vars.KBO_S3_BUCKET }} --delete
+        run: aws s3 sync dist/ s3://${{ vars.KBO_S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront cache
         run: aws cloudfront create-invalidation --distribution-id ${{ vars.KBO_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

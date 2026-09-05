@@ -14,15 +14,19 @@ pnpm dev      # Vite 개발 서버
 ## 프로젝트 구조
 
 ```
-apps/kbo-knit/
+kbo-knit/
 ├── src/
-│   ├── components/    # UI 컴포넌트 (TeamSelector, ScarfPreview 등)
+│   ├── components/    # KBO 기능 컴포넌트 (TeamSelector, ScarfPreview 등)
+│   ├── ui/            # 공통 UI 컴포넌트, 테마, Storybook stories
 │   ├── hooks/         # 커스텀 훅 (useAppState, useKboData)
 │   ├── utils/         # 유틸리티 (게임 필터링, 행 빌드)
 │   ├── types/         # TypeScript 타입 정의
 │   ├── constants/     # 팀 데이터, 기본값
 │   └── styles/        # Vanilla Extract 스타일
 ├── data/              # KBO 경기 데이터 (JSON, 스크래퍼가 생성)
+├── public/            # 정적 자산과 서비스 워커
+├── scripts/           # 빌드 결과와 브라우저 검증
+├── .storybook/        # Storybook 설정
 ├── scrape-kbo.mjs     # Playwright 기반 KBO 데이터 스크래퍼
 └── vite.config.ts     # Vite 설정 (데이터 파이프라인 포함)
 ```
@@ -32,7 +36,7 @@ apps/kbo-knit/
 `data/` 디렉토리의 JSON 파일은 스크래퍼가 자동 생성합니다.
 
 ```bash
-pnpm scrape:kbo    # Playwright로 KBO 사이트에서 데이터 스크래핑
+pnpm scrape    # Playwright로 KBO 사이트에서 데이터 스크래핑
 ```
 
 - 스크래핑에는 Playwright Chromium이 필요합니다
@@ -41,15 +45,15 @@ pnpm scrape:kbo    # Playwright로 KBO 사이트에서 데이터 스크래핑
 
 ## TypeScript
 
-KBO Knit은 더 엄격한 TypeScript 설정을 사용합니다:
+KBO Knit은 다음 TypeScript 설정을 사용합니다:
 
 - `noUnusedLocals`, `noUnusedParameters` 활성화
-- 앱 코드(`tsconfig.app.json`)와 스크립트(`tsconfig.node.json`)가 분리되어 있습니다
+- 앱과 UI 코드(`tsconfig.app.json`), Vite 설정(`tsconfig.node.json`)이 분리되어 있습니다
 - 빌드 시 `tsc -b`가 먼저 실행된 후 Vite 빌드가 이어집니다
 
 ## 스타일링
 
-- Vanilla Extract 사용 (`@star-light/components`의 테마 토큰 활용)
+- Vanilla Extract 사용 (`src/ui`의 테마 토큰 활용)
 
 ## 테스트
 
@@ -57,15 +61,20 @@ KBO Knit은 더 엄격한 TypeScript 설정을 사용합니다:
 pnpm test
 ```
 
-KBO Knit의 hooks와 utilities는 Vitest로 테스트합니다.
+KBO Knit의 hooks, utilities와 UI 컴포넌트는 단일 Vitest 설정으로 테스트합니다. `pnpm test:watch`로 watch 모드를 실행할 수 있습니다.
+
+앱의 주요 상호작용과 저장 상태, 서비스 워커는 [브라우저 검증](../getting-started.md#브라우저-검증)으로 확인합니다. UI 개발은 [컴포넌트 기여 가이드](../ui/CONTRIBUTING.md)를 참고하세요.
 
 ## PR 체크
 
-PR에서 KBO 앱이나 지원 workspace/config가 변경되면 다음이 자동 실행됩니다:
+PR에서 앱 코드, 테스트, Storybook 또는 빌드 설정이 변경되면 다음이 자동 실행됩니다:
 
 - ESLint
-- TypeScript 타입 체크
-- 빌드 성공 여부
+- Vitest 테스트
+- TypeScript 타입 체크와 앱 빌드
+- Storybook 빌드
+
+포맷 검사는 별도 Lint & Format 워크플로우에서 실행됩니다.
 
 ## 배포
 
@@ -76,7 +85,7 @@ PR에서 KBO 앱이나 지원 workspace/config가 변경되면 다음이 자동 
 PR 머지 전에 빌드가 정상적으로 되는지 확인해주세요:
 
 ```bash
-pnpm build:kbo
+pnpm build
 ```
 
 ## 주의사항

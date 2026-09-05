@@ -42,7 +42,7 @@ jobs:
       - name: Resolve Playwright + browser versions
         id: pw
         run: |
-          PW_VERSION=$(pnpm --filter kbo-knit exec playwright --version | awk '{print $2}')
+          PW_VERSION=$(pnpm exec playwright --version | awk '{print $2}')
           BROWSERS_JSON=$(find "$(pwd)" -path '*/playwright-core/browsers.json' | head -1)
           eval "$(node -e '
             const j = require(process.argv[1]);
@@ -107,9 +107,9 @@ jobs:
         timeout-minutes: 5
         run: |
           # apt 시스템 의존성만 설치 (브라우저 다운로드 트리거 안 함).
-          pnpm --filter kbo-knit exec playwright install-deps chromium
+          pnpm exec playwright install-deps chromium
           # 시드한 캐시에서 실제로 chromium 이 뜨는지 확인 -> 레이아웃이 맞다는 결정적 증거.
-          pnpm --filter kbo-knit exec node -e '
+          pnpm exec node -e '
             const { chromium } = require("playwright");
             (async () => {
               const b = await chromium.launch({ headless: true });

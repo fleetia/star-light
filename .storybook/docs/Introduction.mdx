@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# KBO Knit Components
+
+`src/ui/`는 KBO Knit에서 사용하는 UI 컴포넌트를 담고 있습니다.
+
+## 설치
+
+```bash
+pnpm install
+```
+
+## 테마 시스템
+
+모든 컴포넌트는 CSS 변수 기반 테마 시스템을 사용합니다. 런타임에 `setCSSVariable` 또는 `setCSSVariables`를 호출하여 테마를 변경할 수 있습니다.
+
+```tsx
+import { setCSSVariables, darkTheme } from "./ui";
+
+// 다크 테마 적용
+setCSSVariables({
+  "--c-accent": darkTheme.accent,
+  "--c-accent-text": darkTheme.accentText,
+  "--c-surface": darkTheme.surface,
+  "--c-text": darkTheme.text,
+  "--c-border": darkTheme.border,
+  "--c-hover-bg": darkTheme.hoverBg,
+  "--c-hover-text": darkTheme.hoverText,
+  "--c-muted": darkTheme.muted
+});
+```
+
+## CSS 변수 레퍼런스
+
+| 변수명            | 설명               | 기본값    |
+| ----------------- | ------------------ | --------- |
+| `--em`            | 기본 단위          | `16px`    |
+| `--icon-size`     | 아이콘 크기        | `32px`    |
+| `--gap`           | 기본 간격          | `1em`     |
+| `--c-accent`      | 강조 색상          | `#000000` |
+| `--c-accent-text` | 강조 텍스트 색상   | `#ffffff` |
+| `--c-surface`     | 배경 색상          | `#ffffff` |
+| `--c-text`        | 텍스트 색상        | `#000000` |
+| `--c-border`      | 테두리 색상        | `#000000` |
+| `--c-hover-bg`    | 호버 배경 색상     | `#000000` |
+| `--c-hover-text`  | 호버 텍스트 색상   | `#ffffff` |
+| `--c-muted`       | 비활성 텍스트 색상 | `#999999` |
+
+## 컴포넌트
+
+### 레이아웃
+
+- **Modal** — 오버레이 모달 컨테이너
+- **Box** — 테두리 있는 그룹 컨테이너
+- **Tabs** — 탭 네비게이션
+
+### 입력
+
+- **Button** — 범용 버튼 (primary, secondary, ghost, danger)
+- **TextInput** — 텍스트 입력
+- **DateInput** — 날짜 입력
+- **Select** — 선택 입력
+- **RadioGroup** — 단일 선택 그룹
+- **Toggle** — 토글 스위치
+- **ColorPicker** — 색상 선택기
+- **ColorRow** — 색상 행
+
+## 기술 스택
+
+- **React 19** — UI 프레임워크
+- **vanilla-extract** — 타입 안전 CSS-in-TS
+- **Storybook 10** — 컴포넌트 문서화
+- **Vitest** — 테스트

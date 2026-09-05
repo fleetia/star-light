@@ -4,15 +4,22 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "apps/kbo-knit/**"
-      - "packages/components/**"
-      - "tools/config/**"
-      - "utils/test/**"
+      - "src/**"
+      - "public/**"
+      - "data/**"
+      - "test/**"
+      - "scripts/**"
+      - ".storybook/**"
+      - ".github/workflows/**"
+      - "scrape-kbo*.mjs"
+      - "index.html"
       - "package.json"
       - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "tsconfig.json"
+      - "tsconfig*.json"
+      - "vite.config.ts"
+      - "vitest.config.ts"
       - "eslint.config.js"
+      - "prettier.config.js"
 
 jobs:
   check:
@@ -32,10 +39,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Lint
-        run: pnpm -F @star-light/kbo-knit lint
+        run: pnpm lint
 
-      - name: Build design system
-        run: pnpm -F @star-light/components build
+      - name: Test
+        run: pnpm test
 
       - name: Type check & Build
-        run: pnpm -F @star-light/kbo-knit build
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm build-storybook
