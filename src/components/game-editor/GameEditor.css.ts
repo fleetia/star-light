@@ -103,11 +103,3 @@ export const sectionTitle = style({
   color: vars.color.text,
   margin: 0
 });
-
-export const checkboxRow = style({
-  display: "flex",
-  alignItems: "center",
-  gap: "0.4rem",
-  fontSize: vars.fontSize.md,
-  cursor: "pointer"
-});

@@ -1,5 +1,4 @@
-import { Box } from "../../ui/Box";
-import { Select } from "../../ui/Select";
+import { FieldGroup, Select } from "@fleetia/lagrange";
 
 import { CURRENT_YEAR } from "../../constants/defaults";
 import * as s from "./SeasonSelector.css";
@@ -17,11 +16,11 @@ const YEARS = Array.from(
 
 export function SeasonSelector({ value, onChange }: Props) {
   return (
-    <Box title="시즌" className={s.group}>
+    <FieldGroup legend="시즌" className={s.group}>
       <Select
         value={String(value)}
-        onChange={(v: string) => onChange(Number(v))}
-        size="lg"
+        onChange={event => onChange(Number(event.currentTarget.value))}
+        aria-label="시즌"
       >
         {YEARS.map(year => (
           <option key={year} value={year}>
@@ -29,6 +28,6 @@ export function SeasonSelector({ value, onChange }: Props) {
           </option>
         ))}
       </Select>
-    </Box>
+    </FieldGroup>
   );
 }

@@ -1,5 +1,4 @@
-import { Button } from "../../ui/Button";
-import { Box } from "../../ui/Box";
+import { Button, FieldGroup } from "@fleetia/lagrange";
 
 import type { SeriesType } from "../../types/game.types";
 import * as s from "./SeriesFilter.css";
@@ -17,11 +16,12 @@ const SERIES_OPTIONS: { value: SeriesType; label: string }[] = [
 
 export function SeriesFilter({ active, onToggle }: Props) {
   return (
-    <Box title="시리즈" className={s.group}>
+    <FieldGroup legend="시리즈" className={s.group}>
       <div className={s.filters}>
         {SERIES_OPTIONS.map(({ value, label }) => (
           <Button
             key={value}
+            aria-pressed={active.includes(value)}
             variant={active.includes(value) ? "primary" : "secondary"}
             className={s.btn}
             onClick={() => onToggle(value)}
@@ -30,6 +30,6 @@ export function SeriesFilter({ active, onToggle }: Props) {
           </Button>
         ))}
       </div>
-    </Box>
+    </FieldGroup>
   );
 }

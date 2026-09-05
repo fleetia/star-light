@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Select } from "../../ui/Select";
-import { TextInput } from "../../ui/TextInput";
-import { Box } from "../../ui/Box";
+import { FieldGroup, Select, TextField } from "@fleetia/lagrange";
 
 import type { RowMode } from "../../types/game.types";
 import * as s from "./RowModeSelector.css";
@@ -46,11 +44,12 @@ export function RowModeSelector({
   const [cancelDraft, setCancelDraft] = useState<string | null>(null);
 
   return (
-    <Box title="줄 수 설정" className={s.group}>
+    <FieldGroup legend="줄 수 설정" className={s.group}>
       <div className={s.row}>
         <Select
+          aria-label="줄 수 계산 방식"
           value={mode}
-          onChange={(v: string) => onModeChange(v as RowMode)}
+          onChange={event => onModeChange(event.currentTarget.value as RowMode)}
         >
           {Object.entries(MODE_LABELS).map(([key, label]) => (
             <option key={key} value={key}>
@@ -58,12 +57,13 @@ export function RowModeSelector({
             </option>
           ))}
         </Select>
-        <TextInput
+        <TextField
           type="number"
+          aria-label="경기 기준 줄 수"
           min={1}
           max={10}
           value={draft ?? String(count)}
-          onChange={v => setDraft(v)}
+          onChange={event => setDraft(event.currentTarget.value)}
           onBlur={() => {
             const clamped = clampCount(draft ?? String(count));
             onCountChange(clamped);
@@ -75,12 +75,13 @@ export function RowModeSelector({
       </div>
       <div className={s.row}>
         <span>취소 경기</span>
-        <TextInput
+        <TextField
           type="number"
+          aria-label="취소 경기 줄 수"
           min={0}
           max={10}
           value={cancelDraft ?? String(cancelCount)}
-          onChange={v => setCancelDraft(v)}
+          onChange={event => setCancelDraft(event.currentTarget.value)}
           onBlur={() => {
             const clamped = clampCancelCount(
               cancelDraft ?? String(cancelCount)
@@ -92,6 +93,6 @@ export function RowModeSelector({
         />
         <span>줄 (0=숨김)</span>
       </div>
-    </Box>
+    </FieldGroup>
   );
 }

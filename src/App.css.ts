@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { themeVars } from "@fleetia/lagrange/theme";
 import { vars } from "./styles/theme.css";
 
 export const app = style({
@@ -33,6 +34,41 @@ export const optionsTab = style({
   display: "grid",
   gap: "1rem",
   padding: "0.5rem 0"
+});
+
+export const tabList = style({
+  flexWrap: "nowrap",
+  borderBottom: `1px solid ${themeVars.semantic.color.border.strong}`
+});
+
+export const tab = style({
+  flex: 1,
+  justifyContent: "center",
+  padding: "0.75rem 0.25rem",
+  marginBottom: -1,
+  border: "1px solid transparent",
+  borderBottomColor: themeVars.semantic.color.border.strong,
+  borderRadius: "6px 6px 0 0",
+  letterSpacing: "normal",
+  whiteSpace: "nowrap",
+  selectors: {
+    '&[aria-selected="true"]': {
+      borderColor: themeVars.semantic.color.border.strong,
+      borderBottomColor: themeVars.semantic.color.surface.raised,
+      backgroundColor: themeVars.semantic.color.surface.raised
+    },
+    '&[aria-selected="true"]::before': {
+      backgroundColor: "transparent"
+    }
+  }
+});
+
+export const tabPanel = style({
+  border: `1px solid ${themeVars.semantic.color.border.strong}`,
+  borderTop: 0,
+  backgroundColor: themeVars.semantic.color.surface.raised,
+  padding: "1rem",
+  color: vars.color.text
 });
 
 export const settings = style({

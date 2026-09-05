@@ -26,12 +26,18 @@ try {
     "true"
   );
   const tokens = await page.evaluate(() => {
-    const style = getComputedStyle(document.documentElement);
-    return ["--c-accent", "--c-surface", "--c-text"].map(key =>
-      style.getPropertyValue(key).trim()
+    const style = getComputedStyle(
+      document.getElementById("root").firstElementChild
+    );
+    return ["content-accent", "surface-raised", "content-primary"].map(key =>
+      style.getPropertyValue(`--lagrange-semantic-color-${key}`).trim()
     );
   });
-  assert.deepEqual(tokens, ["#000", "#fff", "#000"]);
+  assert.deepEqual(tokens, ["#000", "#fff", "#333"]);
+  assert.equal(
+    await page.getByRole("button", { name: "이전 단", exact: true }).count(),
+    0
+  );
 
   if (screenshotDir) {
     await mkdir(screenshotDir, { recursive: true });
@@ -57,18 +63,41 @@ try {
     .getByRole("button", { name: "+ 경기 결과 미리 추가", exact: true })
     .waitFor();
   await page
-    .getByRole("button", { name: /^#[0-9a-f]{6}$/i })
+    .getByRole("button", { name: /^승: #[0-9a-f]{6}$/i })
     .first()
     .click();
   const colorPicker = page.getByRole("dialog", {
-    name: "Color picker",
+    name: "승 색상 선택",
     exact: true
   });
-  await colorPicker.getByRole("textbox").fill("#ff0000");
+  await colorPicker.getByLabel("CSS color", { exact: true }).fill("#ff0000");
   await page
-    .getByLabel("Close color picker", { exact: true })
-    .click({ position: { x: 1, y: 1 } });
-  await page.getByRole("button", { name: "#ff0000", exact: true }).waitFor();
+    .getByRole("button", { name: "색상 선택 닫기", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "승: #ff0000", exact: true })
+    .waitFor();
+
+  const countInput = page.getByRole("spinbutton", {
+    name: "경기 기준 줄 수",
+    exact: true
+  });
+  await countInput.fill("99");
+  await countInput.press("Tab");
+  assert.equal(await countInput.inputValue(), "10");
+  await countInput.fill("1");
+  await countInput.press("Tab");
+
+  const splitColors = page.getByRole("switch", {
+    name: "홈/원정 색상 분리",
+    exact: true
+  });
+  await splitColors.focus();
+  await splitColors.press("Space");
+  assert.equal(await splitColors.isChecked(), true);
+  await page.getByRole("button", { name: /^원정 승:/ }).waitFor();
+  await page.getByText("홈/원정 색상 분리", { exact: true }).click();
+  assert.equal(await splitColors.isChecked(), false);
 
   await page
     .getByRole("button", { name: "+ 경기 결과 미리 추가", exact: true })
@@ -77,9 +106,7 @@ try {
     name: "경기 결과 미리 추가",
     exact: true
   });
-  await editor
-    .locator('input[type="date"]')
-    .fill("2026-09-06", { force: true });
+  await editor.getByLabel("날짜", { exact: true }).fill("2026-09-06");
   await editor.getByRole("combobox").nth(0).selectOption("LG");
   await editor.getByLabel("내 팀 점수", { exact: true }).fill("5");
   await editor.getByLabel("상대 점수", { exact: true }).fill("3");

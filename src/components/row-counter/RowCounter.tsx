@@ -1,5 +1,4 @@
-import { Toggle } from "../../ui/Toggle";
-import { RadioGroup } from "../../ui/RadioGroup";
+import { Radio, RadioGroup, Switch, VisuallyHidden } from "@fleetia/lagrange";
 import { useCurrentRow } from "../../hooks/useCurrentRow";
 import type { CheckTiming, ScarfRow } from "../../types/game.types";
 import * as s from "./RowCounter.css";
@@ -56,10 +55,14 @@ export function RowCounter({
         >
           단 시작할 때 체크
         </span>
-        <Toggle
+        <Switch
           checked={checkTiming === "end"}
-          onChange={v => onCheckTimingChange(v ? "end" : "start")}
-        />
+          onChange={event =>
+            onCheckTimingChange(event.currentTarget.checked ? "end" : "start")
+          }
+        >
+          <VisuallyHidden>끝날 때 체크</VisuallyHidden>
+        </Switch>
         <span
           className={`${s.toggleLabel} ${checkTiming === "end" ? s.toggleLabelActive : ""}`}
         >
@@ -129,25 +132,29 @@ export function RowCounter({
 
       <div className={s.stitchSection}>
         <div className={s.stockinetteRow}>
-          <Toggle
+          <Switch
             checked={stockinetteEnabled}
-            onChange={onStockinetteEnabledChange}
-            label="메리야스뜨기"
-          />
+            onChange={event =>
+              onStockinetteEnabledChange(event.currentTarget.checked)
+            }
+          >
+            메리야스뜨기
+          </Switch>
         </div>
 
         {stockinetteEnabled && (
           <>
             <RadioGroup
               name="stockinette"
+              orientation="horizontal"
+              label={<VisuallyHidden>겉뜨기 단</VisuallyHidden>}
               className={s.radioGroup}
               value={stockinetteOddKnit ? "odd" : "even"}
-              onChange={v => onStockinetteOddKnitChange(v === "odd")}
-              options={[
-                { value: "odd", label: "홀수단 겉뜨기" },
-                { value: "even", label: "짝수단 겉뜨기" }
-              ]}
-            />
+              onValueChange={v => onStockinetteOddKnitChange(v === "odd")}
+            >
+              <Radio value="odd">홀수단 겉뜨기</Radio>
+              <Radio value="even">짝수단 겉뜨기</Radio>
+            </RadioGroup>
           </>
         )}
       </div>

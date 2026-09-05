@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fleetia/lagrange':
+        specifier: file:../lagrange
+        version: file:../lagrange(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -95,6 +98,13 @@ importers:
         version: 3.2.4(@types/debug@4.1.13)(@types/node@24.12.0)(happy-dom@17.6.3)(jsdom@26.1.0)(lightningcss@1.32.0)(sass@1.98.0)
 
 packages:
+
+  '@fleetia/lagrange@file:../lagrange':
+    resolution: {directory: ../lagrange, type: directory}
+    engines: {node: '>=22.14.0'}
+    peerDependencies:
+      react: '>=18.2.0 <20'
+      react-dom: '>=18.2.0 <20'
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
@@ -2767,6 +2777,12 @@ packages:
     resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
+
+  '@fleetia/lagrange@file:../lagrange(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@adobe/css-tools@4.4.4': {}
 

@@ -2,11 +2,7 @@ import type { StorybookConfig } from "@storybook/react-vite";
 import { fileURLToPath } from "node:url";
 
 const config: StorybookConfig = {
-  stories: [
-    "../src/ui/**/__stories__/**/*.stories.@(ts|tsx)",
-    "../src/ui/**/__stories__/**/*.mdx",
-    "./docs/**/*.mdx"
-  ],
+  stories: ["../src/**/*.stories.@(ts|tsx)", "./docs/**/*.mdx"],
   addons: ["@storybook/addon-docs"],
   framework: {
     name: "@storybook/react-vite",

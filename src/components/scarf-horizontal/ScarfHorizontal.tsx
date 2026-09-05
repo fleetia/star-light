@@ -1,4 +1,4 @@
-import { Box } from "../../ui/Box";
+import { Section, SectionHeader } from "@fleetia/lagrange";
 
 import type { ScarfRow, ScarfColors, SeriesType } from "../../types/game.types";
 import { buildLegend } from "../../utils/legendUtils";
@@ -29,7 +29,12 @@ export function ScarfHorizontal({
     : 0;
 
   return (
-    <Box title="가로 미리보기" className={s.container}>
+    <Section aria-label="가로 미리보기" className={s.container}>
+      <SectionHeader
+        title="가로 미리보기"
+        headingVariant="subsection"
+        rule="none"
+      />
       <div className={s.scarf}>
         {rows.map(r => (
           <div
@@ -45,6 +50,6 @@ export function ScarfHorizontal({
       </div>
 
       <Legend items={legend} />
-    </Box>
+    </Section>
   );
 }

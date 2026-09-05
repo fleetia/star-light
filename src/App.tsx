@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from "react";
-import { Tabs } from "./ui/Tabs";
+import { Tabs, TabList, Tab, TabPanel } from "@fleetia/lagrange";
 import { useAppState } from "./hooks/useAppState";
 import { useKboData } from "./hooks/useKboData";
 import { useCustomGameSync } from "./hooks/useCustomGameSync";
@@ -21,6 +21,12 @@ import * as s from "./App.css";
 
 const isFirstVisit = !hasStoredValue(STORAGE_KEY);
 const DEFAULT_TAB: TabKey = isFirstVisit ? "options" : "pattern";
+const TAB_LABELS: Record<TabKey, string> = {
+  pattern: "목도리 패턴",
+  guide: "뜨개 가이드",
+  counter: "단수 카운터",
+  options: "옵션"
+};
 
 export function App() {
   const [state, actions] = useAppState();
@@ -118,13 +124,19 @@ export function App() {
 
       {!isLoading && (
         <Tabs
-          activeKey={activeTab}
-          onChange={key => actions.setActiveTab(key as TabKey)}
-          items={[
-            {
-              key: "pattern",
-              label: "목도리 패턴",
-              content: hasRows ? (
+          value={activeTab}
+          onValueChange={key => actions.setActiveTab(key as TabKey)}
+        >
+          <TabList aria-label="뜨개 작업" className={s.tabList}>
+            {Object.entries(TAB_LABELS).map(([key, label]) => (
+              <Tab key={key} value={key} className={s.tab}>
+                {label}
+              </Tab>
+            ))}
+          </TabList>
+          <TabPanel value="pattern" className={s.tabPanel}>
+            {activeTab === "pattern" &&
+              (hasRows ? (
                 <ScarfPreview
                   rows={scarfRows}
                   colors={actions.scarfColors}
@@ -139,12 +151,11 @@ export function App() {
                 />
               ) : (
                 <p className={s.empty}>{emptyMessage}</p>
-              )
-            },
-            {
-              key: "guide",
-              label: "뜨개 가이드",
-              content: hasRows ? (
+              ))}
+          </TabPanel>
+          <TabPanel value="guide" className={s.tabPanel}>
+            {activeTab === "guide" &&
+              (hasRows ? (
                 <KnittingGuide
                   rows={scarfRows}
                   checked={state.checked}
@@ -152,12 +163,11 @@ export function App() {
                 />
               ) : (
                 <p className={s.empty}>{emptyMessage}</p>
-              )
-            },
-            {
-              key: "counter",
-              label: "단수 카운터",
-              content: hasRows ? (
+              ))}
+          </TabPanel>
+          <TabPanel value="counter" className={s.tabPanel}>
+            {activeTab === "counter" &&
+              (hasRows ? (
                 <RowCounter
                   rows={scarfRows}
                   checked={state.checked}
@@ -171,15 +181,12 @@ export function App() {
                 />
               ) : (
                 <p className={s.empty}>{emptyMessage}</p>
-              )
-            },
-            {
-              key: "options",
-              label: "옵션",
-              content: optionsContent
-            }
-          ]}
-        />
+              ))}
+          </TabPanel>
+          <TabPanel value="options" className={s.tabPanel}>
+            {activeTab === "options" && optionsContent}
+          </TabPanel>
+        </Tabs>
       )}
 
       <footer className={s.footer}>

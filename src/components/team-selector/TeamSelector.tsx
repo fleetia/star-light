@@ -1,5 +1,4 @@
-import { Box } from "../../ui/Box";
-import { Select } from "../../ui/Select";
+import { FieldGroup, Select } from "@fleetia/lagrange";
 
 import type { TeamCode } from "../../types/game.types";
 import { TEAM_CODES, TEAM_NAMES } from "../../constants/teams";
@@ -12,11 +11,11 @@ type Props = {
 
 export function TeamSelector({ value, onChange }: Props) {
   return (
-    <Box title="팀 선택" className={s.group}>
+    <FieldGroup legend="팀 선택" className={s.group}>
       <Select
         value={value}
-        onChange={(v: string) => onChange(v as TeamCode)}
-        size="lg"
+        onChange={event => onChange(event.currentTarget.value as TeamCode)}
+        aria-label="팀 선택"
       >
         {TEAM_CODES.map(code => (
           <option key={code} value={code}>
@@ -24,6 +23,6 @@ export function TeamSelector({ value, onChange }: Props) {
           </option>
         ))}
       </Select>
-    </Box>
+    </FieldGroup>
   );
 }
