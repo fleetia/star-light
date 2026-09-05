@@ -22,7 +22,9 @@ const STATUS_TEXT: Record<SyncStatus, string> = {
 type Props = { snapshot: CloudSnapshot; store: CloudStore };
 
 export function CloudAccount({ snapshot, store }: Props): ReactElement {
-  const loginUrl = `${API_BASE_URL}/auth?returnTo=kbo-knit`;
+  const returnTo =
+    import.meta.env.DEV && API_BASE_URL === "" ? "kbo-knit-local" : "kbo-knit";
+  const loginUrl = `${API_BASE_URL}/auth?returnTo=${returnTo}`;
   return (
     <section className={s.container} aria-label="계정과 클라우드 저장">
       <h2 className={s.heading}>계정과 클라우드 저장</h2>

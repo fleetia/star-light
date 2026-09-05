@@ -25,7 +25,8 @@ import {
 } from "./validation";
 
 export const API_BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL ?? "https://iserlohn.star-light.space"
+  import.meta.env.VITE_API_BASE_URL ??
+  (import.meta.env.DEV ? "" : "https://iserlohn.star-light.space")
 ).replace(/\/$/, "");
 
 export function createCloudStore(): CloudStore {
