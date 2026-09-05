@@ -12,8 +12,8 @@ Lagrange의 API와 개별 컴포넌트 stories·tests는 [컴포넌트 소스](h
 
 ## 로컬 개발 순서
 
-1. [시작하기](../getting-started.md#설치)에 따라 sibling Lagrange를 빌드하고 KBO Knit에 설치합니다.
-2. 필요한 저장소에서 변경하고 해당 동작의 테스트를 실행합니다. Lagrange를 바꾼 경우 빌드와 로컬 패키지 갱신을 반복합니다.
+1. [시작하기](../getting-started.md#설치)에 따라 GitHub Packages 인증을 준비하고 KBO Knit 의존성을 설치합니다.
+2. 필요한 저장소에서 변경하고 해당 동작의 테스트를 실행합니다. Lagrange를 바꾼 경우 해당 저장소에서 검증·발행한 뒤 KBO Knit의 의존성 버전과 lockfile을 갱신합니다.
 3. `pnpm storybook`에서 KBO 테마를 적용한 실제 조합을 확인합니다. 앱 조합 story는 `src/stories/`에 둡니다.
 4. KBO Knit의 `pnpm test`, `pnpm lint`, `pnpm build`, `pnpm build-storybook`과 관련 [브라우저 검증](../getting-started.md#브라우저-검증)을 실행합니다.
 

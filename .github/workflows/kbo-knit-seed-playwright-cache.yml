@@ -17,11 +17,14 @@ on:
   workflow_dispatch:
 
 permissions:
+  packages: read
   contents: read
 
 jobs:
   seed:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     timeout-minutes: 10
 
     steps:
@@ -35,6 +38,8 @@ jobs:
         with:
           node-version: "24"
           cache: "pnpm"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@fleetia"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

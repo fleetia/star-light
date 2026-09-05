@@ -1,6 +1,6 @@
 # KBO Knit 개발자 기여 가이드
 
-KBO 경기 결과를 뜨개 패턴으로 변환하는 앱의 개발 경계와 검증 방법을 설명합니다. 설치와 로컬 패키지 갱신은 [시작하기](../getting-started.md)를 먼저 참고하세요.
+KBO 경기 결과를 뜨개 패턴으로 변환하는 앱의 개발 경계와 검증 방법을 설명합니다. 설치와 패키지 인증은 [시작하기](../getting-started.md)를 먼저 참고하세요.
 
 ## 코드와 UI의 경계
 
@@ -48,4 +48,4 @@ pnpm build-storybook
 
 저장소의 CI workflow에는 lint, 테스트, 앱 빌드와 Storybook 빌드가 있습니다. 배포 workflow는 main의 대상 파일 변경 시 S3와 CloudFront를 갱신하도록 설정되어 있고, `data/**`만 바뀐 경우에는 별도 데이터 workflow가 동기화를 담당합니다.
 
-현재 `file:../lagrange`는 sibling checkout을 전제로 합니다. 기존 workflow는 KBO Knit만 checkout하므로 원격 CI·배포 전에 Lagrange 패키지 공급을 준비해야 합니다. 로컬 검토 완료를 곧바로 배포 가능한 상태로 보지 마세요. 계정·클라우드 동기화 작업의 배포 여부는 이 UI 이행 범위에서 확정하지 않습니다.
+모든 설치 workflow는 GitHub Packages의 Lagrange를 `GITHUB_TOKEN`으로 받습니다. 패키지 접근 설정과 외부 fork PR의 제한은 [GitHub Actions 인증](../getting-started.md#github-actions-인증)을 참고하세요. 계정·클라우드 동기화 작업의 배포 여부는 이 UI 이행 범위에서 확정하지 않습니다.

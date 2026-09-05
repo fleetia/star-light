@@ -17,9 +17,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 ## 로컬 실행
 
-KBO Knit은 `file:../lagrange` 의존성을 사용합니다. 형제 디렉토리의 Lagrange를
-먼저 빌드하고 KBO Knit 의존성을 설치한 뒤 `pnpm storybook`을 실행하세요.
+KBO Knit은 GitHub Packages의 비공개 `@fleetia/lagrange` 패키지를 사용합니다.
+패키지 인증을 준비하고 의존성을 설치한 뒤 `pnpm storybook`을 실행하세요.
 전체 절차는 [KBO Knit 시작하기](https://github.com/fleetia/kbo-knit/blob/main/docs/getting-started.md)를 참고하세요.
 
-Lagrange를 수정했다면 다시 빌드하고 KBO Knit에 설치된 로컬 패키지도 갱신해야 합니다.
+Lagrange를 수정했다면 패키지 발행 후 KBO Knit의 의존성 버전과 lockfile을 갱신합니다.
 로컬 Storybook은 패키지 발행이나 서비스 배포를 하지 않습니다.

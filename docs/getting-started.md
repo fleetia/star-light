@@ -1,31 +1,39 @@
 # 시작하기
 
-KBO Knit 앱과 앱 조합 Storybook을 로컬에서 실행하는 절차입니다. 공통 UI는 형제 저장소의 Lagrange 빌드 결과를 사용합니다.
+KBO Knit 앱과 앱 조합 Storybook을 로컬에서 실행하는 절차입니다. 공통 UI는 GitHub Packages에 발행된 `@fleetia/lagrange`를 사용합니다.
 
 ## 사전 요구사항
 
 - Node.js 24: 저장소의 `.nvmrc`를 따라 `nvm use`로 선택합니다.
-- pnpm 11.25.0: KBO Knit의 `package.json`에 지정된 버전입니다. Lagrange에서는 해당 저장소의 `packageManager`를 따릅니다.
-- `kbo-knit/`와 같은 부모 디렉토리에 있는 `lagrange/` checkout. 이번 로컬 검토에 필요한 Lagrange 변경이 포함되어 있어야 합니다.
+- pnpm 11.25.0: KBO Knit의 `package.json`에 지정된 버전입니다.
+- 비공개 `@fleetia/lagrange` 패키지 읽기 권한이 있는 GitHub 계정과 `read:packages` 권한의 personal access token (classic).
 
 ## 설치
 
-KBO Knit의 `@fleetia/lagrange` 의존성은 `file:../lagrange`입니다. Lagrange가 내보내는 `dist/`를 먼저 만들어야 앱과 Storybook에서 import할 수 있습니다.
+저장소의 `.npmrc`는 `@fleetia` 패키지를 `https://npm.pkg.github.com`에서 받도록 설정합니다. 인증은 사용자 설정에 둡니다. pnpm 11은 저장소에 포함된 registry credential을 신뢰하지 않습니다.
 
-`kbo-knit/`에서 시작합니다:
+토큰을 `NODE_AUTH_TOKEN` 환경 변수로 준비한 뒤 아래 명령으로 사용자 설정에 **환경 변수 참조**를 저장합니다. 작은따옴표를 유지하면 실제 토큰 대신 `${NODE_AUTH_TOKEN}` 문자열이 기록됩니다. 이후 `pnpm` 명령을 실행하는 터미널에서도 이 환경 변수가 설정되어 있어야 합니다.
+
+```bash
+pnpm config set --location=user '//npm.pkg.github.com/:_authToken' '${NODE_AUTH_TOKEN}'
+```
+
+실제 토큰과 사용자 `.npmrc`는 저장소에 넣지 않습니다. 토큰 발급과 패키지 사용에 관한 기준은 [Lagrange 설치 안내](https://github.com/fleetia/lagrange#설치)를 참고하세요.
+
+KBO Knit 저장소 루트에서 실행합니다:
 
 ```bash
 nvm use
-cd ../lagrange
-pnpm install --frozen-lockfile
-pnpm build
-cd ../kbo-knit
 pnpm install --frozen-lockfile
 ```
 
-Lagrange 소스를 수정했다면 Lagrange에서 `pnpm build`를 다시 실행하고 KBO Knit에서 `pnpm install --force --frozen-lockfile`로 로컬 패키지 복사본을 갱신하세요. 실행 중인 개발 서버도 다시 시작합니다. `file:` 설치가 sibling 소스의 변경을 자동 반영한다고 가정하지 마세요.
+설치는 lockfile에 고정된 registry 패키지를 가져옵니다. `401` 또는 `403`으로 실패하면 환경 변수, 토큰의 `read:packages` 권한과 계정의 패키지 읽기 권한을 확인하세요. Lagrange를 변경할 때는 해당 저장소에서 검증·발행한 뒤 KBO Knit의 의존성 버전과 lockfile을 함께 갱신합니다.
 
-이 설치 방식은 패키지를 registry에 발행하지 않는 로컬 검토용입니다. 형제 저장소가 없는 CI나 배포 환경에는 별도의 의존성 공급 방식이 필요합니다.
+### GitHub Actions 인증
+
+모든 설치 workflow는 `actions/setup-node`의 registry 설정과 작업 단위 `NODE_AUTH_TOKEN`을 사용합니다. 토큰은 `packages: read` 권한의 `GITHUB_TOKEN`이며, Lagrange 패키지의 **Manage Actions access**에 `fleetia/kbo-knit`의 Read 접근이 등록되어 있어야 합니다. CI용 PAT는 필요하지 않습니다.
+
+외부 fork의 PR에서는 토큰과 비공개 패키지 접근이 제한되어 설치 단계가 실패할 수 있습니다. 원본 저장소의 Actions 접근 등록만으로 모든 fork 실행의 설치 성공을 보장하지 않습니다. 이 경우 권한이 있는 로컬 환경에서 검증하고, 관리자가 변경을 검토한 후 원본 저장소의 브랜치에서 CI를 실행합니다. 비공개 패키지 접근을 위해 fork 코드에 토큰을 제공하거나 `pull_request_target`으로 실행하지 않습니다.
 
 ## 앱과 Storybook 실행
 

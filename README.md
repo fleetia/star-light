@@ -49,10 +49,9 @@ KBO 경기 데이터 크롤링은 [kbo-scraper](https://github.com/colabear754/k
 ## Getting Started
 
 Node.js는 `.nvmrc`의 24, pnpm은 `package.json`의 11.25.0을 사용합니다.
-공통 UI는 [Lagrange](https://github.com/fleetia/lagrange)를 사용하며, 로컬 검토 중에는
-`file:../lagrange`로 형제 디렉토리의 빌드 결과를 설치합니다.
+공통 UI는 GitHub Packages의 비공개 [Lagrange](https://github.com/fleetia/lagrange) 패키지를 사용합니다.
 
-먼저 [시작하기](docs/getting-started.md#설치)의 Lagrange 빌드를 마친 뒤 저장소 루트에서 실행하세요:
+먼저 [시작하기](docs/getting-started.md#설치)에 따라 패키지 읽기 권한과 로컬 인증을 준비한 뒤 저장소 루트에서 실행하세요:
 
 ```bash
 nvm use
