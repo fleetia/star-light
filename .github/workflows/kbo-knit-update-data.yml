@@ -55,6 +55,9 @@ jobs:
       - name: Run KBO scraper
         run: node scrape-kbo.mjs
 
+      - name: Format scraped data
+        run: pnpm exec prettier --write "data/*.json"
+
       - name: Check for changes
         id: changes
         run: |
