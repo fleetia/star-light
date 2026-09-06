@@ -44,6 +44,7 @@ export function createCloudStore(): CloudStore {
     storageAvailable: true
   };
   let account: Account | null = null;
+  let hasCheckedIdentity = false;
   let offset = 0;
   let generation = 0;
   let revision = 0;
@@ -116,6 +117,13 @@ export function createCloudStore(): CloudStore {
     return response.json();
   }
 
+  function updateClockOffset(response: Response, startedAt: number): void {
+    const serverTime = response.headers.get("x-server-time");
+    if (serverTime && Number.isFinite(Date.parse(serverTime))) {
+      offset = Date.parse(serverTime) - (startedAt + Date.now()) / 2;
+    }
+  }
+
   function errorCode(body: unknown): string | null {
     if (
       typeof body === "object" &&
@@ -138,6 +146,7 @@ export function createCloudStore(): CloudStore {
     }
     if (response.status === 401) {
       account = null;
+      hasCheckedIdentity = true;
       publish(owner === null ? "guest" : "expired");
       return;
     }
@@ -151,6 +160,7 @@ export function createCloudStore(): CloudStore {
     if (response.status === 409 && errorCode(body) === "account_changed") {
       invalidate();
       account = null;
+      hasCheckedIdentity = false;
       queued = true;
       queuedIdentityCheck = true;
       publish("checking");
@@ -199,7 +209,7 @@ export function createCloudStore(): CloudStore {
     const signal = controller.signal;
     const isCurrent = (): boolean => active && token === generation;
     try {
-      if (checkIdentity || !account?.cloudSyncEnabled) {
+      if (checkIdentity || !hasCheckedIdentity) {
         const startedAt = Date.now();
         const identityResponse = await fetch(`${API_BASE_URL}/v1/me`, {
           credentials: "include",
@@ -227,6 +237,7 @@ export function createCloudStore(): CloudStore {
           cloudSyncEnabled: identity.cloudSyncEnabled ?? identity.supporter,
           nickname: identity.nickname ?? null
         };
+        hasCheckedIdentity = true;
         switchOwner(identity.sub);
       }
       const identity = account;
@@ -240,59 +251,63 @@ export function createCloudStore(): CloudStore {
       publish("syncing");
       const initialRevision = revision;
       const headers = { "X-Account-Sub": identity.sub };
-      const startedAt = Date.now();
-      const cloudResponse = await fetch(`${API_BASE_URL}/v1/state`, {
-        credentials: "include",
-        cache: "no-store",
-        signal,
-        headers: {
-          ...headers,
-          ...(remoteEtag ? { "If-None-Match": remoteEtag } : {})
-        }
-      });
-      if (!isCurrent()) {
-        return;
-      }
-      const serverTime = cloudResponse.headers.get("x-server-time");
-      if (serverTime && Number.isFinite(Date.parse(serverTime))) {
-        offset = Date.parse(serverTime) - (startedAt + Date.now()) / 2;
-      }
-      if (cloudResponse.status === 304 && (!remoteEtag || !remoteState)) {
-        publish("error");
-        return;
-      }
-      if (cloudResponse.status !== 304 && !cloudResponse.ok) {
-        await handleFailure(cloudResponse, token);
-        return;
-      }
-      if (cloudResponse.status !== 304) {
-        const remote = await responseBody(cloudResponse);
+      const canUpload =
+        local.initialized &&
+        local.envelope !== null &&
+        remoteState !== null &&
+        compareEnvelopes(local.envelope, remoteState) > 0;
+      if (!canUpload) {
+        const startedAt = Date.now();
+        const cloudResponse = await fetch(`${API_BASE_URL}/v1/state`, {
+          credentials: "include",
+          cache: "no-store",
+          signal,
+          headers: {
+            ...headers,
+            ...(remoteEtag ? { "If-None-Match": remoteEtag } : {})
+          }
+        });
         if (!isCurrent()) {
           return;
         }
-        const empty =
-          typeof remote === "object" &&
-          remote !== null &&
-          "state" in remote &&
-          remote.state === null;
-        if (!empty && !isEnvelope(remote)) {
+        updateClockOffset(cloudResponse, startedAt);
+        if (cloudResponse.status === 304 && (!remoteEtag || !remoteState)) {
           publish("error");
           return;
         }
-        remoteState = isEnvelope(remote) ? remote : null;
-        if (remoteState) {
-          if (!local.initialized && initialRevision === revision) {
-            if (!backupLocal(owner, local)) {
-              snapshot = { ...snapshot, storageAvailable: false };
-              publish("error");
-              return;
-            }
-            replaceState(remoteState);
-          } else {
-            acceptRemote(remoteState);
-          }
+        if (cloudResponse.status !== 304 && !cloudResponse.ok) {
+          await handleFailure(cloudResponse, token);
+          return;
         }
-        remoteEtag = cloudResponse.headers.get("etag");
+        if (cloudResponse.status !== 304) {
+          const remote = await responseBody(cloudResponse);
+          if (!isCurrent()) {
+            return;
+          }
+          const empty =
+            typeof remote === "object" &&
+            remote !== null &&
+            "state" in remote &&
+            remote.state === null;
+          if (!empty && !isEnvelope(remote)) {
+            publish("error");
+            return;
+          }
+          remoteState = isEnvelope(remote) ? remote : null;
+          if (remoteState) {
+            if (!local.initialized && initialRevision === revision) {
+              if (!backupLocal(owner, local)) {
+                snapshot = { ...snapshot, storageAvailable: false };
+                publish("error");
+                return;
+              }
+              replaceState(remoteState);
+            } else {
+              acceptRemote(remoteState);
+            }
+          }
+          remoteEtag = cloudResponse.headers.get("etag");
+        }
       }
       if (!local.envelope) {
         local = { ...local, envelope: stamp(local.state), initialized: true };
@@ -311,6 +326,7 @@ export function createCloudStore(): CloudStore {
         return;
       }
       publish("syncing");
+      const startedAt = Date.now();
       const savedResponse = await fetch(`${API_BASE_URL}/v1/state`, {
         method: "PUT",
         credentials: "include",
@@ -331,6 +347,7 @@ export function createCloudStore(): CloudStore {
       if (!isCurrent()) {
         return;
       }
+      updateClockOffset(savedResponse, startedAt);
       if (!savedResponse.ok) {
         await handleFailure(savedResponse, token);
         return;
@@ -366,7 +383,11 @@ export function createCloudStore(): CloudStore {
 
   function edit(update: AppState | ((previous: AppState) => AppState)): void {
     const state = typeof update === "function" ? update(local.state) : update;
-    if (state === local.state || !isAppState(state)) {
+    if (
+      state === local.state ||
+      !isAppState(state) ||
+      JSON.stringify(state) === JSON.stringify(local.state)
+    ) {
       return;
     }
     revision += 1;
@@ -406,6 +427,7 @@ export function createCloudStore(): CloudStore {
         return;
       }
       account = null;
+      hasCheckedIdentity = true;
       switchOwner(null);
       publish("guest");
     } catch {
@@ -443,7 +465,10 @@ export function createCloudStore(): CloudStore {
       }
     };
     const poll = (): void => {
-      if (document.visibilityState === "visible") {
+      if (
+        document.visibilityState === "visible" &&
+        (!hasCheckedIdentity || account?.cloudSyncEnabled)
+      ) {
         void refresh(false);
       }
     };
