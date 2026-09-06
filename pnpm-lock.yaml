@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fleetia/lagrange':
-        specifier: 0.2.0
-        version: 0.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 0.2.1
+        version: 0.2.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -558,8 +558,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fleetia/lagrange@0.2.0':
-    resolution: {integrity: sha512-ssnX+/QVer2LDzcyKgqJXdOz4/Ur58GHdaqKFlrEdLWnMNT3H9b5nhGHdFeXyjXuEpA/f7AWMiCN6ZuJY3IB0Q==, tarball: https://npm.pkg.github.com/download/@fleetia/lagrange/0.2.0/6ef20ed753ad76493d6b1011278424653d9faf38}
+  '@fleetia/lagrange@0.2.1':
+    resolution: {integrity: sha512-LaDFSI/LrrRF7qzpLb7vCez3jXAhGrD/Ghv07jYhdR5FCciY9TdKxhuIB6LzgAQRrNutcKKnNWOcLDRsN+/vSQ==, tarball: https://npm.pkg.github.com/download/@fleetia/lagrange/0.2.1/5681cea9fab432d1639f9b2438f8af1ce0735b71}
     engines: {node: '>=22.14.0'}
     peerDependencies:
       react: '>=18.2.0 <20'
@@ -2895,7 +2895,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@fleetia/lagrange@0.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@fleetia/lagrange@0.2.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       clsx: 2.1.1
       react: 19.2.4
