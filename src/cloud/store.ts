@@ -143,7 +143,7 @@ export function createCloudStore(): CloudStore {
     }
     if (response.status === 403) {
       if (account) {
-        account = { ...account, supporter: false };
+        account = { ...account, cloudSyncEnabled: false };
       }
       publish("local");
       return;
@@ -199,7 +199,7 @@ export function createCloudStore(): CloudStore {
     const signal = controller.signal;
     const isCurrent = (): boolean => active && token === generation;
     try {
-      if (checkIdentity || !account?.supporter) {
+      if (checkIdentity || !account?.cloudSyncEnabled) {
         const startedAt = Date.now();
         const identityResponse = await fetch(`${API_BASE_URL}/v1/me`, {
           credentials: "include",
@@ -222,14 +222,18 @@ export function createCloudStore(): CloudStore {
           return;
         }
         offset = Date.parse(identity.serverTime) - (startedAt + Date.now()) / 2;
-        account = identity;
+        account = {
+          ...identity,
+          cloudSyncEnabled: identity.cloudSyncEnabled ?? identity.supporter,
+          nickname: identity.nickname ?? null
+        };
         switchOwner(identity.sub);
       }
       const identity = account;
       if (!identity) {
         return;
       }
-      if (!identity.supporter) {
+      if (!identity.cloudSyncEnabled) {
         publish("local");
         return;
       }
@@ -370,7 +374,7 @@ export function createCloudStore(): CloudStore {
     persist();
     publish(
       navigator.onLine
-        ? account?.supporter
+        ? account?.cloudSyncEnabled
           ? "pending"
           : snapshot.status
         : "offline"

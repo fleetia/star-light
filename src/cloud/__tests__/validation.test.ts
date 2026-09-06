@@ -61,6 +61,17 @@ describe("cloud validation", () => {
       serverTime: envelope.modifiedAt
     };
     expect(isAccount(account)).toBe(true);
+    expect(
+      isAccount({ ...account, cloudSyncEnabled: true, nickname: "뜨개팬" })
+    ).toBe(true);
+    expect(
+      isAccount({ ...account, cloudSyncEnabled: false, nickname: null })
+    ).toBe(true);
+    expect(isAccount({ ...account, cloudSyncEnabled: "true" })).toBe(false);
+    expect(isAccount({ ...account, cloudSyncEnabled: null })).toBe(false);
+    expect(isAccount({ ...account, cloudSyncEnabled: undefined })).toBe(false);
+    expect(isAccount({ ...account, nickname: 123 })).toBe(false);
+    expect(isAccount({ ...account, nickname: " " })).toBe(false);
     expect(isAccount({ ...account, username: null })).toBe(false);
     expect(isAccount({ ...account, email: 123 })).toBe(false);
   });

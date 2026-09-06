@@ -6,8 +6,9 @@ import * as s from "./CloudAccount.css";
 const STATUS_TEXT: Record<SyncStatus, string> = {
   checking: "계정을 확인하고 있어요.",
   guest:
-    "이 기기에 저장됩니다. 로그인하면 후원자는 기기 간에 자동으로 동기화할 수 있어요.",
-  local: "이 기기에 저장됩니다. 클라우드 자동 저장은 후원자 혜택이에요.",
+    "이 기기에 저장됩니다. 로그인하면 무료로 기기 간에 자동 동기화할 수 있어요.",
+  local:
+    "이 기기에 저장됩니다. 현재 계정의 클라우드 동기화가 일시 중지되어 있어요.",
   pending: "이 기기에 저장했어요. 클라우드에 반영할 예정입니다.",
   syncing: "클라우드와 동기화하고 있어요.",
   synced: "클라우드에 저장했어요.",
@@ -30,7 +31,9 @@ export function CloudAccount({ snapshot, store }: Props): ReactElement {
       <h2 className={s.heading}>계정과 클라우드 저장</h2>
       {snapshot.account && (
         <p>
-          {snapshot.account.username ?? snapshot.account.email}
+          {snapshot.account.nickname ??
+            snapshot.account.username ??
+            snapshot.account.email}
           {snapshot.account.supporter ? " · 후원자" : ""}
         </p>
       )}
@@ -49,9 +52,11 @@ export function CloudAccount({ snapshot, store }: Props): ReactElement {
             로그인 / 가입
           </a>
         )}
-        <a className={s.action} href={`${API_BASE_URL}/account`}>
-          계정 · 후원 관리
-        </a>
+        {snapshot.account && (
+          <a className={s.action} href={`${API_BASE_URL}/account`}>
+            계정 · 후원 관리
+          </a>
+        )}
         {snapshot.account && (
           <button
             className={s.action}
