@@ -75,6 +75,78 @@ afterEach(() => {
 });
 
 describe("useCloudState", () => {
+  it("syncs a non-supporter account and preserves its nickname", async () => {
+    const writes: StateEnvelope[] = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn<typeof fetch>().mockImplementation(async (input, options) => {
+        if (String(input).endsWith("/me")) {
+          return Response.json({
+            ...identity(),
+            supporter: false,
+            grantedAt: null,
+            cloudSyncEnabled: true,
+            nickname: "뜨개팬"
+          });
+        }
+        if (options?.method === "PUT") {
+          const saved = JSON.parse(String(options.body)) as StateEnvelope;
+          writes.push(saved);
+          return Response.json(saved);
+        }
+        return Response.json(envelope());
+      })
+    );
+    const { result } = renderHook(useCloudState);
+    await settle();
+    expect(result.current[0].account).toMatchObject({
+      supporter: false,
+      cloudSyncEnabled: true,
+      nickname: "뜨개팬"
+    });
+    expect(result.current[0].status).toBe("synced");
+    act(() => result.current[1].edit(state => ({ ...state, rowCount: 8 })));
+    expect(result.current[0].status).toBe("pending");
+    await advance();
+    expect(writes[0].state.rowCount).toBe(8);
+    expect(result.current[0].status).toBe("synced");
+  });
+
+  it.each([{ supporter: true, cloudSyncEnabled: false }, { supporter: false }])(
+    "keeps sync disabled for account %j",
+    async permission => {
+      const fetchMock = vi
+        .fn<typeof fetch>()
+        .mockResolvedValue(Response.json({ ...identity(), ...permission }));
+      vi.stubGlobal("fetch", fetchMock);
+      const { result } = renderHook(useCloudState);
+      await settle();
+      expect(result.current[0].status).toBe("local");
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+    }
+  );
+
+  it("pauses sync on a state rejection without changing donation status", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn<typeof fetch>().mockImplementation(async input => {
+        if (String(input).endsWith("/me"))
+          return Response.json({ ...identity(), cloudSyncEnabled: true });
+        return Response.json({ error: "Forbidden" }, { status: 403 });
+      })
+    );
+    const { result } = renderHook(useCloudState);
+    await settle();
+    expect(result.current[0].account).toMatchObject({
+      supporter: true,
+      cloudSyncEnabled: false
+    });
+    expect(result.current[0].status).toBe("local");
+    act(() => result.current[1].edit(state => ({ ...state, rowCount: 8 })));
+    expect(result.current[0].status).toBe("local");
+    expect(readLocal("user-a")?.state.rowCount).toBe(8);
+  });
+
   it("checks once a minute, preserves 304 state, and uploads only changed local state", async () => {
     let remote = envelope();
     let etag = '"initial"';

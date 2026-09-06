@@ -13,6 +13,8 @@ export type Account = {
   username?: string | null;
   email: string | null;
   supporter: boolean;
+  cloudSyncEnabled?: boolean;
+  nickname?: string | null;
   grantedAt: string | null;
   csrfToken: string;
   serverTime: string;

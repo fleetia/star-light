@@ -132,6 +132,12 @@ export function isAccount(value: unknown): value is Account {
     ((typeof value.username === "string" && value.username.length > 0) ||
       (typeof value.email === "string" && value.email.length > 0)) &&
     typeof value.supporter === "boolean" &&
+    (!Object.hasOwn(value, "cloudSyncEnabled") ||
+      typeof value.cloudSyncEnabled === "boolean") &&
+    (!Object.hasOwn(value, "nickname") ||
+      value.nickname === null ||
+      (typeof value.nickname === "string" &&
+        value.nickname.trim().length > 0)) &&
     (value.grantedAt === null || isTimestamp(value.grantedAt)) &&
     typeof value.csrfToken === "string" &&
     value.csrfToken.length > 0 &&
