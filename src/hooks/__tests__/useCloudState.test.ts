@@ -123,8 +123,199 @@ describe("useCloudState", () => {
       await settle();
       expect(result.current[0].status).toBe("local");
       expect(fetchMock).toHaveBeenCalledTimes(1);
+      await advance(180_000);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
     }
   );
+
+  it.each(["return", "online", "manual"])(
+    "keeps known guests idle and discovers login on %s",
+    async trigger => {
+      let authorized = false;
+      const fetchMock = vi
+        .fn<typeof fetch>()
+        .mockImplementation(async input => {
+          if (String(input).endsWith("/me")) {
+            return authorized
+              ? Response.json(identity())
+              : Response.json({ error: "Unauthorized" }, { status: 401 });
+          }
+          return Response.json(envelope());
+        });
+      vi.stubGlobal("fetch", fetchMock);
+      const { result } = renderHook(useCloudState);
+      await settle();
+      expect(result.current[0].status).toBe("guest");
+      await advance(180_000);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      authorized = true;
+      if (trigger === "manual") {
+        await act(async () => result.current[1].refresh());
+      } else {
+        act(() => {
+          if (trigger === "return") {
+            window.dispatchEvent(new Event("blur"));
+            window.dispatchEvent(new Event("focus"));
+          } else {
+            window.dispatchEvent(new Event("online"));
+          }
+        });
+        await settle();
+      }
+      expect(result.current[0].account?.sub).toBe("user-a");
+      expect(result.current[0].status).toBe("synced");
+      expect(
+        fetchMock.mock.calls.filter(([input]) => String(input).endsWith("/me"))
+      ).toHaveLength(2);
+    }
+  );
+
+  it("keeps equivalent scalar and nested edits synced without creating a mutation", async () => {
+    const fetchMock = vi
+      .fn<typeof fetch>()
+      .mockImplementation(async (input, options) => {
+        if (String(input).endsWith("/me")) return Response.json(identity());
+        if (options?.method === "PUT")
+          return Response.json(JSON.parse(String(options.body)));
+        return Response.json({
+          ...envelope(),
+          state: {
+            ...envelope().state,
+            checkedMap: { "2026-LG": { "game-1": true } }
+          }
+        });
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const { result } = renderHook(useCloudState);
+    await settle();
+    const saved = readLocal("user-a")?.envelope;
+    act(() =>
+      result.current[1].edit(state => ({ ...state, rowCount: state.rowCount }))
+    );
+    expect(result.current[0].status).toBe("synced");
+    expect(readLocal("user-a")?.envelope).toEqual(saved);
+    act(() =>
+      result.current[1].edit(state => ({
+        ...state,
+        colors: { ...state.colors },
+        series: [...state.series],
+        checked: { ...state.checked },
+        checkedMap: Object.fromEntries(
+          Object.entries(state.checkedMap ?? {}).map(([key, checked]) => [
+            key,
+            { ...checked }
+          ])
+        )
+      }))
+    );
+    expect(result.current[0].status).toBe("synced");
+    expect(readLocal("user-a")?.envelope).toEqual(saved);
+    await advance();
+    expect(
+      fetchMock.mock.calls.filter(([, options]) => options?.method === "PUT")
+    ).toHaveLength(0);
+  });
+
+  it("adopts the newer remote winner returned by a direct upload", async () => {
+    const winner = envelope(11, "2026-09-05T10:02:00.000Z", "other-device");
+    const fetchMock = vi
+      .fn<typeof fetch>()
+      .mockImplementation(async (input, options) => {
+        if (String(input).endsWith("/me")) {
+          return Response.json(identity());
+        }
+        if (options?.method === "PUT") {
+          return Response.json(winner);
+        }
+        return Response.json(envelope());
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const { result } = renderHook(useCloudState);
+    await settle();
+    act(() => result.current[1].edit(state => ({ ...state, rowCount: 8 })));
+    await advance();
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(fetchMock.mock.lastCall?.[1]?.method).toBe("PUT");
+    expect(result.current[0].state.rowCount).toBe(11);
+    expect(readLocal("user-a")?.envelope).toEqual(winner);
+    expect(result.current[0].status).toBe("synced");
+  });
+
+  it.each(["unavailable", "invalid"])(
+    "retries an initially %s identity on the next visible poll",
+    async failure => {
+      let identityReads = 0;
+      const fetchMock = vi
+        .fn<typeof fetch>()
+        .mockImplementation(async input => {
+          if (String(input).endsWith("/me")) {
+            identityReads += 1;
+            if (identityReads === 1) {
+              return failure === "unavailable"
+                ? Response.json({ error: "Unavailable" }, { status: 503 })
+                : Response.json({ sub: "user-a" });
+            }
+            return Response.json(identity());
+          }
+          return Response.json(envelope());
+        });
+      vi.stubGlobal("fetch", fetchMock);
+      const { result } = renderHook(useCloudState);
+      await settle();
+      expect(result.current[0].status).toBe("error");
+      expect(result.current[0].account).toBeNull();
+      await advance();
+      expect(identityReads).toBe(2);
+      expect(result.current[0].account?.sub).toBe("user-a");
+      expect(result.current[0].status).toBe("synced");
+    }
+  );
+
+  it("uses a rejected direct upload's server time only for the next real edit", async () => {
+    const writes: StateEnvelope[] = [];
+    const fetchMock = vi
+      .fn<typeof fetch>()
+      .mockImplementation(async (input, options) => {
+        if (String(input).endsWith("/me")) return Response.json(identity());
+        if (options?.method === "PUT") {
+          const body = JSON.parse(String(options.body)) as StateEnvelope;
+          writes.push(body);
+          return Date.parse(body.modifiedAt) > Date.parse(NOW) + 300_000
+            ? Response.json(
+                { error: "clock_skew" },
+                {
+                  status: 409,
+                  headers: { "x-server-time": NOW }
+                }
+              )
+            : Response.json(body);
+        }
+        return Response.json(envelope(2, "2026-09-04T10:00:00.000Z"));
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const { result } = renderHook(useCloudState);
+    await settle();
+    vi.setSystemTime("2026-09-05T11:00:00.000Z");
+    act(() => result.current[1].edit(state => ({ ...state, rowCount: 5 })));
+    await advance();
+    const rejected = writes[0];
+    expect(result.current[0].status).toBe("clock-error");
+    expect(readLocal("user-a")?.envelope).toEqual(rejected);
+    await advance();
+    expect(writes[1]).toEqual(rejected);
+    expect(result.current[0].status).toBe("clock-error");
+    act(() => result.current[1].edit(state => ({ ...state, rowCount: 6 })));
+    expect(readLocal("user-a")?.envelope?.modifiedAt).toBe(NOW);
+    await advance();
+    expect(writes).toHaveLength(3);
+    expect(writes[2].state.rowCount).toBe(6);
+    expect(writes[2].mutationId).not.toBe(rejected.mutationId);
+    expect(result.current[0].status).toBe("synced");
+    expect(fetchMock).toHaveBeenCalledTimes(5);
+    expect(
+      fetchMock.mock.calls.filter(([input]) => String(input).endsWith("/me"))
+    ).toHaveLength(1);
+  });
 
   it("pauses sync on a state rejection without changing donation status", async () => {
     vi.stubGlobal(
@@ -191,6 +382,8 @@ describe("useCloudState", () => {
     await advance(59_999);
     expect(fetchMock).toHaveBeenCalledTimes(3);
     await advance(1);
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+    expect(fetchMock.mock.lastCall?.[1]?.method).toBe("PUT");
     expect(remote.state.rowCount).toBe(8);
     expect(
       fetchMock.mock.calls.filter(([, options]) => options?.method === "PUT")
@@ -501,8 +694,15 @@ describe("useCloudState", () => {
     expect(result.current[0].account).toBeNull();
     expect(writes).toHaveLength(0);
     expect(readLocal("user-a")?.envelope).toEqual(pending);
+    const requestsAfterExpiry = fetchMock.mock.calls.length;
+    await advance(180_000);
+    expect(fetchMock).toHaveBeenCalledTimes(requestsAfterExpiry);
     authorized = true;
-    await advance();
+    act(() => {
+      window.dispatchEvent(new Event("blur"));
+      window.dispatchEvent(new Event("focus"));
+    });
+    await settle();
     expect(
       fetchMock.mock.calls.filter(([input]) => String(input).endsWith("/me"))
     ).toHaveLength(2);
