@@ -1,117 +1,22 @@
-# Contributing Guide
+# UI 기여 가이드
 
-## 새 컴포넌트 추가
+KBO Knit의 UI 변경을 어느 저장소에서 구현하고 검증할지 안내합니다. 범용 컴포넌트는 [Lagrange](https://github.com/fleetia/lagrange), 야구·뜨개 기능과 화면 조합은 KBO Knit에서 관리합니다.
 
-### 폴더 구조
+## 변경 위치
 
-```
-src/ui/ComponentName/
-├── ComponentName.tsx          # 컴포넌트 구현
-├── ComponentName.css.ts       # Vanilla Extract 스타일
-├── index.ts                   # barrel export
-├── __stories__/
-│   └── ComponentName.stories.tsx
-└── __tests__/
-    └── ComponentName.test.tsx
-```
+- 버튼, 입력, Dialog, Tabs, 색상 선택기의 공통 동작과 접근성은 Lagrange에서 수정합니다.
+- 경기별 배색, 줄 수 계산, 진행 기록과 앱 배치는 `src/components/`와 관련 hooks·utilities에서 수정합니다.
+- 앱 브랜드와 여백 조정은 [KBO 테마 안내](THEME.md)를 참고합니다. 같은 변경을 공통 컴포넌트의 복사본으로 만들지 않습니다.
 
-### 체크리스트
+Lagrange의 API와 개별 컴포넌트 stories·tests는 [컴포넌트 소스](https://github.com/fleetia/lagrange/tree/main/src/components)가 기준입니다. 이 저장소에서는 API 표나 공통 토큰 목록을 따로 유지하지 않습니다.
 
-1. [ ] 컴포넌트 파일 생성 (`ComponentName.tsx`)
-2. [ ] Vanilla Extract 스타일 파일 생성 (`ComponentName.css.ts`)
-3. [ ] barrel export (`index.ts`)
-4. [ ] 유닛 테스트 작성 (Vitest + @testing-library/react)
-5. [ ] Storybook 스토리 작성
+## 로컬 개발 순서
 
-`src/ui`는 앱과 함께 빌드됩니다. 앱에서는 각 컴포넌트의 `index.ts`를 상대 경로로 import합니다.
+1. [시작하기](../getting-started.md#설치)에 따라 GitHub Packages 인증을 준비하고 KBO Knit 의존성을 설치합니다.
+2. 필요한 저장소에서 변경하고 해당 동작의 테스트를 실행합니다. Lagrange를 바꾼 경우 해당 저장소에서 검증·발행한 뒤 KBO Knit의 의존성 버전과 lockfile을 갱신합니다.
+3. `pnpm storybook`에서 KBO 테마를 적용한 실제 조합을 확인합니다. 앱 조합 story는 `src/stories/`에 둡니다.
+4. KBO Knit의 `pnpm test`, `pnpm lint`, `pnpm build`, `pnpm build-storybook`과 관련 [브라우저 검증](../getting-started.md#브라우저-검증)을 실행합니다.
 
-### 스타일 규칙
+키보드 조작, 입력 label, 오류 안내와 Dialog의 닫기 후 focus 복귀를 확인합니다. 앱의 숫자 보정이나 날짜 제약은 해당 앱 기능이 계속 소유합니다. 사용자에게 보이는 KBO 문구는 앱에서 전달하며, 공통 UI의 label props는 Lagrange API를 따릅니다.
 
-- **Vanilla Extract** 사용 (`*.css.ts` 파일)
-- `vars`를 `src/ui/styles/tokens.css.ts`에서 import하여 CSS 변수 참조
-- `styleVariants`로 variant(size, color 등) 정의
-- 상태 표현은 data attribute 사용 (`data-checked`, `data-disabled` 등)
-
-```typescript
-import { style, styleVariants } from "@vanilla-extract/css";
-import { vars } from "../styles/tokens.css";
-
-export const container = style({
-  color: vars.color.text,
-  background: vars.color.surface
-});
-
-export const size = styleVariants({
-  sm: { padding: "0.3em" },
-  md: { padding: "0.5em" }
-});
-```
-
-### 접근성 규칙
-
-- 적절한 ARIA 속성 필수 (`aria-label`, `aria-expanded`, `role` 등)
-- 키보드 네비게이션 지원 (Tab, Enter, Space, Arrow keys)
-- 포커스 관리 (Modal의 포커스 트랩 등)
-
-### i18n 규칙
-
-- 사용자에게 보이는 문자열은 하드코딩하지 않음
-- `useTranslation()` 훅의 `t()` 함수 사용
-- 번역 키는 `컴포넌트.기능.설명` 형식 (예: `modal.close`)
-- 새 키 추가 시 `src/ui/i18n/locales/`의 en, ko, ja 파일 모두 업데이트
-
-### 테스트 규칙
-
-- **Vitest** + **@testing-library/react** (happy-dom 환경)
-- 렌더링, props 변형, className 적용 테스트
-- callback 호출 확인 (`vi.fn()`)
-- `aria-*`, `role` 속성 확인
-- Storybook에서 시각적 확인 + Play Interaction 테스트
-
-```typescript
-import { render, screen, fireEvent } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
-
-describe("Component", () => {
-  it("renders correctly", () => {
-    render(<Component label="Test" />);
-    expect(screen.getByText("Test")).toBeDefined();
-  });
-
-  it("handles click", () => {
-    const onClick = vi.fn();
-    render(<Component onClick={onClick} />);
-    fireEvent.click(screen.getByRole("button"));
-    expect(onClick).toHaveBeenCalledTimes(1);
-  });
-});
-```
-
-### Storybook 규칙
-
-```typescript
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "storybook/test";
-import { Component } from "../Component";
-
-const meta: Meta<typeof Component> = {
-  title: "Components/ComponentName",
-  component: Component,
-  args: { onClick: fn() }
-};
-
-export default meta;
-type Story = StoryObj<typeof Component>;
-
-export const Default: Story = {};
-export const Primary: Story = { args: { variant: "primary" } };
-```
-
-### 빌드
-
-```bash
-pnpm build            # 앱과 UI 빌드
-pnpm test             # 앱과 UI 테스트
-pnpm storybook        # Storybook 실행
-pnpm build-storybook  # Storybook 정적 빌드
-```
+패키지 발행과 서비스 배포는 로컬 확인 이후의 별도 작업입니다.

@@ -26,21 +26,36 @@ KBO 경기 데이터 크롤링은 [kbo-scraper](https://github.com/colabear754/k
 어디까지 떴는지 체크박스로 기록하면서 진행할 수 있어요. 설정이랑 진행 상황은
 브라우저에 자동 저장되니까 매번 다시 설정할 필요 없습니다.
 
-### 데이터는 매일 자동 업데이트됩니다
+### 줄 수와 뜨는 방식을 맞출 수 있어요
 
-시즌 중에는 매일 아침, 전날 경기 결과가 자동으로 반영됩니다. 직접 뭔가 할 필요
-없어요.
+경기 수, 득점, 득점과 실점, 점수 차이를 기준으로 줄 수를 정할 수 있어요.
+취소 경기의 줄 수를 따로 정하거나 0으로 설정해 뺄 수도 있습니다.
+단수 카운터에서는 한 단씩 진행하고 되돌릴 수 있고, 메리야스뜨기의 겉뜨기·안뜨기도 확인할 수 있어요.
+
+### 경기 결과를 먼저 넣을 수 있어요
+
+자동 수집 전에 경기 결과를 직접 추가해 패턴에 반영할 수 있습니다.
+공식 데이터에서 같은 경기 결과를 받으면 직접 추가했던 결과는 정리됩니다.
 
 ## Scraper
 
-GitHub Actions로 시즌 중(3~10월) 매일 KST 오전 3시에 전날 경기 결과를 자동 크롤링합니다.
+자동 수집 일정은 KST 오전 3시입니다. 3~8월에는 화요일을 제외하고, 9~10월에는
+화요일에도 실행하도록 설정되어 있습니다. 실행 시점의 **현재 월** 경기 일정을 수집해
+기존 시즌 데이터와 합칩니다. 전날 경기만 수집하거나 시즌 전체를 다시 받는 방식은 아닙니다.
+
+실행 일정은 [데이터 업데이트 workflow](.github/workflows/kbo-knit-update-data.yml),
+수집 범위는 [scrape-kbo.mjs](scrape-kbo.mjs)가 기준입니다.
 
 ## Getting Started
 
-저장소 루트에서:
+Node.js는 `.nvmrc`의 24, pnpm은 `package.json`의 11.25.0을 사용합니다.
+공통 UI는 GitHub Packages의 비공개 [Lagrange](https://github.com/fleetia/lagrange) 패키지를 사용합니다.
+
+먼저 [시작하기](docs/getting-started.md#설치)에 따라 패키지 읽기 권한과 로컬 인증을 준비한 뒤 저장소 루트에서 실행하세요:
 
 ```bash
-pnpm install
+nvm use
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
@@ -59,8 +74,8 @@ pnpm build-storybook
 
 ```bash
 pnpm exec playwright install chromium
-pnpm scrape       # 올해 시즌
-pnpm scrape 2025  # 특정 연도
+pnpm scrape       # 올해 시즌의 현재 월
+pnpm scrape 2025  # 2025년의 현재 월
 ```
 
 ## Contributing
@@ -68,7 +83,7 @@ pnpm scrape 2025  # 특정 연도
 기여는 언제나 환영합니다! 이슈를 열거나 PR을 보내주세요.
 
 - [KBO Knit 기여 가이드](docs/kbo-knit/contributing.md) — 개발 환경, 데이터 파이프라인, 배포
-- [UI 컴포넌트 기여 가이드](docs/ui/CONTRIBUTING.md) — `src/ui`와 Storybook
+- [UI 기여 가이드](docs/ui/CONTRIBUTING.md) — Lagrange 공통 UI와 KBO 화면의 작업 경계
 - [비개발자 기여 가이드](docs/contributing-non-dev.md) — 버그 리포트, 기능 제안, 피드백
 
 ## License

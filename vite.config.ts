@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { readdirSync, readFileSync, existsSync, writeFileSync } from "node:fs";
 import { resolve, join, relative } from "node:path";
+import { localAccountProxy } from "./dev/accountProxy";
 
 const dataDir = resolve(__dirname, "data");
 
@@ -90,5 +91,11 @@ const serveRootData = (): Plugin => ({
 });
 
 export default defineConfig({
-  plugins: [react(), vanillaExtractPlugin(), serveRootData(), injectSwVersion()]
+  plugins: [
+    react(),
+    vanillaExtractPlugin(),
+    serveRootData(),
+    injectSwVersion(),
+    localAccountProxy()
+  ]
 });

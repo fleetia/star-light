@@ -1,7 +1,13 @@
 import { useCallback, useMemo, useState } from "react";
-import { Modal } from "../../ui/Modal";
-import { TextInput } from "../../ui/TextInput";
-import { Select, SelectLabel, SelectGroup } from "../../ui/Select";
+import {
+  Button,
+  Checkbox,
+  DateField,
+  Dialog,
+  FormField,
+  Select,
+  TextField
+} from "@fleetia/lagrange";
 
 import type { Game, SeriesType, TeamCode } from "../../types/game.types";
 import { TEAM_NAMES, TEAM_CODES } from "../../constants/teams";
@@ -57,7 +63,6 @@ export function GameEditor({
   const defaultSeries = todayGame?.seriesType ?? series[0] ?? "REGULAR_SEASON";
 
   const [isOpen, setIsOpen] = useState(false);
-  const closeModal = useCallback(() => setIsOpen(false), []);
   const [date, setDate] = useState(today);
   const [dateError, setDateError] = useState("");
 
@@ -134,134 +139,158 @@ export function GameEditor({
 
   return (
     <>
-      <button className={s.addButton} onClick={() => setIsOpen(true)}>
-        + 경기 결과 미리 추가
-      </button>
-
-      <Modal
-        isOpen={isOpen}
-        onClose={closeModal}
-        title="경기 결과 미리 추가"
-        size="sm"
+      <Button
+        variant="secondary"
+        className={s.addButton}
+        onClick={() => setIsOpen(true)}
       >
-        <div className={s.form}>
-          <TextInput
-            label="날짜"
-            type="date"
-            value={date}
-            min={today}
-            onChange={handleDateChange}
-            onFocus={() => setDateError("")}
-            error={dateError}
-          />
+        + 경기 결과 미리 추가
+      </Button>
 
-          <SelectGroup>
-            <SelectLabel>상대 팀</SelectLabel>
-            <Select value={opponent} onChange={v => setOpponent(v as TeamCode)}>
-              <option value="">선택</option>
-              {opponents.map(code => (
-                <option key={code} value={code}>
-                  {TEAM_NAMES[code]}
-                </option>
-              ))}
-            </Select>
-          </SelectGroup>
-
-          <SelectGroup>
-            <SelectLabel>홈/원정</SelectLabel>
-            <Select
-              value={isHome ? "home" : "away"}
-              onChange={v => setIsHome(v === "home")}
-            >
-              <option value="home">홈</option>
-              <option value="away">원정</option>
-            </Select>
-          </SelectGroup>
-
-          <SelectGroup>
-            <SelectLabel>시리즈</SelectLabel>
-            <Select
-              value={seriesType}
-              onChange={v => setSeriesType(v as SeriesType)}
-            >
-              <option value="PRESEASON">시범</option>
-              <option value="REGULAR_SEASON">정규</option>
-              <option value="POSTSEASON">포스트</option>
-            </Select>
-          </SelectGroup>
-
-          <label className={s.checkboxRow}>
-            <input
-              type="checkbox"
-              checked={isCancelled}
-              onChange={e => setIsCancelled(e.target.checked)}
-            />
-            취소 경기로 추가
-          </label>
-
-          {!isCancelled && (
-            <div className={s.row}>
-              <TextInput
-                label="내 팀 점수"
-                type="number"
-                min={0}
-                value={myScore}
-                onChange={setMyScore}
-              />
-              <TextInput
-                label="상대 점수"
-                type="number"
-                min={0}
-                value={opScore}
-                onChange={setOpScore}
-              />
-            </div>
-          )}
-
-          <button
-            className={s.submitButton}
-            disabled={!canSubmit}
-            onClick={handleSubmit}
-          >
-            추가
-          </button>
-        </div>
-
-        {seasonGames.length > 0 && (
+      <Dialog
+        isOpen={isOpen}
+        onOpenChange={setIsOpen}
+        closeLabel="닫기"
+        title="경기 결과 미리 추가"
+        size="small"
+      >
+        {isOpen && (
           <>
-            <hr className={s.divider} />
-            <p className={s.sectionTitle}>추가한 경기 ({seasonGames.length})</p>
-            <div className={s.list}>
-              {seasonGames.map(g => {
-                const isHomeGame = g.homeTeam === team;
-                const opTeam = isHomeGame ? g.awayTeam : g.homeTeam;
-                const my = isHomeGame ? g.homeScore : g.awayScore;
-                const op = isHomeGame ? g.awayScore : g.homeScore;
-                const cancelled = g.status === "cancelled";
-                return (
-                  <div key={g.gameKey} className={s.listItem}>
-                    <div className={s.listInfo}>
-                      <span>
-                        {TEAM_NAMES[opTeam]}{" "}
-                        {cancelled ? "취소" : `${my}:${op}`}{" "}
-                        {isHomeGame ? "(홈)" : "(원정)"}
-                      </span>
-                      <span className={s.listDate}>{formatDate(g.date)}</span>
-                    </div>
-                    <button
-                      className={s.deleteButton}
-                      onClick={() => onRemove(g.gameKey)}
-                      aria-label="삭제"
-                    >
-                      ×
-                    </button>
-                  </div>
-                );
-              })}
+            <div className={s.form}>
+              <FormField label="날짜" error={dateError}>
+                <DateField
+                  value={date}
+                  min={today}
+                  onChange={event => {
+                    if (event.currentTarget.value) {
+                      handleDateChange(event.currentTarget.value);
+                    }
+                  }}
+                  onFocus={() => setDateError("")}
+                />
+              </FormField>
+
+              <FormField label="상대 팀">
+                <Select
+                  value={opponent}
+                  onChange={event =>
+                    setOpponent(event.currentTarget.value as TeamCode)
+                  }
+                >
+                  <option value="">선택</option>
+                  {opponents.map(code => (
+                    <option key={code} value={code}>
+                      {TEAM_NAMES[code]}
+                    </option>
+                  ))}
+                </Select>
+              </FormField>
+
+              <FormField label="홈/원정">
+                <Select
+                  value={isHome ? "home" : "away"}
+                  onChange={event =>
+                    setIsHome(event.currentTarget.value === "home")
+                  }
+                >
+                  <option value="home">홈</option>
+                  <option value="away">원정</option>
+                </Select>
+              </FormField>
+
+              <FormField label="시리즈">
+                <Select
+                  value={seriesType}
+                  onChange={event =>
+                    setSeriesType(event.currentTarget.value as SeriesType)
+                  }
+                >
+                  <option value="PRESEASON">시범</option>
+                  <option value="REGULAR_SEASON">정규</option>
+                  <option value="POSTSEASON">포스트</option>
+                </Select>
+              </FormField>
+
+              <Checkbox
+                checked={isCancelled}
+                onChange={event => setIsCancelled(event.currentTarget.checked)}
+              >
+                취소 경기로 추가
+              </Checkbox>
+
+              {!isCancelled && (
+                <div className={s.row}>
+                  <FormField label="내 팀 점수">
+                    <TextField
+                      type="number"
+                      min={0}
+                      value={myScore}
+                      onChange={event => setMyScore(event.currentTarget.value)}
+                    />
+                  </FormField>
+                  <FormField label="상대 점수">
+                    <TextField
+                      type="number"
+                      min={0}
+                      value={opScore}
+                      onChange={event => setOpScore(event.currentTarget.value)}
+                    />
+                  </FormField>
+                </div>
+              )}
+
+              <Button
+                className={s.submitButton}
+                disabled={!canSubmit}
+                onClick={handleSubmit}
+              >
+                추가
+              </Button>
             </div>
+
+            {seasonGames.length > 0 && (
+              <>
+                <hr className={s.divider} />
+                <p className={s.sectionTitle}>
+                  추가한 경기 ({seasonGames.length})
+                </p>
+                <div className={s.list}>
+                  {seasonGames.map(g => {
+                    const isHomeGame = g.homeTeam === team;
+                    const opTeam = isHomeGame ? g.awayTeam : g.homeTeam;
+                    const my = isHomeGame ? g.homeScore : g.awayScore;
+                    const op = isHomeGame ? g.awayScore : g.homeScore;
+                    const cancelled = g.status === "cancelled";
+                    return (
+                      <div key={g.gameKey} className={s.listItem}>
+                        <div className={s.listInfo}>
+                          <span>
+                            {TEAM_NAMES[opTeam]}{" "}
+                            {cancelled ? "취소" : `${my}:${op}`}{" "}
+                            {isHomeGame ? "(홈)" : "(원정)"}
+                          </span>
+                          <span className={s.listDate}>
+                            {formatDate(g.date)}
+                          </span>
+                        </div>
+                        <Button
+                          variant="quiet"
+                          size="compact"
+                          className={s.deleteButton}
+                          onClick={() => onRemove(g.gameKey)}
+                          aria-label={`${formatDate(g.date)} ${TEAM_NAMES[opTeam]} 경기 삭제`}
+                        >
+                          ×
+                        </Button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </>
         )}
-      </Modal>
+      </Dialog>
     </>
   );
 }

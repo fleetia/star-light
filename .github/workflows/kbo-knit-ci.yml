@@ -15,15 +15,23 @@ on:
       - "index.html"
       - "package.json"
       - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - ".npmrc"
       - "tsconfig*.json"
       - "vite.config.ts"
       - "vitest.config.ts"
       - "eslint.config.js"
       - "prettier.config.js"
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -34,6 +42,8 @@ jobs:
         with:
           node-version: "24"
           cache: "pnpm"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@fleetia"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

@@ -135,7 +135,8 @@ export const stockinetteRow = style({
 });
 
 export const radioGroup = style({
-  justifyContent: "center"
+  width: "fit-content",
+  marginInline: "auto"
 });
 
 export const stitchType = style({

@@ -1,10 +1,14 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/theme.css";
+import { frame } from "../../styles/frame.css";
 
-export const container = style({
-  borderRadius: vars.radius.lg,
-  padding: "1rem"
-});
+export const container = style([
+  frame,
+  {
+    borderRadius: vars.radius.lg,
+    padding: "1rem"
+  }
+]);
 
 export const scarf = style({
   display: "flex",

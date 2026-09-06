@@ -1,0 +1,19 @@
+packages:
+  - .
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+# This release is verified and published together with the consumer update.
+minimumReleaseAgeExclude:
+  - "@fleetia/lagrange@0.2.0"
+trustPolicy: no-downgrade
+# Existing lockfile artifacts checked against their upstream release sources.
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
+  - vite@5.4.21
+blockExoticSubdeps: true
+strictDepBuilds: true
+allowBuilds:
+  "@parcel/watcher": false
+  esbuild: true

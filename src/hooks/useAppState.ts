@@ -10,8 +10,9 @@ import type {
   TeamCode
 } from "../types/game.types";
 import { TEAM_COLORS } from "../constants/teams";
-import { DEFAULT_STATE, STORAGE_KEY } from "../constants/defaults";
-import { useLocalStorage } from "./useLocalStorage";
+import { DEFAULT_STATE } from "../constants/defaults";
+import { useCloudState } from "./useCloudState";
+import type { CloudSnapshot, CloudStore } from "../cloud/types";
 
 type AppActions = {
   setSeason: (season: number) => void;
@@ -32,11 +33,15 @@ type AppActions = {
   scarfColors: ScarfColors;
 };
 
-export function useAppState(): [AppState, AppActions] {
-  const [rawState, setState] = useLocalStorage<AppState>(
-    STORAGE_KEY,
-    DEFAULT_STATE
-  );
+export function useAppState(): [
+  AppState,
+  AppActions,
+  CloudSnapshot,
+  CloudStore
+] {
+  const [cloud, store] = useCloudState();
+  const rawState = cloud.state;
+  const setState = store.edit;
 
   const state: AppState = useMemo(
     () => ({
@@ -242,6 +247,8 @@ export function useAppState(): [AppState, AppActions] {
       addCustomGame,
       removeCustomGame,
       scarfColors
-    }
+    },
+    cloud,
+    store
   ];
 }

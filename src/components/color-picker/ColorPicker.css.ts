@@ -1,12 +1,16 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/theme.css";
+import { fieldFrame } from "../../styles/frame.css";
 
-export const group = style({
-  position: "relative",
-  borderRadius: vars.radius.lg,
-  padding: "1rem",
-  "@media": { "(min-width: 768px)": { padding: "1.2rem 1.5rem" } }
-});
+export const group = style([
+  fieldFrame,
+  {
+    position: "relative",
+    borderRadius: vars.radius.lg,
+    padding: "1rem",
+    "@media": { "(min-width: 768px)": { padding: "1.2rem 1.5rem" } }
+  }
+]);
 
 export const sectionLabel = style({
   fontSize: vars.fontSize.base,
@@ -17,12 +21,9 @@ export const sectionLabel = style({
 });
 
 export const toggleRow = style({
-  position: "absolute",
-  top: "1rem",
-  right: "1rem",
-  "@media": {
-    "(min-width: 768px)": { top: "1.2rem", right: "1.5rem" }
-  }
+  display: "flex",
+  justifyContent: "flex-end",
+  marginBottom: "0.5rem"
 });
 
 export const splitRow = style({
@@ -33,4 +34,12 @@ export const splitRow = style({
 
 export const section = style({
   flex: 1
+});
+
+export const colorRow = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "0.5rem",
+  padding: "0.3em 0"
 });
